@@ -31,8 +31,8 @@ function App() {
         <h1>Our Names</h1>
         <br></br>
         <span>Olivia Karney</span>
-        <span>Zahra Temori</span>
         <span>Jacob Whitman</span>
+        <span>Zahra Temori</span>
         <br></br>
         {/*Insert Next Name Below!!!*/}
         
