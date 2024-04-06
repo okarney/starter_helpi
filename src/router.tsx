@@ -11,9 +11,9 @@ function Routerer() {
     return (
         <Router>
             <Routes>
-                <Route path="/first"
+                <Route path="/BasicQuestions"
                     element={<Basic />} />
-                <Route path="/second"
+                <Route path="/DetailedQuestions"
                     element={<Detailed />} />
                 <Route path="/"
                     element={<App />} />

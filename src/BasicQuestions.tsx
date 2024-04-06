@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -35,23 +36,7 @@ function Basic() {
         {/*Insert Next Name Below!!!*/}
         
         <p>
-          <div style={{ margin: '30px 0' }}>
-          <a href="./BasicQuestions.tsx">
-            <button>
-              Basic Assessment
-            </button>
-          </a>
-
-          <a href="./DetailedQuestions.tsx">
-            <button
-              style={{ marginLeft: '20px' }}>
-              Detailed Assessment
-            </button>
-          </a>
-            
-          
-
-          </div>
+        <Link to="/">go back</Link>
         </p>
         <a
           className="App-link"
