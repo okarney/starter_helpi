@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
-import { BrowserRouter as Router, Routes, Route }
-    from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -14,19 +10,7 @@ if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
 
-function App() {
-    const navigate = useNavigate();
- 
-    const goToDetailed = () => {
- 
-        // This will navigate to second component
-        navigate('/DetailedQuestions');
-    };
-    const gotToBasic = () => {
- 
-        // This will navigate to first component
-        navigate('/BasicQuestions');
-    };
+function Basic() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   
   //sets the local storage item to the api key the user inputed
@@ -35,37 +19,37 @@ function App() {
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
 
-
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
-    
   }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <h1>Our Names</h1>
         <br></br>
-        <span>Olivia Karney</span>
-        <span>Jacob Whitman</span>
-        <span>Zahra Temori</span>
-        <span>Khadija Mohammadi</span>
+        <span>Basic Questions!</span>
+        
         <br></br>
         {/*Insert Next Name Below!!!*/}
         
         <p>
           <div style={{ margin: '30px 0' }}>
-          
-            <button onClick={gotToBasic}>
+          <a href="./BasicQuestions.tsx">
+            <button>
               Basic Assessment
             </button>
-          
+          </a>
+
+          <a href="./DetailedQuestions.tsx">
             <button
-              onClick={goToDetailed}
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
             </button>
+          </a>
+            
+          
 
           </div>
         </p>
@@ -88,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default Basic;
