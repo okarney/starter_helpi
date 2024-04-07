@@ -9,10 +9,13 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
+  <div>
   <React.StrictMode>
-    <Routerer /> {/* Use Routerer here to wrap your app in a Router */}
+    <Routerer/> {/* Use Routerer here to wrap your app in a Router */}
   </React.StrictMode>
+  </div>
 );
 
 
