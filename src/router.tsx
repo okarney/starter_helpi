@@ -7,17 +7,18 @@ import Basic from "./BasicQuestions";
  
 function Routerer() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/BasicQuestions"
-                    element={<Basic />} />
-                <Route path="/DetailedQuestions"
-                    element={<Detailed />} />
-                <Route path="/"
-                    element={<App />} />
-            </Routes>
-        </Router>
-        
+        <div>
+            <Router>
+                <Routes>
+                    <Route path="/BasicQuestions"
+                        element={<Basic />} />
+                    <Route path="/DetailedQuestions"
+                        element={<Detailed />} />
+                    <Route path="/"
+                        element={<App />} />
+                </Routes>
+            </Router>
+        </div>
     );
 }
  
