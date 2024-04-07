@@ -281,7 +281,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (136 ms)
+  ✕ renders learn react link (121 ms)
 
   ● renders learn react link
 
@@ -326,14 +326,14 @@ All files              |   10.63 |       10 |    7.14 |   10.63 |
  App.tsx               |   33.33 |       50 |      20 |   33.33 | 12,18-42          
  BasicQuestions.tsx    |       0 |        0 |       0 |       0 | 7-27              
  DetailedQuestions.tsx |       0 |        0 |       0 |       0 | 7-27              
- index.tsx             |       0 |      100 |     100 |       0 | 8-21              
+ index.tsx             |       0 |      100 |     100 |       0 | 9-22              
  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- router.tsx            |       0 |      100 |       0 |       0 | 11                
+ router.tsx            |       0 |      100 |       0 |       0 | 9                 
 -----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.012 s
+Time:        3.007 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
