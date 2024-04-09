@@ -58,13 +58,14 @@ function App() {
             <button onClick={gotToBasic}>
               Basic Assessment
             </button>
-            <p>test</p>
+            <p>Discover your potential career path through our refined multiple-choice assessment.</p>
           
             <button
               onClick={goToDetailed}
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
             </button>
+            <p>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
 
           </div>
         </p>
