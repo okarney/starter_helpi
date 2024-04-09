@@ -57,8 +57,8 @@ function App() {
             
             <button onClick={gotToBasic}>
               Basic Assessment
-              <span>test</span>
             </button>
+            <p>test</p>
           
             <button
               onClick={goToDetailed}
