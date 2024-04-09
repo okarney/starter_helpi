@@ -24,12 +24,36 @@ function Basic() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  export function App(): JSX.Element {
+    // This is the State (Model)
+    const [choice, setChoice] = useState<string>("");
+
+    // This is the Control
+    function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
+        setChoice(event.target.value);
+    }
+
   return (
     <div className="App">
       <header className="App-header">
         
         <h1>Basic Questions</h1>
         <br></br>
+        <div>
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which work environment aligns best with your interests?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Structured and organized">Structured and organized</option>
+                    <option value="Problem-solving and analytical">Problem-solving and analytical</option>
+                    <option value="Collaborative and people-oriented">Collaborative and people-oriented</option>
+                    <option value="Creative and innovative">Creative and innovative</option>
+                    <option value=" Hands-on and practical"> Hands-on and practical</option>
+                    <option value="Leadership-driven and competitive">Leadership-driven and competitive</option>
+
+                </Form.Select>
+            </Form.Group>
+            {/*The user is feeling {emotion}.*/}
+        </div>
         {/*<span>Basic Questions!</span>*/}
         
         <br></br>
