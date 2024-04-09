@@ -57,7 +57,7 @@ function App() {
             <button onClick={gotToBasic}>
               Basic Assessment
             </button>
-            <p style={{ fontSize: '12px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
+            <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
 
           
             <button
@@ -65,7 +65,7 @@ function App() {
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
             </button>
-            <p style={{ fontSize: '12px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
+            <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
 
           </div>
         </p>
