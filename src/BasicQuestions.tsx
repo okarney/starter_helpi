@@ -28,9 +28,9 @@ function Basic() {
     <div className="App">
       <header className="App-header">
         
-        <h1>Our Names</h1>
+        <h1>Basic Questions</h1>
         <br></br>
-        <span>Basic Questions!</span>
+        {/*<span>Basic Questions!</span>*/}
         
         <br></br>
         {/*Insert Next Name Below!!!*/}
