@@ -24,7 +24,7 @@ function Basic() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-  export function App(): JSX.Element {
+  function App(): JSX.Element {
     // This is the State (Model)
     const [choice, setChoice] = useState<string>("");
 
@@ -80,5 +80,5 @@ function Basic() {
     </div>
   );
 }
-
+}
 export default Basic;
