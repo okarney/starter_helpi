@@ -51,19 +51,21 @@ function App() {
         <span>Khadija Mohammadi</span>
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        
         <p>
           <div style={{ margin: '30px 0' }}>
             
             <button onClick={gotToBasic}>
               Basic Assessment
             </button>
+            <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
+
           
             <button
               onClick={goToDetailed}
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
             </button>
+            <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
 
           </div>
         </p>
