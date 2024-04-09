@@ -51,7 +51,6 @@ function App() {
         <span>Khadija Mohammadi</span>
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        
         <p>
           <div style={{ margin: '30px 0' }}>
             
