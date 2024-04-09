@@ -53,7 +53,7 @@ function App() {
         {/*Insert Next Name Below!!!*/}
         
         <p>
-          <div style={{ margin: '20px 0' }}>
+          <div style={{ margin: '10px 0' }}>
             
             <button onClick={gotToBasic}>
               Basic Assessment
@@ -63,7 +63,7 @@ function App() {
           
             <button
               onClick={goToDetailed}
-              style={{ marginLeft: '10px' }}>
+              style={{ marginLeft: '5px' }}>
               Detailed Assessment
             </button>
             <p style={{ fontSize: '12px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
