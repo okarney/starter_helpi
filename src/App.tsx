@@ -54,10 +54,11 @@ function App() {
         
         <p>
           <div style={{ margin: '30px 0' }}>
-            <span>test</span>
+            
             <button onClick={gotToBasic}>
               Basic Assessment
             </button>
+            <div style={{ margin: '30px 0' }}> <span>test</span> </div>
           
             <button
               onClick={goToDetailed}
