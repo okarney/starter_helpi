@@ -24,17 +24,77 @@ function Detailed() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+
+// useState and update function for Question 1
+
+  const [q1Response, setQ1Response] = useState<string>("");
+
+  function updateQ1Response(event: React.ChangeEvent<HTMLInputElement>) {
+    setQ1Response(event.target.value)
+  }
+
+// useState and update function for Question 2
+
+const [q2Response, setQ2Response] = useState<string>("");
+
+function updateQ2Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ2Response(event.target.value)
+}
+
+// useState and update function for Question 3
+
+const [q3Response, setQ3Response] = useState<string>("");
+
+function updateQ3Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ3Response(event.target.value)
+}
+
+// useState and update function for Question 4
+
+const [q4Response, setQ4Response] = useState<string>("");
+
+function updateQ4Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ4Response(event.target.value)
+}
+
+// useState and update function for Question 5
+
+const [q5Response, setQ5Response] = useState<string>("");
+
+function updateQ5Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ5Response(event.target.value)
+}
+
+// useState and update function for Question 6
+
+const [q6Response, setQ6Response] = useState<string>("");
+
+function updateQ6Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ6Response(event.target.value)
+}
+
+// useState and update function for Question 7
+
+const [q7Response, setQ7Response] = useState<string>("");
+
+function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
+  setQ7Response(event.target.value)
+}
+
   return (
     <div className="App">
       <header className="App-header">
         
-        <h1>Our Names</h1>
-        <br></br>
-        <span>Detailed Questions!</span>
-        
-        <br></br>
-        {/*Insert Next Name Below!!!*/}
-        
+      <h1>Detailed Questions!</h1>
+
+      {/*<Form.Group controlId="formMovieName">
+      <Form.Label>Name:</Form.Label>
+      <Form.Control
+        value={q1Response}
+        onChange={updateQ1Response} />
+  </Form.Group>*/}
+  
+        <br></br>        
         <p>
         <Link to="/">go back</Link>
         </p>
