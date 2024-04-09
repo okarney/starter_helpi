@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './router';
+
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -12,19 +14,52 @@ if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
 
+function BasicQuestions() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/BasicQuestions');
+  }
+
+  return (
+    <button type="button" onClick={handleClick}>
+    Basic Assessment
+    </button>
+  );
+}
+
+function DetailedQuestions() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate('/DetailedQuestions');
+  }
+
+  return (
+    <button
+    type="button"
+    onClick={handleClick}
+    style={{ marginLeft: '20px' }}>
+    Detailed Assessment
+    </button>
+  );
+}
+
+
+
 function App() {
-    const navigate = useNavigate();
+    
  
-    const goToDetailed = () => {
+    // const goToDetailed = () => {
  
-        // This will navigate to second component
-        navigate('/DetailedQuestions');
-    };
-    const gotToBasic = () => {
+    //     // This will navigate to second component
+    //     Nav('/DetailedQuestions');
+    // };
+    // const gotToBasic = () => {
  
-        // This will navigate to first component
-        navigate('/BasicQuestions');
-    };
+    //     // This will navigate to first component
+    //     Nav('/BasicQuestions');
+    // };
   const [key, setKey] = useState<string>(keyData); //for api key input
   
   //sets the local storage item to the api key the user inputed
@@ -51,19 +86,15 @@ function App() {
         <span>Khadija Mohammadi</span>
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        
         <p>
           <div style={{ margin: '30px 0' }}>
             
-            <button onClick={gotToBasic}>
-              Basic Assessment
-            </button>
-          
-            <button
-              onClick={goToDetailed}
-              style={{ marginLeft: '20px' }}>
-              Detailed Assessment
-            </button>
+
+            <BasicQuestions/>
+            <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
+            <DetailedQuestions/>
+            <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
+
 
           </div>
         </p>
