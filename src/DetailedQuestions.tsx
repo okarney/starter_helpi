@@ -87,25 +87,60 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
         
       <h1>Detailed Questions!</h1>
 
-      {/*<Form.Group controlId="formMovieName">
-      <Form.Label>Name:</Form.Label>
+      <Form.Group controlId="question1">
+      <Form.Label>Question 1:</Form.Label>
       <Form.Control
         value={q1Response}
         onChange={updateQ1Response} />
-  </Form.Group>*/}
+  </Form.Group>
+
+  <Form.Group controlId="question2">
+      <Form.Label>Question 2:</Form.Label>
+      <Form.Control
+        value={q2Response}
+        onChange={updateQ2Response} />
+  </Form.Group>
+
+  <Form.Group controlId="question3">
+      <Form.Label>Question 3:</Form.Label>
+      <Form.Control
+        value={q3Response}
+        onChange={updateQ3Response} />
+  </Form.Group>
+
+  <Form.Group controlId="question4">
+      <Form.Label>Question 4:</Form.Label>
+      <Form.Control
+        value={q4Response}
+        onChange={updateQ4Response} />
+  </Form.Group>
+
+  <Form.Group controlId="question3">
+      <Form.Label>Question 5:</Form.Label>
+      <Form.Control
+        value={q5Response}
+        onChange={updateQ5Response} />
+  </Form.Group>
+
+  <Form.Group controlId="question6">
+      <Form.Label>Question 6:</Form.Label>
+      <Form.Control
+        value={q6Response}
+        onChange={updateQ6Response} />
+  </Form.Group>
+
+  <Form.Group controlId="question7">
+      <Form.Label>Question 7:</Form.Label>
+      <Form.Control
+        value={q7Response}
+        onChange={updateQ7Response} />
+  </Form.Group>
   
         <br></br>        
         <p>
         <Link to="/">go back</Link>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
