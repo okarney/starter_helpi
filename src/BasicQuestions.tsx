@@ -24,10 +24,10 @@ function Basic() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-  function App(): JSX.Element {
+  //function App(): JSX.Element {
     // This is the State (Model)
-    const [choice, setChoice] = useState<string>("");
-
+    const [choice, setChoice] = useState<string>("                        ");
+  //}
     // This is the Control
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
@@ -49,6 +49,85 @@ function Basic() {
                     <option value="Creative and innovative">Creative and innovative</option>
                     <option value=" Hands-on and practical"> Hands-on and practical</option>
                     <option value="Leadership-driven and competitive">Leadership-driven and competitive</option>
+
+                </Form.Select>
+            </Form.Group>
+            
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which personality traits do you resonate with the most?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Detail-oriented and meticulous">Detail-oriented and meticulous</option>
+                    <option value="Logical and analytical">Logical and analytical</option>
+                    <option value="Compassionate and empathetic">Compassionate and empathetic</option>
+                    <option value="Imaginative and expressive">Imaginative and expressive</option>
+                    <option value="Practical and resourceful"> Practical and resourceful</option>
+                    <option value="Confident and decisive">Confident and decisive</option>
+                    <option value="None of the above">None of the above</option>
+
+
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which of the following is true about you?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Very organized">Very organized</option>
+                    <option value="Organized">Organized</option>
+                    <option value="Somewhat organized">Somewhat organized</option>
+                    <option value="Not organized">Not organized</option>
+
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which career-related activities do you find most fulfilling?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Organizing and maintaining order">Organizing and maintaining order</option>
+                    <option value="Analyzing data and solving complex problems">Analyzing data and solving complex problems</option>
+                    <option value="Helping others and fostering connections">Helping others and fostering connections</option>
+                    <option value="Expressing creativity and originality">Expressing creativity and originality</option>
+                    <option value="Engaging in practical tasks and hands-on work"> Engaging in practical tasks and hands-on work</option>
+                    <option value="Leading teams and driving projects forward">Leading teams and driving projects forward</option>
+
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which challenges are you eager to take on?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Ensuring accuracy and precision">Ensuring accuracy and precision</option>
+                    <option value="Tackling intellectual puzzles and scientific inquiries">Tackling intellectual puzzles and scientific inquiries</option>
+                    <option value="Addressing social issues and making a difference">Addressing social issues and making a difference</option>
+                    <option value="Pushing boundaries and exploring new ideas">Pushing boundaries and exploring new ideas</option>
+                    <option value="Overcoming technical obstacles and mastering skills">Overcoming technical obstacles and mastering skills</option>
+                    <option value="Taking risks and embracing leadership opportunities">Taking risks and embracing leadership opportunities</option>
+
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>What would you do on a weekend?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Go to the movies with a friend or boy/girlfriend">Go to the movies with a friend or boy/girlfriend</option>
+                    <option value="Go for a walk along the nearest lake near your housel">Go for a walk along the nearest lake near your house</option>
+                    <option value="Go to a party with friends">Go to a party with friends</option>
+                    <option value="Do homework">Do homework</option>
+                    <option value="Do nothing. I am antisocial">Do nothing. I am antisocial</option>
+                    <option value="Doing outdoor sports(mountain climbing, sky-diving, hiking…)">Doing outdoor sports(mountain climbing, sky-diving, hiking…)</option>
+
+                </Form.Select>
+            </Form.Group>
+
+            <Form.Group controlId="basicQuestions">
+                <Form.Label>Which academic area do you prefer?</Form.Label>
+                <Form.Select value={choice} onChange={updateChoice}>
+                    <option value="Technology/Engineering">Technology/Engineering</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="Business">Business</option>
+                    <option value="Natural Sciences">Natural Sciences</option>
+                    <option value=" Health Sciences"> Health Sciences</option>
+                    <option value="Music">Music</option>
+                    <option value="Other">Other</option>
 
                 </Form.Select>
             </Form.Group>
@@ -79,6 +158,5 @@ function Basic() {
       </Form>
     </div>
   );
-}
 }
 export default Basic;
