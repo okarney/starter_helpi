@@ -1,4 +1,3 @@
-import react from "react"
 import ProgressBar from 'react-bootstrap/ProgressBar';
 interface Bar {
     progress: number
