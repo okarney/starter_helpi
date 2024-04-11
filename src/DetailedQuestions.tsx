@@ -82,6 +82,8 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 }
 
 // submit button useState
+//Remove no unused vars when done this
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const [submitted, setSubmitted] = useState<boolean>(false);
 
 
