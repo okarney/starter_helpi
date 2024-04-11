@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BasicExample } from './progressBar';
 
+
+function App(){
+  return <span>There is actually something here</span>
+}
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -13,11 +18,14 @@ if (prevKey !== null) {
 
 function Basic() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  
+  const [progress, setProgress] = useState<number>(0)
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
+  }
+  function handleIncrease() {
+    setProgress(progress + 20);
   }
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
@@ -27,7 +35,8 @@ function Basic() {
   return (
     <div className="App">
       <header className="App-header">
-        
+      <button onClick = {handleIncrease}></button>
+        <h1><BasicExample progress={progress}></BasicExample></h1>
         <h1>Our Names</h1>
         <br></br>
         <span>Basic Questions!</span>
