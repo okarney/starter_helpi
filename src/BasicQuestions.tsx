@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button, Form, ProgressBar } from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BasicExample } from './progressBar';
 
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
   return <span>There is actually something here</span>
 }
