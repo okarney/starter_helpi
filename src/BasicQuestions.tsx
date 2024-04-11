@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, ProgressBar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BasicExample } from './progressBar';
 
@@ -44,7 +44,7 @@ function Basic() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <h1><ProgressBar>Progress bar is here</ProgressBar></h1>
         <h1>Our Names</h1>
         <br></br>
         <div>
