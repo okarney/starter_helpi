@@ -607,7 +607,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (201 ms)
+  ✕ renders learn react link (214 ms)
 
   ● renders learn react link
 
@@ -648,28 +648,17 @@ FAIL src/App.test.tsx
 -----------------------|---------|----------|---------|---------|----------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
 -----------------------|---------|----------|---------|---------|----------------------
-All files              |   25.39 |       30 |    12.5 |   25.39 |                      
+All files              |   17.58 |    16.66 |    8.82 |   17.58 |                      
  App.tsx               |      50 |       50 |   42.85 |      50 | 14,21-24,35-38,67-74 
- BasicQuestions.tsx    |   33.33 |       50 |       0 |   33.33 | 11-36                
- DetailedQuestions.tsx |   16.66 |       50 |       0 |   16.66 | 11-84                
+ BasicQuestions.tsx    |   10.81 |       10 |       0 |   10.81 | 10,17-94             
+ DetailedQuestions.tsx |   15.38 |       50 |       0 |   15.38 | 11-149               
  index.tsx             |       0 |      100 |     100 |       0 | 8-18                 
+ progressBar.tsx       |       0 |      100 |       0 |       0 | 6                    
  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10                 
  router.tsx            |       0 |      100 |       0 |       0 | 9                    
 -----------------------|---------|----------|---------|---------|----------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.298 s
+Time:        2.829 s
 Ran all test suites.
-[0;33mOne of your dependencies, babel-preset-react-app, is importing the
-"@babel/plugin-proposal-private-property-in-object" package without
-declaring it in its dependencies. This is currently working because
-"@babel/plugin-proposal-private-property-in-object" is already in your
-node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
-
-babel-preset-react-app is part of the create-react-app project, [1mwhich
-is not maintianed anymore[0;33m. It is thus unlikely that this bug will
-ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
-your devDependencies to work around this error. This will make this message
-go away.[0m
-  
