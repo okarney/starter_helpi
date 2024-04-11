@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route }
 import App from "./App";
 import Detailed from "./DetailedQuestions";
 import Basic from "./BasicQuestions";
+import Home from "./HomeQuestions";
+
  
 function Routerer() {
     return (
@@ -14,6 +16,8 @@ function Routerer() {
                         element={<Basic />} />
                     <Route path="/DetailedQuestions"
                         element={<Detailed />} />
+                    <Route path="/HomeQuestions"
+                        element={<Home />} />
                     <Route path="/"
                         element={<App />} />
                 </Routes>
