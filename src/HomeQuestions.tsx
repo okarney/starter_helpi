@@ -13,18 +13,18 @@ if (prevKey !== null) {
 }
 
 function Home() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
  
-    const goToDetailed = () => {
+    // const goToDetailed = () => {
  
-        // This will navigate to second component
-        navigate('/DetailedQuestions');
-    };
-    const gotToBasic = () => {
+    //     // This will navigate to second component
+    //     navigate('/DetailedQuestions');
+    // };
+    // const gotToBasic = () => {
  
-        // This will navigate to first component
-        navigate('/BasicQuestions');
-    };
+    //     // This will navigate to first component
+    //     navigate('/BasicQuestions');
+    // };
   const [key, setKey] = useState<string>(keyData); //for api key input
   
   //sets the local storage item to the api key the user inputed
@@ -55,15 +55,16 @@ function Home() {
         <p>
           <div style={{ margin: '30px 0' }}>
             
-            <button onClick={gotToBasic}>
+            {/* <button onClick={gotToBasic}>
               Basic Assessment
-            </button>
+            </button> */}
           
-            <button
+            {/* <button
               onClick={goToDetailed}
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
-            </button>
+            </button> */}
+            
 
           </div>
         </p>
