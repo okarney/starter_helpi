@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import Link from 'next/link';
+
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -40,6 +40,7 @@ function Home() {
     setKey(event.target.value);
     
   }
+  const navigate = useNavigate();
   return (
     <div className="App">
       <header className="App-header">
@@ -65,10 +66,15 @@ function Home() {
               style={{ marginLeft: '20px' }}>
               Detailed Assessment
             </button> */}
-            <Link to="/BasicQuestions">Go to Basic Page</Link>
+            {/* <Link to="/BasicQuestions">Go to Basic Page</Link>
           
           
-            <Link to="/DetailedQuestions">Go to Detailed Page</Link>
+            <Link to="/DetailedQuestions">Go to Detailed Page</Link> */}
+            
+            <button onClick={() => navigate('/basic')}>Go to Basic Questions</button>
+             <button onClick={() => navigate('/detailed')} style={{ marginLeft: '20px' }}>
+          Go to Detailed Questions
+        </button>
 
           </div>
         </p>
