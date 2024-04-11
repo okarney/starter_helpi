@@ -607,7 +607,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (183 ms)
+  ✕ renders learn react link (201 ms)
 
   ● renders learn react link
 
@@ -618,7 +618,7 @@ FAIL src/App.test.tsx
     > 18 |   const navigate = useNavigate();
          |                               ^
       19 |
-      20 |   function handleClick() {
+      20 |   function handleClick2() {
       21 |     navigate('/BasicQuestions');
 
       at Object.invariant [as UNSAFE_invariant] (node_modules/@remix-run/router/history.ts:494:11)
@@ -659,7 +659,7 @@ All files              |   25.39 |       30 |    12.5 |   25.39 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.13 s
+Time:        3.298 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
