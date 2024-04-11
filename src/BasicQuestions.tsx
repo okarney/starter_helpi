@@ -61,7 +61,7 @@ function Basic() {
     <div className="App">
       <header className="App-header">
         
-        <h1>Basic Questions</h1>
+        <h1>Basic  Questions</h1>
         <br></br>
         <div>
             <Form.Group controlId="basicQuestions">
