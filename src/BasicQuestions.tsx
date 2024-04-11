@@ -19,13 +19,31 @@ if (prevKey !== null) {
 function Basic() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
+
+  const [choice1, setChoice1] = useState<string>("Select an option");
+  const [choice2, setChoice2] = useState<string>("Select an option");
+  const [choice3, setChoice3] = useState<string>("Select an option");
+  const [choice4, setChoice4] = useState<string>("Select an option");
+  const [choice5, setChoice5] = useState<string>("Select an option");
+  const [choice6, setChoice6] = useState<string>("Select an option");
+  const [choice7, setChoice7] = useState<string>("Select an option");
+
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
-  function handleIncrease() {
-    setProgress(progress + 20);
+
+  //function handleIncrease() {
+   // setProgress(progress + 20);
+  //}
+  function updateProgress(originalValue: string, event: string){
+    if (originalValue === "Select an option" && event !== "Select an option") {
+      setProgress(progress + 15)
+    }
+    else if (originalValue !== "Select an option" && event === "Select an option") {
+      setProgress(progress - 15)
+    }
   }
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
@@ -34,24 +52,55 @@ function Basic() {
   }
   //function App(): JSX.Element {
     // This is the State (Model)
-    const [choice, setChoice] = useState<string>("");
   //}
     // This is the Control
+    /*
     function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
         setChoice(event.target.value);
     }
+    */
+    function updateChoice1(event: React.ChangeEvent<HTMLSelectElement>) {
+      updateProgress(choice1, event.target.value);
+      setChoice1(event.target.value);
+  }
+
+  function updateChoice2(event: React.ChangeEvent<HTMLSelectElement>) {
+    updateProgress(choice2, event.target.value);
+    setChoice2(event.target.value);
+}
+function updateChoice3(event: React.ChangeEvent<HTMLSelectElement>) {
+  updateProgress(choice3, event.target.value);
+  setChoice3(event.target.value);
+}
+function updateChoice4(event: React.ChangeEvent<HTMLSelectElement>) {
+  updateProgress(choice4, event.target.value);
+  setChoice4(event.target.value);
+}
+function updateChoice5(event: React.ChangeEvent<HTMLSelectElement>) {
+  updateProgress(choice5, event.target.value);
+  setChoice5(event.target.value);
+}
+function updateChoice6(event: React.ChangeEvent<HTMLSelectElement>) {
+  updateProgress(choice6, event.target.value);
+  setChoice6(event.target.value);
+}
+function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
+  updateProgress(choice7, event.target.value);
+  setChoice7(event.target.value);
+}
+
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1><ProgressBar>Progress bar is here</ProgressBar></h1>
+        <h1><BasicExample progress={progress}></BasicExample></h1>
         <h1>Our Names</h1>
         <br></br>
         <div>
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which work environment aligns best with your interests?</Form.Label>
-                <Form.Select value = {"choice"} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value = {choice1} onChange={updateChoice1}>
+                    <option value="Select an option">Select an option</option>
                     <option value="Structured and organized">Structured and organized</option>
                     <option value="Problem-solving and analytical">Problem-solving and analytical</option>
                     <option value="Collaborative and people-oriented">Collaborative and people-oriented</option>
@@ -64,8 +113,8 @@ function Basic() {
             
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which personality traits do you resonate with the most?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice2} onChange={updateChoice2}>
+                <option value="Select an option">Select an option</option>
                     <option value="Detail-oriented and meticulous">Detail-oriented and meticulous</option>
                     <option value="Logical and analytical">Logical and analytical</option>
                     <option value="Compassionate and empathetic">Compassionate and empathetic</option>
@@ -80,8 +129,8 @@ function Basic() {
 
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which of the following is true about you?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice3} onChange={updateChoice3}>
+                <option value="Select an option">Select an option</option>
                     <option value="Very organized">Very organized</option>
                     <option value="Organized">Organized</option>
                     <option value="Somewhat organized">Somewhat organized</option>
@@ -92,8 +141,8 @@ function Basic() {
 
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which career-related activities do you find most fulfilling?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice4} onChange={updateChoice4}>
+                <option value="Select an option">Select an option</option>
                     <option value="Organizing and maintaining order">Organizing and maintaining order</option>
                     <option value="Analyzing data and solving complex problems">Analyzing data and solving complex problems</option>
                     <option value="Helping others and fostering connections">Helping others and fostering connections</option>
@@ -106,8 +155,8 @@ function Basic() {
 
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which challenges are you eager to take on?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice5} onChange={updateChoice5}>
+                <option value="Select an option">Select an option</option>
                     <option value="Ensuring accuracy and precision">Ensuring accuracy and precision</option>
                     <option value="Tackling intellectual puzzles and scientific inquiries">Tackling intellectual puzzles and scientific inquiries</option>
                     <option value="Addressing social issues and making a difference">Addressing social issues and making a difference</option>
@@ -120,8 +169,8 @@ function Basic() {
 
             <Form.Group controlId="basicQuestions">
                 <Form.Label>What would you do on a weekend?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice6} onChange={updateChoice6}>
+                <option value="Select an option">Select an option</option>
                     <option value="Go to the movies with a friend or boy/girlfriend">Go to the movies with a friend or boy/girlfriend</option>
                     <option value="Go for a walk along the nearest lake near your housel">Go for a walk along the nearest lake near your house</option>
                     <option value="Go to a party with friends">Go to a party with friends</option>
@@ -134,8 +183,8 @@ function Basic() {
 
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which academic area do you prefer?</Form.Label>
-                <Form.Select value={choice} onChange={updateChoice}>
-                <option value="">Select an option</option>
+                <Form.Select value={choice7} onChange={updateChoice7}>
+                <option value="Select an option">Select an option</option>
                     <option value="Technology/Engineering">Technology/Engineering</option>
                     <option value="Humanities">Humanities</option>
                     <option value="Business">Business</option>
