@@ -42,7 +42,7 @@ function Basic() {
         <div>
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which work environment aligns best with your interests?</Form.Label>
-                <Form.Select value = {"choice"} onChange={updateChoice}>
+                <Form.Select value = {choice} onChange={updateChoice}>
                 <option value="">Select an option</option>
                     <option value="Structured and organized">Structured and organized</option>
                     <option value="Problem-solving and analytical">Problem-solving and analytical</option>
