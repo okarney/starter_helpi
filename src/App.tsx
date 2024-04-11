@@ -17,12 +17,12 @@ if (prevKey !== null) {
 function BasicQuestions() {
   const navigate = useNavigate();
 
-  function handleClick() {
+  function handleClick2() {
     navigate('/BasicQuestions');
   }
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={handleClick2}>
     Basic Assessment
     </button>
   );
@@ -31,14 +31,14 @@ function BasicQuestions() {
 function DetailedQuestions() {
   const navigate = useNavigate();
 
-  function handleClick() {
+  function handleClick1() {
     navigate('/DetailedQuestions');
   }
 
   return (
     <button
     type="button"
-    onClick={handleClick}
+    onClick={handleClick1}
     style={{ marginLeft: '20px' }}>
     Detailed Assessment
     </button>
