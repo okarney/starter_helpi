@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from 'react-router-dom';
 import './router';
+//import Link from 'next/link';
+//import Basic from './BasicQuestions';
+//import Detailed from './DetailedQuestions';
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -15,30 +24,32 @@ if (prevKey !== null) {
 }
 
 function BasicQuestions() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  function handleClick() {
-    navigate('/BasicQuestions');
-  }
+  // function handleClick() {
+  //   this.router.navigate(['/BasicQuestions']);
+  // }
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" 
+    //onClick={handleClick}
+    >
     Basic Assessment
     </button>
   );
 }
 
 function DetailedQuestions() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  function handleClick() {
-    navigate('/DetailedQuestions');
-  }
+  // function handleClick() {
+  //   navigate('/DetailedQuestions');
+  // }
 
   return (
     <button
     type="button"
-    onClick={handleClick}
+    //onClick={handleClick}
     style={{ marginLeft: '20px' }}>
     Detailed Assessment
     </button>
@@ -86,15 +97,15 @@ function App() {
         <span>Khadija Mohammadi</span>
         <br></br>
         {/*Insert Next Name Below!!!*/}
+        
         <p>
           <div style={{ margin: '30px 0' }}>
-            
-
+          
             <BasicQuestions/>
-            <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
+            <Link to="/BasicQuestions">Go to Basic Page</Link>
+          
             <DetailedQuestions/>
-            <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
-
+            <Link to="/DetailedQuestions">Go to Detailed Page</Link>
 
           </div>
         </p>

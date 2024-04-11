@@ -5,6 +5,9 @@ import App from "./App";
 import Detailed from "./DetailedQuestions";
 import Basic from "./BasicQuestions";
  
+
+
+
 function Routerer() {
     return (
         <div>

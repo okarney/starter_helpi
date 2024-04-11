@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Routerer from './router';
+//import Routerer from './router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+//import Link from 'next/link';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routerer/> {/* Use Routerer here to wrap your app in a Router */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
