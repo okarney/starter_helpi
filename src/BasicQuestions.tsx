@@ -95,7 +95,7 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
     <div className="App">
       <header className="App-header">
         <h1><BasicExample progress={progress}></BasicExample></h1>
-        <h1>Our Names</h1>
+        <h1>Basic Questions</h1>
         <br></br>
         <div>
             <Form.Group controlId="basicQuestions">
@@ -199,21 +199,22 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
             {/*The user is feeling {emotion}.*/}
         </div>
         {/*<span>Basic Questions!</span>*/}
+
         
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        
+        <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress >= 100)}>Get Career Choices</Button>
         <p>
         <Link to="/">go back</Link>
         </p>
-        <a
+        {/*<a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+  </a>*/}
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
