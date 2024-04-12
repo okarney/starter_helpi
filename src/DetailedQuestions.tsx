@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BasicExample } from './progressBar';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -13,6 +14,16 @@ if (prevKey !== null) {
 
 function Detailed() {
   const [key, setKey] = useState<string>(keyData); //for api key input
+  const [progress, setProgress] = useState<number>(0)
+
+  function updateProgress(originalValue: string, event: string){
+    if (originalValue === "" && event !== "") {
+      setProgress(progress + 15)
+    }
+    else if (originalValue !== "" && event === "") {
+      setProgress(progress - 15)
+    }
+  }
   
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
@@ -22,6 +33,7 @@ function Detailed() {
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
+    updateProgress(q1Response,event.target.value);
     setKey(event.target.value);
   }
 
@@ -30,6 +42,7 @@ function Detailed() {
   const [q1Response, setQ1Response] = useState<string>("");
 
   function updateQ1Response(event: React.ChangeEvent<HTMLInputElement>) {
+    updateProgress(q1Response, event.target.value);
     setQ1Response(event.target.value)
   }
 
@@ -38,6 +51,7 @@ function Detailed() {
 const [q2Response, setQ2Response] = useState<string>("");
 
 function updateQ2Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q2Response, event.target.value);
   setQ2Response(event.target.value)
 }
 
@@ -46,6 +60,7 @@ function updateQ2Response(event: React.ChangeEvent<HTMLInputElement>) {
 const [q3Response, setQ3Response] = useState<string>("");
 
 function updateQ3Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q3Response, event.target.value);
   setQ3Response(event.target.value)
 }
 
@@ -54,6 +69,7 @@ function updateQ3Response(event: React.ChangeEvent<HTMLInputElement>) {
 const [q4Response, setQ4Response] = useState<string>("");
 
 function updateQ4Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q4Response, event.target.value);
   setQ4Response(event.target.value)
 }
 
@@ -62,6 +78,7 @@ function updateQ4Response(event: React.ChangeEvent<HTMLInputElement>) {
 const [q5Response, setQ5Response] = useState<string>("");
 
 function updateQ5Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q5Response, event.target.value);
   setQ5Response(event.target.value)
 }
 
@@ -70,6 +87,7 @@ function updateQ5Response(event: React.ChangeEvent<HTMLInputElement>) {
 const [q6Response, setQ6Response] = useState<string>("");
 
 function updateQ6Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q6Response, event.target.value);
   setQ6Response(event.target.value)
 }
 
@@ -78,6 +96,7 @@ function updateQ6Response(event: React.ChangeEvent<HTMLInputElement>) {
 const [q7Response, setQ7Response] = useState<string>("");
 
 function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
+  updateProgress(q7Response, event.target.value);
   setQ7Response(event.target.value)
 }
 
@@ -93,7 +112,7 @@ const [submitted, setSubmitted] = useState<boolean>(false);
   return (
     <div className="App">
       <header className="App-header">
-        
+      <h1><BasicExample progress={progress}></BasicExample></h1>
       <h1>Detailed Questions!</h1>
 
       <Form.Group controlId="question1">

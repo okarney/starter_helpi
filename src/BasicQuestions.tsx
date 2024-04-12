@@ -3,8 +3,6 @@ import './App.css';
 import { Button, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BasicExample } from './progressBar';
-
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
   return <span>There is actually something here</span>
