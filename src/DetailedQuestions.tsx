@@ -100,6 +100,15 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
   setQ7Response(event.target.value)
 }
 
+// submit button useState
+//Remove no unused vars when done this
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const [submitted, setSubmitted] = useState<boolean>(false);
+
+
+
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -153,6 +162,11 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
       <Form.Control
         value={q7Response}
         onChange={updateQ7Response} />
+
+        <br></br>
+
+  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!submitted}>Get Career Choices</Button>
+
   </Form.Group>
   
         <br></br>        
@@ -167,6 +181,8 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+
+
     </div>
   );
 }
