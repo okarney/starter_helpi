@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 import { BasicExample } from './progressBar';
 
 
-function App(){
-  return <span>There is actually something here</span>
-}
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
