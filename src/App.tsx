@@ -78,12 +78,12 @@ function App() {
       <header className="App-header">
         <h1>The Career Helpi</h1>
         
-        <p>
+        {/*<p>
           <div style={{ margin: '30px 0' }}>
             
 
           </div>
-        </p>
+  </p>*/}
 
         <Container>
                 <Row>
