@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './router';
 
@@ -77,35 +77,30 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Our Names</h1>
-        <br></br>
-        <span>Olivia Karney</span>
-        <span>Jacob Whitman</span>
-        <span>Zahra Temori</span>
-        <span>Khadija Mohammadi</span>
-        <br></br>
-        {/*Insert Next Name Below!!!*/}
+        <h1>The Career Helpi</h1>
+        
         <p>
           <div style={{ margin: '30px 0' }}>
             
 
-            <BasicQuestions/>
-            <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
-            <DetailedQuestions/>
-            <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
-
-
           </div>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Container>
+                <Row>
+                    <Col>
+                    <BasicQuestions/>
+                    <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
+                        
+                    </Col>
+                    <Col>
+                    <DetailedQuestions/>
+                    <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
+
+                    </Col>
+                </Row>
+            </Container>
+        
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
@@ -113,6 +108,7 @@ function App() {
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+      <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
     </div>
   );
 }
