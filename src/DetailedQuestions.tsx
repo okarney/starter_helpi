@@ -165,7 +165,7 @@ const [submitted, setSubmitted] = useState<boolean>(false);
 
         <br></br>
 
-  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!submitted}>Get Career Choices</Button>
+  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress>=100)}>Get Career Choices</Button>
 
   </Form.Group>
   
