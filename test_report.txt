@@ -472,6 +472,7 @@
     The above error occurred in the <Link> component:
     
         at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:924:7)
+        at div
         at BasicQuestions
         at div
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Col.js:64:8
@@ -481,7 +482,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
         at header
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:42:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:46:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -521,6 +522,7 @@
     The above error occurred in the <Link> component:
     
         at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:924:7)
+        at div
         at DetailedQuestions
         at div
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Col.js:64:8
@@ -530,7 +532,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
         at header
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:42:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:46:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -567,7 +569,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (166 ms)
+  ✕ renders learn react link (182 ms)
 
   ● renders learn react link
 
@@ -605,17 +607,17 @@ FAIL src/App.test.tsx
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |   15.84 |    11.53 |    8.82 |   15.84 |                   
- App.tsx               |   66.66 |       50 |      60 |   66.66 | 13,46-53          
+All files              |   16.66 |    11.53 |    8.82 |   16.66 |                   
+ App.tsx               |   66.66 |       50 |      60 |   66.66 | 13,50-57          
  BasicQuestions.tsx    |   10.52 |       10 |       0 |   10.52 | 8,15-204          
  DetailedQuestions.tsx |   10.25 |       10 |       0 |   10.25 | 12-168            
- index.tsx             |       0 |      100 |     100 |       0 | 9-21              
+ index.tsx             |       0 |      100 |     100 |       0 | 8-18              
  progressBar.tsx       |       0 |      100 |       0 |       0 | 6                 
  reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- router.tsx            |       0 |      100 |       0 |       0 | 9                 
+ router.tsx            |      50 |      100 |       0 |      50 | 8                 
 -----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.869 s
+Time:        2.604 s
 Ran all test suites.
