@@ -12,7 +12,7 @@ if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
 
-function Detailed() {
+function DetailedQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
 
@@ -187,4 +187,4 @@ const [submitted, setSubmitted] = useState<boolean>(false);
   );
 }
 
-export default Detailed;
+export default DetailedQuestions;

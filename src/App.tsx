@@ -15,9 +15,11 @@ if (prevKey !== null) {
 
 function BasicQuestions() {
   return (
+    <div>
     <Link to="/BasicQuestions">
         <Button className="BasicButton">Basic Questions</Button>
       </Link>
+      </div>
   );
 }
 
@@ -25,11 +27,13 @@ function DetailedQuestions() {
 
 
   return (
+    <div>
     <Link to="/DetailedQuestions">
       <Button className="DetailedButton">
       Detailed Assessment
       </Button>
     </Link>
+    </div>
     
   );
 }

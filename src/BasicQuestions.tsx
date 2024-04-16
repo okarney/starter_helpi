@@ -15,7 +15,7 @@ if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
 
-function Basic() {
+function BasicQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
 
@@ -223,4 +223,4 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
     </div>
   );
 }
-export default Basic;
+export default BasicQuestions;
