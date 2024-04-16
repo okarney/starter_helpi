@@ -1,25 +1,20 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route }
-    from "react-router-dom";
-import App from "./App";
-import Detailed from "./DetailedQuestions";
-import Basic from "./BasicQuestions";
- 
-function Routerer() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import App from './App';
+import BasicQuestions from './BasicQuestions';
+import DetailedQuestions from './DetailedQuestions';
+
+const RootRouter = () => {
     return (
-        <div>
-            <Router>
-                <Routes>
-                    <Route path="/BasicQuestions"
-                        element={<Basic />} />
-                    <Route path="/DetailedQuestions"
-                        element={<Detailed />} />
-                    <Route path="/"
-                        element={<App />} />
-                </Routes>
-            </Router>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<App />} />
+                <Route path="/BasicQuestions" element={<BasicQuestions />} />
+                <Route path="/DetailedQuestions" element={<DetailedQuestions />} />
+                {/* You can add more routes here */}
+            </Routes>
+        </Router>
     );
-}
- 
-export default Routerer;
+};
+
+export default RootRouter;

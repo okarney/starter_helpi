@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RootRouter from './router'; // Import the RootRouter component that manages all routes
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router> {/* Use Routerer here to wrap your app in a Router */}
+    <RootRouter />
   </React.StrictMode>,
   document.getElementById('root')
 );
