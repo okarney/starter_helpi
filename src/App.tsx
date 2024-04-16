@@ -3,6 +3,7 @@ import './App.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './router';
+import { Link } from "react-router-dom";
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -14,33 +15,23 @@ if (prevKey !== null) {
 }
 
 function BasicQuestions() {
-  const navigate = useNavigate();
-
-  function handleClick2() {
-    navigate('/BasicQuestions');
-  }
-
   return (
-    <button type="button" onClick={handleClick2}>
-    Basic Assessment
-    </button>
+    <Link to="/BasicQuestions">
+        <Button className="BasicButton">Basic Questions</Button>
+      </Link>
   );
 }
 
 function DetailedQuestions() {
-  const navigate = useNavigate();
 
-  function handleClick1() {
-    navigate('/DetailedQuestions');
-  }
 
   return (
-    <button
-    type="button"
-    onClick={handleClick1}
-    style={{ marginLeft: '20px' }}>
-    Detailed Assessment
-    </button>
+    <Link to="/DetailedQuestions">
+      <Button className="DetailedButton">
+      Detailed Assessment
+      </Button>
+    </Link>
+    
   );
 }
 
@@ -49,16 +40,6 @@ function DetailedQuestions() {
 function App() {
     
  
-    // const goToDetailed = () => {
- 
-    //     // This will navigate to second component
-    //     Nav('/DetailedQuestions');
-    // };
-    // const gotToBasic = () => {
- 
-    //     // This will navigate to first component
-    //     Nav('/BasicQuestions');
-    // };
   const [key, setKey] = useState<string>(keyData); //for api key input
   
   //sets the local storage item to the api key the user inputed
