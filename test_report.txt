@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
   console.error
-    Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
+    Error: Uncaught [TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.]
         at reportException (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
         at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -40,14 +40,11 @@
         at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
         at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
         at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
-        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) Error: useNavigate() may be used only in the context of a <Router> component.
-        at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
-        at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
-        at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at BasicQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:17:31)
+        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:937:11)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-        at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+        at updateForwardRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:19226:20)
+        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21636:16)
         at HTMLUnknownElement.callCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
         at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -121,7 +118,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
+    Error: Uncaught [TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.]
         at reportException (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
         at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -158,14 +155,11 @@
         at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
         at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
         at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
-        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) Error: useNavigate() may be used only in the context of a <Router> component.
-        at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
-        at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
-        at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at DetailedQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:31:31)
+        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:937:11)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-        at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+        at updateForwardRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:19226:20)
+        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21636:16)
         at HTMLUnknownElement.callCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
         at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -239,7 +233,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
+    Error: Uncaught [TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.]
         at reportException (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
         at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -277,14 +271,11 @@
         at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
         at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
         at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
-        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) Error: useNavigate() may be used only in the context of a <Router> component.
-        at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
-        at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
-        at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at BasicQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:17:31)
+        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:937:11)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-        at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+        at updateForwardRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:19226:20)
+        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21636:16)
         at HTMLUnknownElement.callCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
         at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -360,7 +351,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    Error: Uncaught [Error: useNavigate() may be used only in the context of a <Router> component.]
+    Error: Uncaught [TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.]
         at reportException (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:341:9)
         at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
@@ -398,14 +389,11 @@
         at runJest (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/runJest.js:404:19)
         at _run10000 (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:320:7)
         at runCLI (/home/runner/work/starter_helpi/starter_helpi/node_modules/@jest/core/build/cli/index.js:173:3)
-        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) Error: useNavigate() may be used only in the context of a <Router> component.
-        at Object.invariant [as UNSAFE_invariant] (/home/runner/work/starter_helpi/starter_helpi/node_modules/@remix-run/router/history.ts:494:11)
-        at useNavigateUnstable (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:188:3)
-        at useNavigate (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router/lib/hooks.tsx:184:46)
-        at DetailedQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:31:31)
+        at Object.run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-cli/build/cli/index.js:155:37) TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:937:11)
         at renderWithHooks (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-        at mountIndeterminateComponent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+        at updateForwardRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:19226:20)
+        at beginWork (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:21636:16)
         at HTMLUnknownElement.callCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
         at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
         at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
@@ -481,9 +469,10 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    The above error occurred in the <BasicQuestions> component:
+    The above error occurred in the <Link> component:
     
-        at BasicQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:17:31)
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:924:7)
+        at BasicQuestions
         at div
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Col.js:64:8
         at div
@@ -492,7 +481,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
         at header
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:62:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:42:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -529,9 +518,10 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
   console.error
-    The above error occurred in the <DetailedQuestions> component:
+    The above error occurred in the <Link> component:
     
-        at DetailedQuestions (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:31:31)
+        at LinkWithRef (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-router-dom/index.tsx:924:7)
+        at DetailedQuestions
         at div
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Col.js:64:8
         at div
@@ -540,7 +530,7 @@
         at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-bootstrap/cjs/Container.js:14:3
         at header
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:62:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:42:33)
     
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
@@ -577,27 +567,24 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (202 ms)
+  ✕ renders learn react link (173 ms)
 
   ● renders learn react link
 
-    useNavigate() may be used only in the context of a <Router> component.
+    TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
 
-      15 |
-      16 | function BasicQuestions() {
-    > 17 |   const navigate = useNavigate();
-         |                               ^
-      18 |
-      19 |   function handleClick2() {
-      20 |     navigate('/BasicQuestions');
+      4 |
+      5 | test('renders learn react link', () => {
+    > 6 |   render(<App />);
+        |         ^
+      7 |   const linkElement = screen.getByText(/learn react/i);
+      8 |   expect(linkElement).toBeInTheDocument();
+      9 | });
 
-      at Object.invariant [as UNSAFE_invariant] (node_modules/@remix-run/router/history.ts:494:11)
-      at useNavigateUnstable (node_modules/react-router/lib/hooks.tsx:188:3)
-      at useNavigate (node_modules/react-router/lib/hooks.tsx:184:46)
-      at BasicQuestions (src/App.tsx:17:31)
+      at LinkWithRef (node_modules/react-router-dom/index.tsx:937:11)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+      at updateForwardRef (node_modules/react-dom/cjs/react-dom.development.js:19226:20)
+      at beginWork (node_modules/react-dom/cjs/react-dom.development.js:21636:16)
       at beginWork$1 (node_modules/react-dom/cjs/react-dom.development.js:27426:14)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26560:12)
       at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
@@ -615,20 +602,20 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
------------------------|---------|----------|---------|---------|----------------------
-File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
------------------------|---------|----------|---------|---------|----------------------
-All files              |   15.23 |    11.53 |    8.33 |   15.23 |                      
- App.tsx               |      50 |       50 |   42.85 |      50 | 13,20-23,34-37,66-73 
- BasicQuestions.tsx    |   10.52 |       10 |       0 |   10.52 | 8,15-204             
- DetailedQuestions.tsx |   10.25 |       10 |       0 |   10.25 | 12-168               
- index.tsx             |       0 |      100 |     100 |       0 | 8-18                 
- progressBar.tsx       |       0 |      100 |       0 |       0 | 6                    
- reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10                 
- router.tsx            |       0 |      100 |       0 |       0 | 9                    
------------------------|---------|----------|---------|---------|----------------------
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |   15.84 |    11.53 |    8.82 |   15.84 |                   
+ App.tsx               |   66.66 |       50 |      60 |   66.66 | 13,46-53          
+ BasicQuestions.tsx    |   10.52 |       10 |       0 |   10.52 | 8,15-204          
+ DetailedQuestions.tsx |   10.25 |       10 |       0 |   10.25 | 12-168            
+ index.tsx             |       0 |      100 |     100 |       0 | 8-18              
+ progressBar.tsx       |       0 |      100 |       0 |       0 | 6                 
+ reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
+ router.tsx            |       0 |      100 |       0 |       0 | 9                 
+-----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.713 s
+Time:        2.604 s
 Ran all test suites.
