@@ -16,6 +16,8 @@ function DetailedQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
 
+  const [finished, setFinished] = useState<boolean> (false);
+
   function updateProgress(originalValue: string, event: string){
     if (originalValue === "" && event !== "") {
       setProgress(progress + 15)
@@ -165,7 +167,11 @@ const [submitted, setSubmitted] = useState<boolean>(false);
 
         <br></br>
 
-  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress>=100)}>Get Career Choices</Button>
+  <Button onClick={() => setFinished(true)} disabled={!(progress>=100)}>Get Career Choices</Button>
+  <div>
+  {finished ? <span> You have successfully submitted your responds!</span>: <span></span>}
+  </div>
+
 
   </Form.Group>
   
