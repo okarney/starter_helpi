@@ -9,6 +9,7 @@ function App(){
 }
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
+let text: string = "Finished the Quize"
 const saveKeyData = "MYKEY";
 const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
 if (prevKey !== null) {
@@ -18,6 +19,8 @@ if (prevKey !== null) {
 function BasicQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
+
+  const [finished, setFinished] = useState<boolean> (false);
 
   const [choice1, setChoice1] = useState<string>("Select an option");
   const [choice2, setChoice2] = useState<string>("Select an option");
@@ -201,7 +204,8 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
         
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
         <p>
         <Link to="/">go back</Link>
         </p>
