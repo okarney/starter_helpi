@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../App.css';
 import { Button, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { BasicExample } from './progressBar';
+import { BasicExample } from '../progressBar';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
   return <span>There is actually something here</span>
@@ -18,8 +18,6 @@ if (prevKey !== null) {
 function BasicQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
-
-  const [finished, setFinished] = useState<boolean> (false);
 
   const [choice1, setChoice1] = useState<string>("Select an option");
   const [choice2, setChoice2] = useState<string>("Select an option");
@@ -203,8 +201,7 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
         
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
-        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
+        <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress >= 100)}>Get Career Choices</Button>
         <p>
         <Link to="/">go back</Link>
         </p>

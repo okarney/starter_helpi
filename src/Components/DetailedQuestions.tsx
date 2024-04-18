@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { BasicExample } from './progressBar';
+import { BasicExample } from '../progressBar';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -15,8 +15,6 @@ if (prevKey !== null) {
 function DetailedQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
-
-  const [finished, setFinished] = useState<boolean> (false);
 
   function updateProgress(originalValue: string, event: string){
     if (originalValue === "" && event !== "") {
@@ -167,11 +165,7 @@ const [submitted, setSubmitted] = useState<boolean>(false);
 
         <br></br>
 
-  <Button onClick={() => setFinished(true)} disabled={!(progress>=100)}>Get Career Choices</Button>
-  <div>
-  {finished ? <span> You have successfully submitted your responds!</span>: <span></span>}
-  </div>
-
+  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress>=100)}>Get Career Choices</Button>
 
   </Form.Group>
   

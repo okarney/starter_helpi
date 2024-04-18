@@ -1,99 +1,61 @@
-import React, { useState } from 'react';
-import './App.css';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import './router';
-import { Link } from "react-router-dom";
-
-
-//local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
-let keyData = "";
-const saveKeyData = "MYKEY";
-const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
-if (prevKey !== null) {
-  keyData = JSON.parse(prevKey);
-}
-
-function BasicQuestions() {
-  return (
-    <div>
-    <Link to="/BasicQuestions">
-        <Button className="BasicButton">Basic Questions</Button>
-      </Link>
-      </div>
-  );
-}
-
-function DetailedQuestions() {
-
-
-  return (
-    <div>
-    <Link to="/DetailedQuestions">
-      <Button className="DetailedButton">
-      Detailed Assessment
-      </Button>
-    </Link>
-    </div>
-    
-  );
-}
-
-
-
-function App() {
-    
+import "./App.css";
+// importing components from react-router-dom package
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
  
-  const [key, setKey] = useState<string>(keyData); //for api key input
-  
-  //sets the local storage item to the api key the user inputed
-  function handleSubmit() {
-    localStorage.setItem(saveKeyData, JSON.stringify(key));
-    window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
-  }
+// import Home component
+import Home from "./Components/Home";
+import DetailedQuestions from "./Components/DetailedQuestions";
+import BasicQuestions from "./Components/BasicQuestions";
+ 
+function App() {
+    return (
+        <>
+            {/* This is the alias of BrowserRouter i.e. Router */}
+            <Router>
+                <Routes>
+                    {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+                    <Route
+                        path="/"
+                        element={<Home />}
+                    />
 
-
-  //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
-  function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
-    setKey(event.target.value);
-    
-  }
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>The Career Helpi</h1>
-        
-        {/*<p>
-          <div style={{ margin: '30px 0' }}>
-            
-
-          </div>
-  </p>*/}
-
-        <Container>
-                <Row>
-                    <Col>
-                    <BasicQuestions/>
-                    <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
-                        
-                    </Col>
-                    <Col>
-                    <DetailedQuestions/>
-                    <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
-
-                    </Col>
-                </Row>
-            </Container>
-        
-      </header>
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form>
-      <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
-    </div>
-  );
+                    
+                    {/* This route is for about component 
+          with exact path "/about", in component 
+          props we passes the imported component*/}
+                    <Route
+                        path="/BasicQuestions"
+                        element={<BasicQuestions />}
+                    />
+ 
+                    {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
+                    <Route
+                        path="/DetailedQuestions"
+                        element={<DetailedQuestions />}
+                    />
+ 
+                    {/* If any route mismatches the upper 
+          route endpoints then, redirect triggers 
+          and redirects app to home component with to="/" */}
+                    {/* <Redirect to="/" /> */}
+                    <Route
+                        path="*"
+                        element={<Navigate to="/" />}
+                    />
+                </Routes>
+            </Router>
+        </>
+    );
 }
-
+ 
 export default App;
+
