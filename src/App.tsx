@@ -8,9 +8,9 @@ import {
 } from "react-router-dom";
  
 // import Home component
-import Home from "./components/Home";
-import DetailedQuestions from "./components/DetailedQuestions";
-import BasicQuestions from "./components/BasicQuestions";
+import Home from "./Components/Home";
+import DetailedQuestions from "./Components/DetailedQuestions";
+import BasicQuestions from "./Components/BasicQuestions";
  
 function App() {
     return (
