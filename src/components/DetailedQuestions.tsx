@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
+import '../App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { BasicExample } from './progressBar';
+import { BasicExample } from '../progressBar';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";

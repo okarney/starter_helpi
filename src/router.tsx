@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
-import BasicQuestions from './BasicQuestions';
-import DetailedQuestions from './DetailedQuestions';
+import BasicQuestions from './components/BasicQuestions';
+import DetailedQuestions from './components/DetailedQuestions';
 
 const RootRouter = () => {
     return (
