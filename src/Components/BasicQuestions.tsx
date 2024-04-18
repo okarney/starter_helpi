@@ -104,7 +104,11 @@ function OurHeader(){
 
   return(
     <div className="App-header2">
-      <h1>The Career Helpi</h1>
+      
+      <div className="App-header2">
+        <h1>The Career Helpi</h1>
+      </div>
+
       <Button className="goToHome" onClick={goToHome}>
           Go Back
       </Button>

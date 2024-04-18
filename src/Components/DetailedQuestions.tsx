@@ -108,7 +108,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const [submitted, setSubmitted] = useState<boolean>(false);
 
-
+//hook for buttons to work
 const navigate = useNavigate();
 
 const goToHome = () => {
@@ -122,6 +122,10 @@ function OurHeader(){
 
   return(
     <div className="App-header2">
+      
+      <div className="App-header2">
+        <h1>The Career Helpi</h1>
+      </div>
       
       <Button className="goToHome" onClick={goToHome}>
           Go Back
