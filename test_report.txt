@@ -281,7 +281,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (215 ms)
+  ✕ renders learn react link (176 ms)
 
   ● renders learn react link
 
@@ -320,19 +320,19 @@ FAIL src/App.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |    12.5 |    11.53 |    2.94 |    12.5 |                   
+All files               |    11.3 |       10 |    2.56 |    11.3 |                   
  src                    |    8.33 |        0 |      25 |    8.33 |                   
   App.tsx               |     100 |      100 |     100 |     100 |                   
   index.tsx             |       0 |      100 |     100 |       0 | 9-19              
   progressBar.tsx       |       0 |      100 |       0 |       0 | 6                 
   reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- src/Components         |   13.04 |    13.63 |       0 |   13.04 |                   
-  BasicQuestions.tsx    |   10.52 |       10 |       0 |   10.52 | 8,15-204          
-  DetailedQuestions.tsx |   10.25 |       10 |       0 |   10.25 | 12-168            
-  Home.tsx              |   26.66 |       50 |       0 |   26.66 | 14-75             
+ src/Components         |   11.65 |    11.53 |       0 |   11.65 |                   
+  BasicQuestions.tsx    |     9.3 |     8.33 |       0 |     9.3 | 9,17-236          
+  DetailedQuestions.tsx |    9.09 |     8.33 |       0 |    9.09 | 14-200            
+  Home.tsx              |      25 |       50 |       0 |      25 | 14-89             
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.766 s
+Time:        2.646 s
 Ran all test suites.
