@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
+import { useNavigate } from 'react-router-dom';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
+
 const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
 if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
@@ -15,6 +17,7 @@ if (prevKey !== null) {
 function DetailedQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
+  const [finished, setFinished] = useState<boolean> (false);
 
   function updateProgress(originalValue: string, event: string){
     if (originalValue === "" && event !== "") {
@@ -105,12 +108,41 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const [submitted, setSubmitted] = useState<boolean>(false);
 
+//hook for buttons to work
+const navigate = useNavigate();
 
+const goToHome = () => {
+    // This will navigate to first component
+    navigate('/Home');
+  };
+
+
+function OurHeader(){
+  
+
+  return(
+    <div className="App-header2">
+      
+      <Button className="goToHome" onClick={goToHome}>
+          ⇐
+      </Button>
+
+      <div className="App-header2">
+        <h1>The Career Helpi</h1>
+      </div>
+      
+      
+    </div>
+    
+  )
+}
 
 
 
   return (
     <div className="App">
+      <OurHeader/>
+      
       <header className="App-header">
       <h1><BasicExample progress={progress}></BasicExample></h1>
       <h1>Detailed Questions!</h1>
@@ -165,14 +197,13 @@ const [submitted, setSubmitted] = useState<boolean>(false);
 
         <br></br>
 
-  <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress>=100)}>Get Career Choices</Button>
+        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
 
   </Form.Group>
   
         <br></br>        
-        <p>
-        <Link to="/">go back</Link>
-        </p>
+        
         
       </header>
       <Form>

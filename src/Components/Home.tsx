@@ -41,7 +41,21 @@ if (prevKey !== null) {
 //   );
 // }
 
+function OurHeader(){
+  
 
+    return(
+      <div className="App-header2">
+        
+        <div className="App-header2">
+          <h1>The Career Helpi</h1>
+        </div>
+  
+    
+      </div>
+      
+    )
+  }
 
 function Home() {
     const navigate = useNavigate();
@@ -74,6 +88,7 @@ function Home() {
   }
   return (
     <div className="App">
+        <OurHeader/>
       <header className="App-header">
         <h1>The Career Helpi</h1>
         

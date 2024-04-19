@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Button, Form} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
+import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
   return <span>There is actually something here</span>
 }
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
+
 const saveKeyData = "MYKEY";
 const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
 if (prevKey !== null) {
@@ -19,6 +21,7 @@ function BasicQuestions() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   const [progress, setProgress] = useState<number>(0)
 
+  const [finished, setFinished] = useState<boolean> (false);
   const [choice1, setChoice1] = useState<string>("Select an option");
   const [choice2, setChoice2] = useState<string>("Select an option");
   const [choice3, setChoice3] = useState<string>("Select an option");
@@ -88,9 +91,37 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
   setChoice7(event.target.value);
 }
 
+const navigate = useNavigate();
+
+const goToHome = () => {
+    // This will navigate to first component
+    navigate('/Home');
+  };
+
+
+function OurHeader(){
+  
+
+  return(
+    <div className="App-header2">
+
+      <Button className="goToHome" onClick={goToHome}>
+          ⇐
+      </Button>
+      
+      <div className="App-header2">
+        <h1>The Career Helpi</h1>
+      </div>
+
+    </div>
+    
+  )
+}
+
 
   return (
     <div className="App">
+      <OurHeader/>
       <header className="App-header">
         <h1><BasicExample progress={progress}></BasicExample></h1>
         <h1>Basic Questions</h1>
@@ -201,10 +232,9 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
         
         <br></br>
         {/*Insert Next Name Below!!!*/}
-        <Button onClick={() => <span>Sending Responses to GPT!!!!</span>} disabled={!(progress >= 100)}>Get Career Choices</Button>
-        <p>
-        <Link to="/">go back</Link>
-        </p>
+        
+        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
         {/*<a
           className="App-link"
           href="https://reactjs.org"
