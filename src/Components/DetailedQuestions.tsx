@@ -51,9 +51,9 @@ function DetailedQuestions() {
   
   const API_KEY = key;
 
-  const openai = new OpenAI(
-    {apiKey: API_KEY, dangerouslyAllowBrowser: true}
-);
+//   const openai = new OpenAI(
+//     {apiKey: API_KEY, dangerouslyAllowBrowser: true}
+// );
   
   async function callOpenAIAPI() {
     //const response = await getResponse(input);
