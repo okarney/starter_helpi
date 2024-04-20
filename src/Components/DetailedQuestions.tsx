@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {OpenAI} from "openai"
 import '../App.css';
 import { Button, Form } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
@@ -27,6 +28,73 @@ function DetailedQuestions() {
       setProgress(progress - 15)
     }
   }
+
+  // CHATGPT THINGS
+
+
+  const [response, setResponse] = useState(""); // Response from GPT
+
+
+  // const APIBody = {
+  //     "model": 'gpt-3.5-turbo', // Specify the model you want to use
+  //     "prompt": "print the word hello in french",
+  //     "messages": [{"role": "user", "content": "Say this is a test!"}],
+  //     "temperature": 0.7,
+  //     "top_p": 1.0,
+  //     "max_tokens": 150,
+  //     "frequency_penalty": 0.0,
+  //     "presence_penalty": 0.0
+  // }
+  
+  
+  // send message to GPT function
+  
+  const API_KEY = key;
+
+  const openai = new OpenAI(
+    {apiKey: API_KEY, dangerouslyAllowBrowser: true}
+);
+  
+  async function callOpenAIAPI() {
+    //const response = await getResponse(input);
+    await fetch('https://api.openai.com/v1/chat/completions', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + API_KEY,
+      
+    },
+    body: JSON.stringify({
+      "model": 'gpt-3.5-turbo',
+      "messages": [{"role": "user", "content": "Say this is a test!"}],
+      "temperature": 0.7,
+
+    })
+}).then(response => response.json())
+.then(data => {
+    console.log('Response:', data);
+    setResponse(data.choices[0].message.content.trim());
+})
+.catch(error => {
+    console.error('Error:', error);
+  })
+};
+  
+  
+  console.log("hello")
+  
+  
+  console.log(response)
+  
+
+
+
+
+
+
+
+
+
   
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
@@ -104,9 +172,6 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 }
 
 // submit button useState
-//Remove no unused vars when done this
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const [submitted, setSubmitted] = useState<boolean>(false);
 
 //hook for buttons to work
 const navigate = useNavigate();
@@ -197,8 +262,14 @@ function OurHeader(){
 
         <br></br>
 
+        <Button onClick={callOpenAIAPI} disabled={!(progress>=100)}>CallGPT</Button>
+
+
         <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
         {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
+
+        <span>GPT Response: {response}</span>
+
 
   </Form.Group>
   
