@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {OpenAI} from "openai"
+//import {OpenAI} from "openai"
 import '../App.css';
 import { Button, Form } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
