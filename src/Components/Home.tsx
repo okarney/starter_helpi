@@ -4,8 +4,9 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import '../App';
 //import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-
-
+import olivia from './logo.png'
+import careerpic from './careerpic.png'
+//import {office} from './careervideo.mp4'
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -46,13 +47,17 @@ function OurHeader(){
 
     return(
       <div className="App-header2">
+        <div className = "navbar">
         
-        <div className="App-header2">
-          <h1>The Career Helpi</h1>
-        </div>
-  
-    
+        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+        </div> 
       </div>
+      
       
     )
   }
@@ -90,34 +95,34 @@ function Home() {
     <div className="App">
         <OurHeader/>
       <header className="App-header">
-        <h1>The Career Helpi</h1>
-        
-        {/*<p>
-          <div style={{ margin: '30px 0' }}>
-            
+        <div className='banner'>
+          <div className='left-column'>
+         {/*<video controls autoPlay loop muted playsInline>
+        <source src= 'src/Components/office.mp4' type="video/mp4"/>
+        Your browser does not support the video tag.
+    </video>*/}
+            <img src = {careerpic} alt = "Creer pic" />
 
           </div>
-  </p>*/}
-
-        <Container>
+          <div className='right-column'>
+          <h1>Career <span>Explorer</span></h1>
+        <h3><span>Explore your future</span> career with us!</h3>
+          <div className='btn'>
+          <Container>
                 <Row>
                 <Col>
-                    <Button className="BasicButton" onClick={goToBasic}>Basic Questions</Button>
-
-                    {/* <BasicQuestions/> */}
+                    <Button className="BasicButton" onClick={goToBasic}> Basic Assessment </Button>
                     <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
-                        
                     </Col>
                     <Col>
-                    <Button className="DetailedButton" onClick={goToDetailed}>
-                    Detailed Assessment
-                    </Button>
-                    {/* <DetailedQuestions/> */}
-                    <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive assessment featuring detailed questions.</p>
-
+                    <Button className="DetailedButton" onClick={goToDetailed}>Detailed Assessment</Button>
+                    <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive detailed questions.</p>
                     </Col>
                 </Row>
             </Container>
+            </div>
+          </div>
+        </div>
         
       </header>
       <Form>
@@ -132,3 +137,8 @@ function Home() {
 }
 
 export default Home;
+
+/*
+<li>Home</li>
+          <li><a href = "#">About</a></li>
+          <li><a href = "#">Contact</a></li>*/
