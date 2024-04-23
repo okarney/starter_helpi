@@ -22,7 +22,7 @@ function App() {
           with exact path "/", in component props 
           we passes the imported component*/}
                     <Route
-                        path="/Home"
+                        path="/"
                         element={<Home />}
                     />
 
