@@ -56,6 +56,8 @@ function DetailedQuestions() {
 // );
   
   async function callOpenAIAPI() {
+
+    setFinished(true);
     //const response = await getResponse(input);
     await fetch('https://api.openai.com/v1/chat/completions', {
     method: "POST",
@@ -65,10 +67,20 @@ function DetailedQuestions() {
       
     },
     body: JSON.stringify({
-      "model": 'gpt-3.5-turbo',
+      "model": 'gpt-4-turbo',
       "messages": [{
         "role": "user", 
-        "content": "write the word hello in french"
+        "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
+        
+        `Describe your hobbies and interests: ${q1Response}` +
+        `Describe your soft skills (teamwork, problem solving, leadership, communication, etc): ${q2Response}` +
+        `What subject areas intrigue you the most?: ${q3Response}` +
+        `Where do you envision your career path evolving towards?: ${q4Response}` +
+        `What technical skills do you possess or are interested in developing?: ${q5Response}` + 
+        `What is your dream place to live?: ${q6Response}` +
+        `Describe your personal values: ${q7Response}`
+
+
       }],
       "temperature": 0.7,
 
@@ -81,14 +93,7 @@ function DetailedQuestions() {
 .catch(error => {
     console.error('Error:', error);
   })
-};
-  
-  
-  console.log("hello")
-  
-  
-  console.log(response)
-  
+};  
 
 
 
@@ -265,13 +270,18 @@ function OurHeader(){
 
         <br></br>
 
-        <Button onClick={callOpenAIAPI} disabled={!(progress>=100)}>CallGPT</Button>
+        <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
+        <br></br>
 
-        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
         {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
 
-        <span>GPT Response: {response}</span>
+        <br></br>
+
+        <h2>GPT Response</h2>
+
+        <span>{response}</span>
 
 
   </Form.Group>
