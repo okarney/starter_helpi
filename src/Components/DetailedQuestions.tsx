@@ -6,6 +6,8 @@ import { Button, Form } from 'react-bootstrap';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
+import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
+
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -302,9 +304,12 @@ function OurHeader(){
         <br></br>
 
         {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
-        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
+        {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
         <br></br>
+
+        {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
+
 
         <h2>GPT Response</h2>
 
