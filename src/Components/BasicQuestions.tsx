@@ -4,7 +4,7 @@ import { Button, Form} from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
-import OpenAI from 'openai';
+//import OpenAI from 'openai';
 import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
@@ -281,7 +281,7 @@ function OurHeader(){
         <h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
-        
+
 
         <span>{response}</span>
 
