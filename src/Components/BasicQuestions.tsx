@@ -4,6 +4,8 @@ import { Button, Form} from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
+import OpenAI from 'openai';
+import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function App(){
   return <span>There is actually something here</span>
@@ -47,20 +49,63 @@ function BasicQuestions() {
       setProgress(progress - 15)
     }
   }
+  
+  //Gpt
+  const [response, setResponse] = useState(""); // Response from GPT
+
+  // send message to GPT function
+  
+  const API_KEY = key; // DO i need key or the real key?
+
+   //const openai = new OpenAI(
+     //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
+ //);
+  
+  async function callOpenAIAPI() {
+
+    setFinished(true);
+    //const response = await getResponse(input);
+    await fetch('https://api.openai.com/v1/chat/completions', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + API_KEY,
+      
+    },
+    body: JSON.stringify({
+      "model": 'gpt-4-turbo',
+      "messages": [{
+        "role": "user", 
+        "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
+        
+        `Which work environment aligns best with your interests?: ${choice1}` +
+        `Which personality traits do you resonate with the most?: ${choice2}` +
+        `Which of the following is true about you?: ${choice3}` +
+        `Which career-related activities do you find most fulfilling?: ${choice4}` +
+        `Which challenges are you eager to take on?: ${choice5}` + 
+        `What would you do on a weekend?: ${choice6}` +
+        `Which academic area do you prefer?: ${choice7}`
+
+
+      }],
+      "temperature": 0.7,
+
+    })
+}).then(response => response.json())
+.then(data => {
+    console.log('Response:', data);
+    setResponse(data.choices[0].message.content.trim());
+})
+.catch(error => {
+    console.error('Error:', error);
+  })
+};
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-  //function App(): JSX.Element {
-    // This is the State (Model)
-  //}
-    // This is the Control
-    /*
-    function updateChoice(event: React.ChangeEvent<HTMLSelectElement>) {
-        setChoice(event.target.value);
-    }
-    */
+  
     function updateChoice1(event: React.ChangeEvent<HTMLSelectElement>) {
       updateProgress(choice1, event.target.value);
       setChoice1(event.target.value);
@@ -126,7 +171,6 @@ function OurHeader(){
         <h1><BasicExample progress={progress}></BasicExample></h1>
         <h1>Basic Questions</h1>
         <br></br>
-        <div>
             <Form.Group controlId="basicQuestions">
                 <Form.Label>Which work environment aligns best with your interests?</Form.Label>
                 <Form.Select value = {choice1} onChange={updateChoice1}>
@@ -224,25 +268,29 @@ function OurHeader(){
                     <option value="Other">Other</option>
 
                 </Form.Select>
-            </Form.Group>
-            {/*The user is feeling {emotion}.*/}
-        </div>
-        {/*<span>Basic Questions!</span>*/}
+                <br></br>
 
+<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
+
+<br></br>
+
+{finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
+
+<br></br>
+
+        <h2>GPT Response</h2>
+        {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
+        {/*<img src ={GIF} alt = "GIF"/>*/}
         
-        <br></br>
-        {/*Insert Next Name Below!!!*/}
+
+        <span>{response}</span>
+
+
+   </Form.Group>
         
-        <Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>
-        {finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
-        {/*<a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-  </a>*/}
+        <br></br>        
+        
+        
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
@@ -250,6 +298,7 @@ function OurHeader(){
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+      
     </div>
   );
 }
