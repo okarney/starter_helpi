@@ -5,6 +5,7 @@ import { Button, Form } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
+import "./gptResponse.json"
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -32,7 +33,10 @@ function DetailedQuestions() {
   // CHATGPT THINGS
 
 
-  const [response, setResponse] = useState(""); // Response from GPT
+  const [career1, setCareer1] = useState(""); // Response from GPT
+  const [career2, setCareer2] = useState(""); // Response from GPT
+  const [career3, setCareer3] = useState(""); // Response from GPT
+
 
 
   // const APIBody = {
@@ -54,6 +58,31 @@ function DetailedQuestions() {
 //   const openai = new OpenAI(
 //     {apiKey: API_KEY, dangerouslyAllowBrowser: true}
 // );
+
+
+let gptData = {
+  'name': "gptData",
+  'description': "data to be passed to gpt",
+  'parameters': {
+      'type': 'object',
+      'properties': {
+          "CareerChoice1": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        },
+          "CareerChoice2": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        },
+        "CareerChoice3": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        }
+     },
+     'required': ['CareerChoice1', 'CareerChoice2', 'CareerChoice3']
+  }
+}
+
   
   async function callOpenAIAPI() {
 
@@ -68,6 +97,8 @@ function DetailedQuestions() {
     },
     body: JSON.stringify({
       "model": 'gpt-4-turbo',
+      //"response_format": {"type": "json_object"},
+      "tools": [{"type": "function", "function": gptData}],
       "messages": [{
         "role": "user", 
         "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
@@ -79,7 +110,7 @@ function DetailedQuestions() {
         `What technical skills do you possess or are interested in developing?: ${q5Response}` + 
         `What is your dream place to live?: ${q6Response}` +
         `Describe your personal values: ${q7Response}`
-
+        
 
       }],
       "temperature": 0.7,
@@ -88,20 +119,16 @@ function DetailedQuestions() {
 }).then(response => response.json())
 .then(data => {
     console.log('Response:', data);
-    setResponse(data.choices[0].message.content.trim());
+    const obj = JSON.parse(data.choices[0].message.tool_calls[0].function.arguments.toString());
+    setCareer1(obj.CareerChoice1);
+    setCareer2(obj.CareerChoice2);
+    setCareer3(obj.CareerChoice3);
+
 })
 .catch(error => {
     console.error('Error:', error);
   })
 };  
-
-
-
-
-
-
-
-
 
   
   //sets the local storage item to the api key the user inputed
@@ -281,7 +308,16 @@ function OurHeader(){
 
         <h2>GPT Response</h2>
 
-        <span>{response}</span>
+        <span>{career1}</span>
+
+        <br></br>
+
+        <span>{career2}</span>
+
+        <br></br>
+        
+        <span>{career3}</span>
+
 
 
   </Form.Group>
