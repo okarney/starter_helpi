@@ -6,10 +6,9 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
 import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function App(){
-  return <span>There is actually something here</span>
-}
+// function App(){
+//   return <span>There is actually something here</span>
+// }
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 
@@ -274,7 +273,7 @@ function OurHeader(){
 
 <br></br>
 
-{finished ? <span> Your responds has been seccussfully submitted!</span>: <span></span>}
+{/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
 
