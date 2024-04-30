@@ -1,32 +1,8 @@
 import '../App.css';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
-import careerpic from './careerpic.png'
-
-
-function OurHeader(){
-  
-
-    return(
-      <div className="App-header2">
-        <div className = "navbar">
-        
-        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          
-        </ul>
-        </div> 
-      </div>
-      
-      
-    )
-  }
-
 function About() {
     const navigate = useNavigate();
  
@@ -35,11 +11,7 @@ function About() {
         // This will navigate to second component
         navigate('/Home');
     };
-    const goToDetailed = () => {
- 
-        // This will navigate to first component
-        navigate('/DetailedQuestions');
-    };
+    
     
    return (
     <div className="App">

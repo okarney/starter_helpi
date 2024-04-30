@@ -170,7 +170,7 @@ function OurHeader(){
         <h1><BasicExample progress={progress}></BasicExample></h1>
         <h1>Basic Questions</h1>
         <br></br>
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which work environment aligns best with your interests?</Form.Label>
                 <Form.Select value = {choice1} onChange={updateChoice1}>
                     <option value="Select an option">Select an option</option>
@@ -184,7 +184,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
             
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which personality traits do you resonate with the most?</Form.Label>
                 <Form.Select value={choice2} onChange={updateChoice2}>
                 <option value="Select an option">Select an option</option>
@@ -200,7 +200,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which of the following is true about you?</Form.Label>
                 <Form.Select value={choice3} onChange={updateChoice3}>
                 <option value="Select an option">Select an option</option>
@@ -212,7 +212,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which career-related activities do you find most fulfilling?</Form.Label>
                 <Form.Select value={choice4} onChange={updateChoice4}>
                 <option value="Select an option">Select an option</option>
@@ -226,7 +226,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which challenges are you eager to take on?</Form.Label>
                 <Form.Select value={choice5} onChange={updateChoice5}>
                 <option value="Select an option">Select an option</option>
@@ -240,7 +240,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>What would you do on a weekend?</Form.Label>
                 <Form.Select value={choice6} onChange={updateChoice6}>
                 <option value="Select an option">Select an option</option>
@@ -254,7 +254,7 @@ function OurHeader(){
                 </Form.Select>
             </Form.Group>
 
-            <Form.Group controlId="basicQuestions">
+            <Form.Group controlId="basicQuestions" className='basicQuestions'>
                 <Form.Label>Which academic area do you prefer?</Form.Label>
                 <Form.Select value={choice7} onChange={updateChoice7}>
                 <option value="Select an option">Select an option</option>
