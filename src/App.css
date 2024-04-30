@@ -90,6 +90,9 @@ ul li a:hover::after{
   margin-right: 100px;
   margin-left: 0px;
 }
+.Progress-bar{
+  margin-left: 100px;
+}
 span{
   color: #0e0d0f;
 }

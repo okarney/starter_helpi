@@ -5,8 +5,8 @@ interface Bar {
 export function BasicExample({progress}: Bar):JSX.Element {
   return (
     <div>
-    <h1 style = {{color: "#282c34", backgroundColor: "#282c34", width: "80%", justifyContent: 'center', alignItems: 'center'}}>Progress Barrrrrrrrrrrrrrr</h1>
-    <ProgressBar now={progress}/> 
+    <h1 style = {{color: "#ffffff", backgroundColor: "#ffffff", width: "80%", justifyContent: 'center', alignItems: 'center'}}>Progress Barrrrrrrrrrrrrrr</h1>
+    <ProgressBar now={progress} className='Progress-bar'/> 
   </div>
   );
 }
