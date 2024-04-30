@@ -11,6 +11,7 @@ import {
 import Home from "./Components/Home";
 import DetailedQuestions from "./Components/DetailedQuestions";
 import BasicQuestions from "./Components/BasicQuestions";
+import About from "./Components/About"
  
 function App() {
     return (
@@ -24,6 +25,13 @@ function App() {
                     <Route
                         path="/"
                         element={<Home />}
+                    />
+                    {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+                    <Route
+                        path="/About"
+                        element={<About />}
                     />
 
                     
