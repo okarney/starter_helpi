@@ -43,7 +43,12 @@ import careerpic from './careerpic.png'
 // }
 
 function OurHeader(){
-  
+  const navigate = useNavigate();
+  const goToAbout = () => {
+ 
+    // This will navigate to second component
+    navigate('/About');
+};
 
     return(
       <div className="App-header2">
@@ -52,7 +57,7 @@ function OurHeader(){
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
           <li>Home</li>
-          <li>About</li>
+          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
           <li>Contact</li>
         </ul>
         </div> 

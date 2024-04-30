@@ -167,25 +167,36 @@ function OurHeader(){
     <div className="App">
       <OurHeader/>
       <header className="App-header">
-        <h1><BasicExample progress={progress}></BasicExample></h1>
+        
         <h1>Basic Questions</h1>
+        <h1><BasicExample progress={progress}></BasicExample></h1>
+        <br></br>
         <br></br>
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which work environment aligns best with your interests?</Form.Label>
-                <Form.Select value = {choice1} onChange={updateChoice1}>
-                    <option value="Select an option">Select an option</option>
-                    <option value="Structured and organized">Structured and organized</option>
-                    <option value="Problem-solving and analytical">Problem-solving and analytical</option>
-                    <option value="Collaborative and people-oriented">Collaborative and people-oriented</option>
-                    <option value="Creative and innovative">Creative and innovative</option>
-                    <option value=" Hands-on and practical"> Hands-on and practical</option>
-                    <option value="Leadership-driven and competitive">Leadership-driven and competitive</option>
+              </div>
+                
+                <div className='dropdown'>
+                  <Form.Select value = {choice1} onChange={updateChoice1}>
+                      <option value="Select an option">Select an option</option>
+                      <option value="Structured and organized">Structured and organized</option>
+                      <option value="Problem-solving and analytical">Problem-solving and analytical</option>
+                      <option value="Collaborative and people-oriented">Collaborative and people-oriented</option>
+                      <option value="Creative and innovative">Creative and innovative</option>
+                      <option value=" Hands-on and practical"> Hands-on and practical</option>
+                      <option value="Leadership-driven and competitive">Leadership-driven and competitive</option>
 
                 </Form.Select>
+                </div>
+                
             </Form.Group>
             
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which personality traits do you resonate with the most?</Form.Label>
+              </div>
+              <div className='dropdown'>
                 <Form.Select value={choice2} onChange={updateChoice2}>
                 <option value="Select an option">Select an option</option>
                     <option value="Detail-oriented and meticulous">Detail-oriented and meticulous</option>
@@ -198,10 +209,15 @@ function OurHeader(){
 
 
                 </Form.Select>
+              </div>
+                
             </Form.Group>
 
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which of the following is true about you?</Form.Label>
+              </div>
+              <div className='dropdown'>
                 <Form.Select value={choice3} onChange={updateChoice3}>
                 <option value="Select an option">Select an option</option>
                     <option value="Very organized">Very organized</option>
@@ -210,11 +226,16 @@ function OurHeader(){
                     <option value="Not organized">Not organized</option>
 
                 </Form.Select>
+              </div>
+                
             </Form.Group>
 
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which career-related activities do you find most fulfilling?</Form.Label>
-                <Form.Select value={choice4} onChange={updateChoice4}>
+              </div>
+              <div className='dropdown'>
+              <Form.Select value={choice4} onChange={updateChoice4}>
                 <option value="Select an option">Select an option</option>
                     <option value="Organizing and maintaining order">Organizing and maintaining order</option>
                     <option value="Analyzing data and solving complex problems">Analyzing data and solving complex problems</option>
@@ -224,10 +245,16 @@ function OurHeader(){
                     <option value="Leading teams and driving projects forward">Leading teams and driving projects forward</option>
 
                 </Form.Select>
+              </div>
+                
+                
             </Form.Group>
 
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which challenges are you eager to take on?</Form.Label>
+              </div>
+              <div className='dropdown'>
                 <Form.Select value={choice5} onChange={updateChoice5}>
                 <option value="Select an option">Select an option</option>
                     <option value="Ensuring accuracy and precision">Ensuring accuracy and precision</option>
@@ -238,10 +265,15 @@ function OurHeader(){
                     <option value="Taking risks and embracing leadership opportunities">Taking risks and embracing leadership opportunities</option>
 
                 </Form.Select>
+              </div>
+                
             </Form.Group>
 
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>What would you do on a weekend?</Form.Label>
+              </div>
+              <div className='dropdown'>
                 <Form.Select value={choice6} onChange={updateChoice6}>
                 <option value="Select an option">Select an option</option>
                     <option value="Go to the movies with a friend or boy/girlfriend">Go to the movies with a friend or boy/girlfriend</option>
@@ -252,10 +284,15 @@ function OurHeader(){
                     <option value="Doing outdoor sports(mountain climbing, sky-diving, hiking…)">Doing outdoor sports(mountain climbing, sky-diving, hiking…)</option>
 
                 </Form.Select>
+              </div>
+                
             </Form.Group>
 
             <Form.Group controlId="basicQuestions">
+              <div className='questionAsk'>
                 <Form.Label>Which academic area do you prefer?</Form.Label>
+              </div>
+              <div className='dropdown'>
                 <Form.Select value={choice7} onChange={updateChoice7}>
                 <option value="Select an option">Select an option</option>
                     <option value="Technology/Engineering">Technology/Engineering</option>
@@ -267,6 +304,8 @@ function OurHeader(){
                     <option value="Other">Other</option>
 
                 </Form.Select>
+              </div>
+                
                 <br></br>
 
 <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
@@ -291,12 +330,15 @@ function OurHeader(){
         
         
       </header>
-      <Form>
+      <div className='api'>
+        <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+      </div>
+      
       
     </div>
   );
