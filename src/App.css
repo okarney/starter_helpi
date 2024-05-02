@@ -121,13 +121,13 @@ span{
   padding: 7 30px;
   font-size: 150px;
   margin-right: 72%;
-  margin-left: 30px;
+  margin-left: 60px;
 }
 .questionAsk{
   /* padding: 7 30px; */
   font-size: 15px;
   margin-right: 50%;
-  margin-left: 30px;
+  margin-left: 60px;
   /* justify-content: left; */
   background: transparent;
   font-size: 25px;
@@ -135,6 +135,18 @@ span{
   text-align: left;
 
 }
+.bottom{
+  margin-left: 60px;
+}
+
+.bottom h1{
+  margin-left: -10px;
+}
+
+.img{
+  margin-left: -150px;
+}
+
 .api{
   justify-content: left;
   margin-right: 80%;
