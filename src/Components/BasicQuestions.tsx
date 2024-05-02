@@ -355,7 +355,16 @@ function OurHeader(){
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
-        <span>{response}</span>
+
+        <span>{career1}</span>
+
+<br></br>
+
+        <span>{career2}</span>
+
+<br></br>
+
+        <span>{career3}</span>
 
 
    </Form.Group>
