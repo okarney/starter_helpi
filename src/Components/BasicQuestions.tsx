@@ -54,12 +54,40 @@ function BasicQuestions() {
 
   // send message to GPT function
   
-  const API_KEY = key; // DO i need key or the real key?
+  const API_KEY = key; 
 
    //const openai = new OpenAI(
      //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
  //);
-  
+    const [career1, setCareer1] = useState(""); // Response from GPT
+    const [career2, setCareer2] = useState(""); // Response from GPT
+    const [career3, setCareer3] = useState(""); // Response from GPT
+    
+
+ 
+ let gptData = {
+  'name': "gptData",
+  'description': "data to be passed to gpt",
+  'parameters': {
+      'type': 'object',
+      'properties': {
+          "CareerChoice1": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        },
+          "CareerChoice2": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        },
+        "CareerChoice3": {
+            "type": "string",
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        }
+     },
+     'required': ['CareerChoice1', 'CareerChoice2', 'CareerChoice3']
+  }
+}
+
   async function callOpenAIAPI() {
 
     setFinished(true);
@@ -71,8 +99,10 @@ function BasicQuestions() {
       "Authorization": "Bearer " + API_KEY,
       
     },
+    
     body: JSON.stringify({
       "model": 'gpt-4-turbo',
+      "tools": [{"type": "function", "function": gptData}],
       "messages": [{
         "role": "user", 
         "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
@@ -90,11 +120,15 @@ function BasicQuestions() {
       "temperature": 0.7,
 
     })
-}).then(response => response.json())
-.then(data => {
-    console.log('Response:', data);
-    setResponse(data.choices[0].message.content.trim());
-})
+  }).then(response => response.json())
+  .then(data => {
+      console.log('Response:', data);
+      const obj = JSON.parse(data.choices[0].message.tool_calls[0].function.arguments.toString());
+      setCareer1(obj.CareerChoice1);
+      setCareer2(obj.CareerChoice2);
+      setCareer3(obj.CareerChoice3);
+  
+  })
 .catch(error => {
     console.error('Error:', error);
   })
