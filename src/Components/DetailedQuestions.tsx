@@ -232,7 +232,7 @@ function OurHeader(){
   return(
     <div className="App-header2">
         <div className = "navbar">
-        
+    
         <div className = "img">
             <img src = {olivia} alt = "logo" id = "image" className='fram'/>
           </div>
@@ -254,59 +254,67 @@ function OurHeader(){
       <OurHeader/>
       
       <header className="App-header">
+      <h1 className='det'>Detailed Questions!</h1>
       <h1><BasicExample progress={progress}></BasicExample></h1>
       <div className='bottom'>
-      <h1>Detailed Questions!</h1>
+      
       </div>
       
-      <div className='bottom'>
+      <div className='bottom2'>
       <Form.Group controlId="question1">
       <Form.Label>Describe your hobbies and interests:</Form.Label>
       <Form.Control
         value={q1Response}
-        onChange={updateQ1Response} />
+        onChange={updateQ1Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question2">
       <Form.Label>Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
       <Form.Control
         value={q2Response}
-        onChange={updateQ2Response} />
+        onChange={updateQ2Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question3">
       <Form.Label>What subject areas intrigue you the most?</Form.Label>
       <Form.Control
         value={q3Response}
-        onChange={updateQ3Response} />
+        onChange={updateQ3Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question4">
       <Form.Label>Where do you envision your career path evolving towards?</Form.Label>
       <Form.Control
         value={q4Response}
-        onChange={updateQ4Response} />
+        onChange={updateQ4Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question3">
       <Form.Label>What technical skills do you possess or are interested in developing?</Form.Label>
       <Form.Control
         value={q5Response}
-        onChange={updateQ5Response} />
+        onChange={updateQ5Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question6">
       <Form.Label>What is your dream place to live?</Form.Label>
       <Form.Control
         value={q6Response}
-        onChange={updateQ6Response} />
+        onChange={updateQ6Response} 
+        as="textarea"/>
   </Form.Group>
 
   <Form.Group controlId="question7">
       <Form.Label>Describe your personal values:</Form.Label>
       <Form.Control
         value={q7Response}
-        onChange={updateQ7Response} />
+        onChange={updateQ7Response} 
+        as="textarea"/>
 
         <br></br>
 
