@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
+
 function About() {
     const navigate = useNavigate();
  
@@ -21,7 +22,8 @@ function About() {
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
             <Button className="DetailedButton" onClick={goToHome}>Home</Button>
-          <li>Contact</li>
+            <li>About</li>
+            <li>Contact</li>
           
         </ul>
         </div> 
