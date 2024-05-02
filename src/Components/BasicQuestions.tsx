@@ -349,6 +349,9 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 
                 </Form.Select>
               </div>
+
+              </Form.Group>
+
                 
                 <br></br>
 <div className='bottom'>
@@ -359,6 +362,7 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
+
 <div className='bottom'>
         <h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
@@ -366,22 +370,22 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 
 
 
- <br></br>       
+       <br></br>       
 
 
 
         <span>{career1}</span>
 
-<br></br>
+        <br></br>
 
         <span>{career2}</span>
 
-<br></br>
+      <br></br>
 
         <span>{career3}</span>
 
 
-   </Form.Group>
+   </div>{/*</Form.Group>*/}
         
         <br></br>        
         
@@ -397,10 +401,10 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
       </Form>
       </div>
       </div>
-
-      
       
 </div>
+
+
   );
 }
 export default BasicQuestions;
