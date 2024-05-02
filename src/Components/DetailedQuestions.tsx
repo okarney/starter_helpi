@@ -7,6 +7,7 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
 import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
+import olivia from './logo.png'
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -211,30 +212,37 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 // submit button useState
 
 //hook for buttons to work
-const navigate = useNavigate();
 
-const goToHome = () => {
+
+
+function OurHeader(){
+  const navigate = useNavigate();
+
+  const goToHome = () => {
     // This will navigate to first component
     navigate('/Home');
   };
 
-
-function OurHeader(){
-  
+  const goToAbout = () => {
+ 
+    // This will navigate to second component
+    navigate('/About');
+  };
 
   return(
     <div className="App-header2">
-      
-      <Button className="goToHome" onClick={goToHome}>
-          ⇐
-      </Button>
-
-      <div className="App-header2">
-        <h1>The Career Helpi</h1>
+        <div className = "navbar">
+        
+        <div className = "img">
+            <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+          </div>
+        <ul>
+          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+          <li>Contact</li>
+        </ul>
+        </div> 
       </div>
-      
-      
-    </div>
     
   )
 }
@@ -247,8 +255,11 @@ function OurHeader(){
       
       <header className="App-header">
       <h1><BasicExample progress={progress}></BasicExample></h1>
+      <div className='bottom'>
       <h1>Detailed Questions!</h1>
-
+      </div>
+      
+      <div className='bottom'>
       <Form.Group controlId="question1">
       <Form.Label>Describe your hobbies and interests:</Form.Label>
       <Form.Control
@@ -326,18 +337,19 @@ function OurHeader(){
 
 
   </Form.Group>
-  
+  </div>
         <br></br>        
         
         
       </header>
+      <div className='bottom'>
       <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
-
+    </div>
 
     </div>
   );

@@ -6,6 +6,7 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
 import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
+import olivia from './logo.png'
 // function App(){
 //   return <span>There is actually something here</span>
 // }
@@ -135,40 +136,49 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
   setChoice7(event.target.value);
 }
 
-const navigate = useNavigate();
-
-const goToHome = () => {
-    // This will navigate to first component
-    navigate('/Home');
-  };
 
 
-function OurHeader(){
+  function OurHeader(){
+    const navigate = useNavigate();
   
-
-  return(
-    <div className="App-header2">
-
-      <Button className="goToHome" onClick={goToHome}>
-          ⇐
-      </Button>
-      
+    const goToHome = () => {
+      // This will navigate to first component
+      navigate('/Home');
+    };
+  
+    const goToAbout = () => {
+   
+      // This will navigate to second component
+      navigate('/About');
+    };
+  
+    return(
       <div className="App-header2">
-        <h1>The Career Helpi</h1>
-      </div>
-
-    </div>
-    
-  )
-}
+          <div className = "navbar">
+          <div className = "img">
+            <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+          </div>
+          
+          <ul>
+            <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+            <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+            <li>Contact</li>
+          </ul>
+          </div> 
+        </div>
+      
+    )
+  }
 
 
   return (
     <div className="App">
       <OurHeader/>
       <header className="App-header">
+        <div className='bottom'>
+          <h1>Basic Questions</h1>
+        </div>
         
-        <h1>Basic Questions</h1>
         <h1><BasicExample progress={progress}></BasicExample></h1>
         <br></br>
         <br></br>
@@ -307,22 +317,22 @@ function OurHeader(){
               </div>
                 
                 <br></br>
-
-<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
-
+<div className='bottom'>
+  <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
+</div>
 <br></br>
 
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
-
+<div className='bottom'>
         <h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
         <span>{response}</span>
-
+  </div>
 
    </Form.Group>
         
@@ -330,6 +340,7 @@ function OurHeader(){
         
         
       </header>
+      <div className='bottom'>
       <div className='api'>
         <Form>
         <Form.Label>API Key:</Form.Label>
@@ -338,9 +349,11 @@ function OurHeader(){
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
       </div>
+      </div>
+
       
       
-    </div>
+</div>
   );
 }
 export default BasicQuestions;
