@@ -353,7 +353,7 @@ function OurHeader(){
         <h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
-        
+
 
  <br></br>       
 
