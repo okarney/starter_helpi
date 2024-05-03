@@ -40,28 +40,12 @@ function DetailedQuestions() {
   const [career2, setCareer2] = useState(""); // Response from GPT
   const [career3, setCareer3] = useState(""); // Response from GPT
 
-
-
-  // const APIBody = {
-  //     "model": 'gpt-3.5-turbo', // Specify the model you want to use
-  //     "prompt": "print the word hello in french",
-  //     "messages": [{"role": "user", "content": "Say this is a test!"}],
-  //     "temperature": 0.7,
-  //     "top_p": 1.0,
-  //     "max_tokens": 150,
-  //     "frequency_penalty": 0.0,
-  //     "presence_penalty": 0.0
-  // }
   
-  
-  // send message to GPT function
-  
-  const API_KEY = key;
+const API_KEY = key;
 
-//   const openai = new OpenAI(
-//     {apiKey: API_KEY, dangerouslyAllowBrowser: true}
-// );
 
+
+// JSON Data storing 3 Different Career Options
 
 let gptData = {
   'name': "gptData",
@@ -326,19 +310,27 @@ function OurHeader(){
         {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
         <br></br>
+        {finished ? <h2>Your Careers</h2> : <span></span>}
+        
+        <br></br>
 
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
+        
+        <br></br>
+        <br></br>
 
-
-        <h2>GPT Response</h2>
 
         <span>{career1}</span>
 
         <br></br>
+        <br></br>
+
 
         <span>{career2}</span>
 
+        <br></br>      
         <br></br>
+
         
         <span>{career3}</span>
 
