@@ -53,18 +53,15 @@ function BasicQuestions() {
   //Gpt
   const [response, setResponse] = useState(""); // Response from GPT
 
-  // send message to GPT function
   
   const API_KEY = key; 
 
-   //const openai = new OpenAI(
-     //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
- //);
+ 
     const [career1, setCareer1] = useState(""); // Response from GPT
     const [career2, setCareer2] = useState(""); // Response from GPT
     const [career3, setCareer3] = useState(""); // Response from GPT
     
-
+// JSON Data storing 3 Different Career Options
  
  let gptData = {
   'name': "gptData",
@@ -364,7 +361,10 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 <br></br>
 
 <div className='bottom'>
-        <h2>GPT Response</h2>
+        {finished ? <h2>GPT Response</h2> : <span></span>}
+        
+        <br></br>
+
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
@@ -372,15 +372,17 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 
        <br></br>       
 
-
-
         <span>{career1}</span>
+
+        <br></br>
 
         <br></br>
 
         <span>{career2}</span>
 
       <br></br>
+      <br></br>
+
 
         <span>{career3}</span>
 
