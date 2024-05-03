@@ -51,7 +51,6 @@ function BasicQuestions() {
   }
   
   //Gpt
-  const [response, setResponse] = useState(""); // Response from GPT
 
   
   const API_KEY = key; 
@@ -361,7 +360,7 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 <br></br>
 
 <div className='bottom'>
-        {finished ? <h2>GPT Response</h2> : <span></span>}
+        {finished ? <h2>Your Careers</h2> : <span></span>}
         
         <br></br>
 
