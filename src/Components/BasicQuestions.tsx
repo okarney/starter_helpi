@@ -200,6 +200,10 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
     )
   }
 
+  //validation checks
+
+  // #1 No API Key Submitted
+
 
   return (
     <div className="App">
@@ -351,8 +355,17 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
                 
                 <br></br>
 <div className='bottom'>
-  <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
+  <Button onClick={callOpenAIAPI} disabled={!(progress >= 100) && key === ""}>Get Career Choices</Button>
+  
+  <br></br>
+  <br></br>
+
+
+  {finished && key === "" ? <span>Please submit an API Key!</span> : <span></span>}
+
 </div>
+
+
 <br></br>
 
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
@@ -360,15 +373,14 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 <br></br>
 
 <div className='bottom'>
-        {finished ? <h2>Your Careers</h2> : <span></span>}
+        {finished && key !== "" ? <h2>Your Careers</h2> : <span></span>}
         
         <br></br>
 
-        {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
-        {/*<img src ={GIF} alt = "GIF"/>*/}
+        {finished && key !== "" ? <img src ={GIF} alt = "GIF"/> : <span></span>}
 
-
-
+        {/*Validation Check #1: Make sure the user submits an API Key*/}
+        
        <br></br>       
 
         <span>{career1}</span>
