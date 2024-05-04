@@ -49,6 +49,18 @@ function BasicQuestions() {
       setProgress(progress - 15)
     }
   }
+
+  // function to handle get career choices button
+  //Validation Check #1: Make sure the user submits an API Key
+
+  function handleGetCareerChoices() {
+    if (key === "") {
+      alert("Please submit an API Key!");
+    }
+    else {
+      callOpenAIAPI();
+    }
+  }
   
   //Gpt
 
@@ -355,13 +367,7 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
                 
                 <br></br>
 <div className='bottom'>
-  <Button onClick={callOpenAIAPI} disabled={!(progress >= 100) && key === ""}>Get Career Choices</Button>
-  
-  <br></br>
-  <br></br>
-
-
-  {finished && key === "" ? <span>Please submit an API Key!</span> : <span></span>}
+  <Button onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
 </div>
 
@@ -378,8 +384,6 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
         <br></br>
 
         {finished && key !== "" ? <img src ={GIF} alt = "GIF"/> : <span></span>}
-
-        {/*Validation Check #1: Make sure the user submits an API Key*/}
         
        <br></br>       
 
