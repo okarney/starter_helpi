@@ -33,6 +33,18 @@ function DetailedQuestions() {
     }
   }
 
+  // function to handle get career choices button
+  //Validation Check #1: Make sure the user submits an API Key
+
+  function handleGetCareerChoices() {
+    if (key === "") {
+      alert("Please submit an API Key!");
+    }
+    else {
+      callOpenAIAPI();
+    }
+  }
+
   // CHATGPT THINGS
 
 
@@ -302,7 +314,7 @@ function OurHeader(){
 
         <br></br>
 
-        <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
+        <Button onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
         <br></br>
 
