@@ -45,6 +45,7 @@ function DetailedQuestions() {
     }
   }
 
+
   // CHATGPT THINGS
 
 
@@ -326,25 +327,25 @@ function OurHeader(){
         
         <br></br>
 
-        {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
         
-        <br></br>
-        <br></br>
+        <div>
+          <span>{career1}</span>
+
+          <br></br>
+          <br></br>
 
 
-        <span>{career1}</span>
+          <span>{career2}</span>
 
-        <br></br>
-        <br></br>
+          <br></br>      
+          <br></br>
 
 
-        <span>{career2}</span>
-
-        <br></br>      
-        <br></br>
-
+          <span>{career3}</span>
+        </div>}
         
-        <span>{career3}</span>
+
 
 
 
