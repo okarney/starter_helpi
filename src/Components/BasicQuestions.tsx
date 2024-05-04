@@ -377,30 +377,30 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
+<br></br>
 
 <div className='bottom'>
         {finished && key !== "" ? <h2>Your Careers</h2> : <span></span>}
         
         <br></br>
 
-        {finished && key !== "" ? <img src ={GIF} alt = "GIF"/> : <span></span>}
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
         
-       <br></br>       
+        <div>
+          <span>{career1}</span>
 
-        <span>{career1}</span>
-
-        <br></br>
-
-        <br></br>
-
-        <span>{career2}</span>
-
-      <br></br>
-      <br></br>
+          <br></br>
+          <br></br>
 
 
-        <span>{career3}</span>
+          <span>{career2}</span>
 
+          <br></br>      
+          <br></br>
+
+
+          <span>{career3}</span>
+        </div>}
 
    </div>{/*</Form.Group>*/}
         
