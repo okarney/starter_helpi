@@ -50,7 +50,7 @@ function BasicQuestions() {
   }
   
   //Gpt
-  const [response, setResponse] = useState(""); // Response from GPT
+  //const [response, setResponse] = useState(""); // Response from GPT
 
   // send message to GPT function
   
