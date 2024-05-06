@@ -6,7 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
-import GIF from './visualfeedback-ezgif.com-video-to-gif-converter (1).gif';
+import GIF from '/Users/khadijamohammadi/starter_helpi/src/Components/gif.gif';
 import olivia from './logo.png'
 
 
