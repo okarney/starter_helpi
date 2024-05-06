@@ -402,11 +402,8 @@ const goToHome = () => {
 
 {/*<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
 
-<br></br>
-
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
-<br></br>
 <br></br>
 
 <div className='bottom'>
