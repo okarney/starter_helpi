@@ -24,6 +24,7 @@ function BasicQuestions() {
   const [progress, setProgress] = useState<number>(0)
 
   const [finished, setFinished] = useState<boolean> (false);
+  
   const [choice1, setChoice1] = useState<string>("Select an option");
   const [choice2, setChoice2] = useState<string>("Select an option");
   const [choice3, setChoice3] = useState<string>("Select an option");
