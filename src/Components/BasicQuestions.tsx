@@ -5,7 +5,7 @@ import { Button, Form} from 'react-bootstrap';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
-import GIF from '/Users/khadijamohammadi/starter_helpi/src/Components/gif.gif';
+import GIF from './gif.gif';
 // function App(){
 //   return <span>There is actually something here</span>
 // }
