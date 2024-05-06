@@ -6,6 +6,7 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
 import GIF from './gif.gif';
+import olivia from './logo.png'
 // function App(){
 //   return <span>There is actually something here</span>
 // }
@@ -49,8 +50,20 @@ function BasicQuestions() {
     }
   }
   
+  // function to handle get career choices button
+  //Validation Check #1: Make sure the user submits an API Key
+
+  function handleGetCareerChoices() {
+    if (key === "") {
+      alert("Please submit an API Key!");
+    }
+    else {
+      callOpenAIAPI();
+    }
+  }
+
   //Gpt
-  //const [response, setResponse] = useState(""); // Response from GPT
+  /*const [response, setResponse] = useState(""); // Response from GPT*/
 
   // send message to GPT function
   
@@ -59,6 +72,7 @@ function BasicQuestions() {
    //const openai = new OpenAI(
      //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
  //);
+ // JSON Data storing 3 Different Career Options
     const [career1, setCareer1] = useState(""); // Response from GPT
     const [career2, setCareer2] = useState(""); // Response from GPT
     const [career3, setCareer3] = useState(""); // Response from GPT
@@ -169,18 +183,49 @@ function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
   setChoice7(event.target.value);
 }
 
-const navigate = useNavigate();
+/*const navigate = useNavigate();
 
 const goToHome = () => {
     // This will navigate to first component
     navigate('/Home');
-  };
+  };*/
+
+  function OurHeader(){
+    const navigate = useNavigate();
+
+    const goToHome = () => {
+      // This will navigate to first component
+      navigate('/Home');
+    };
+
+    const goToAbout = () => {
+
+      // This will navigate to second component
+      navigate('/About');
+    };
 
 
-function OurHeader(){
-  
-
+/*function OurHeader(){*/
   return(
+    <div className="App-header2">
+        <div className = "navbar">
+        <div className = "img">
+          <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+        </div>
+
+        <ul>
+          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+          <li>Contact</li>
+        </ul>
+        </div> 
+      </div>
+
+  )
+}
+  
+//validation checks
+  /*return(
     <div className="App-header2">
 
       <Button className="goToHome" onClick={goToHome}>
@@ -194,15 +239,18 @@ function OurHeader(){
     </div>
     
   )
-}
+}*/
 
 
   return (
     <div className="App">
       <OurHeader/>
       <header className="App-header">
+      <div className='bottom'>
+          <h1>Basic Questions</h1>
+        </div>
         
-        <h1>Basic Questions</h1>
+        {/*<h1>Basic Questions</h1>*/}
         <h1><BasicExample progress={progress}></BasicExample></h1>
         <br></br>
         <br></br>
@@ -339,43 +387,62 @@ function OurHeader(){
 
                 </Form.Select>
               </div>
+
+              </Form.Group>
+
+              
+            
+    
                 
                 <br></br>
+                <div className='bottom'>
+  <Button onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
-<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
+</div>
+
+{/*<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
 
 <br></br>
 
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
+<br></br>
 
-        <h2>GPT Response</h2>
+<div className='bottom'>
+        {finished && key !== "" ? <h2>Your Careers</h2> : <span></span>}
+
+        <br></br>
+
+        {/*<h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
- <br></br>       
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
 
-
-
+        <div>
         <span>{career1}</span>
 
         <br></br>
+        <br></br>      
+
 
         <span>{career2}</span>
 
         <br></br>
+        <br></br>
 
         <span>{career3}</span>
-
-
-   </Form.Group>
+        </div>}
+        </div>{/*</Form.Group>*/}
         
+
         <br></br>        
         
         
       </header>
+      <div className='bottom'>
       <div className='api'>
         <Form>
         <Form.Label>API Key:</Form.Label>
@@ -384,9 +451,11 @@ function OurHeader(){
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
       </div>
-      
-      
-    </div>
+      </div>
+
+</div>
+
+
   );
 }
 export default BasicQuestions;
