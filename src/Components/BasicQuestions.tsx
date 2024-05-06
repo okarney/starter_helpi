@@ -344,18 +344,18 @@ function OurHeader(){
 
 <Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
-        <br></br>
+<br></br>
 
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
-        <br></br>
+<br></br>
 
         <h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
-        <br></br>       
+ <br></br>       
 
 
 
