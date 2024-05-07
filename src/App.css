@@ -88,7 +88,6 @@ ul li a:hover::after{
   margin-left: 50px;
   
 }
-
 .App-header h3{
   font-size: 25px;
   margin-right: 100px;
@@ -96,6 +95,7 @@ ul li a:hover::after{
 }
 .Progress-bar{
   margin-left: 10px;
+  margin-right: 80px;
 }
 span{
   color: #0e0d0f;
@@ -136,6 +136,7 @@ span{
   text-align: left;
 
 }
+
 .bottom{
   margin-left: 60px;
 }
