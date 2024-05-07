@@ -219,7 +219,7 @@ const goToHome = () => {
         <ul>
           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li>Contact</li>
+          <li><Button className="BasicButton"> Contact</Button></li>
         </ul>
         </div> 
       </div>

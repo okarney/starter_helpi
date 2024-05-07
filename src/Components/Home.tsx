@@ -56,9 +56,9 @@ function OurHeader(){
         
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
-          <li>Home</li>
+          <li><Button className="BasicButton"> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li>Contact</li>
+          <li><Button className="BasicButton"> Contact</Button></li>
         </ul>
         </div> 
       </div>

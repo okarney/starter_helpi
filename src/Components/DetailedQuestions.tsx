@@ -7,7 +7,8 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
 import GIF from './gif.gif';
-import olivia from './logo.png'
+import olivia from './logo.png';
+
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -239,7 +240,7 @@ function OurHeader(){
         <ul>
           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li>Contact</li>
+          <li><Button className="BasicButton"> Contact</Button></li>
         </ul>
         </div> 
       </div>
@@ -247,22 +248,17 @@ function OurHeader(){
   )
 }
 
-
-
   return (
-    <div className="App">
+    <div className="detailed">
       <OurHeader/>
       
-      <header className="App-header">
-      <h1 className='det'>Detailed Questions!</h1>
-      <h1><BasicExample progress={progress}></BasicExample></h1>
-      <div className='bottom'>
-      
-      </div>
+      <header className="detailed-header">
+      <h1>Detailed Questions!</h1>
+        <h2><BasicExample progress={progress}></BasicExample></h2>
       
       <div className='bottom2'>
       <Form.Group controlId="question1">
-      <Form.Label>Describe your hobbies and interests:</Form.Label>
+      <Form.Label>1. Describe your hobbies and interests:</Form.Label>
       <Form.Control
         value={q1Response}
         onChange={updateQ1Response} 
@@ -270,7 +266,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question2">
-      <Form.Label>Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
+      <Form.Label>2. Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
       <Form.Control
         value={q2Response}
         onChange={updateQ2Response} 
@@ -278,7 +274,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question3">
-      <Form.Label>What subject areas intrigue you the most?</Form.Label>
+      <Form.Label>3. What subject areas intrigue you the most?</Form.Label>
       <Form.Control
         value={q3Response}
         onChange={updateQ3Response} 
@@ -286,7 +282,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question4">
-      <Form.Label>Where do you envision your career path evolving towards?</Form.Label>
+      <Form.Label>4. Where do you envision your career path evolving towards?</Form.Label>
       <Form.Control
         value={q4Response}
         onChange={updateQ4Response} 
@@ -294,7 +290,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question3">
-      <Form.Label>What technical skills do you possess or are interested in developing?</Form.Label>
+      <Form.Label>5. What technical skills do you possess or are interested in developing?</Form.Label>
       <Form.Control
         value={q5Response}
         onChange={updateQ5Response} 
@@ -302,7 +298,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question6">
-      <Form.Label>What is your dream place to live?</Form.Label>
+      <Form.Label>6. What is your dream place to live?</Form.Label>
       <Form.Control
         value={q6Response}
         onChange={updateQ6Response} 
@@ -310,7 +306,7 @@ function OurHeader(){
   </Form.Group>
 
   <Form.Group controlId="question7">
-      <Form.Label>Describe your personal values:</Form.Label>
+      <Form.Label>7. Describe your personal values:</Form.Label>
       <Form.Control
         value={q7Response}
         onChange={updateQ7Response} 
@@ -318,20 +314,16 @@ function OurHeader(){
 
         <br></br>
 
-        <Button onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
-
+        <Button className="CareerButton" onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
         <br></br>
 
         {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
         {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
-
         <br></br>
-        {finished ? <h2>Your Careers</h2> : <span></span>}
-        
+        {finished ? <h3>Your Careers</h3> : <span></span>}
         <br></br>
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> : 
-        
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <span>{career1}</span>
 
@@ -346,7 +338,8 @@ function OurHeader(){
 
 
           <span>{career3}</span>
-        </div>}
+        </div>
+        }
         
 
 
@@ -358,13 +351,14 @@ function OurHeader(){
         
         
       </header>
-      <div className='bottom'>
+      <div className='api'>
       <Form>
         <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey} ></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+   
     </div>
 
     </div>
