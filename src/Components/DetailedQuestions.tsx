@@ -68,7 +68,7 @@ let gptData = {
       'properties': {
           "CareerChoice1": {
             "type": "string",
-            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions. If the user inputs a jumble of letters or responses that are not relevant to the question, your response is \"resubmit\"." 
         },
           "CareerChoice2": {
             "type": "string",
@@ -100,7 +100,10 @@ let gptData = {
       //"response_format": {"type": "json_object"},
       "tools": [{"type": "function", "function": gptData}],
       "messages": [{
-        "role": "user", 
+        "role": "system",
+                    "content": "You are an assistant that give career advise in 3 senteces"},
+    
+        {"role": "user", 
         "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
         
         `Describe your hobbies and interests: ${q1Response}` +
@@ -327,7 +330,7 @@ function OurHeader(){
         
         <br></br>
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> : 
         
         <div>
           <span>{career1}</span>
