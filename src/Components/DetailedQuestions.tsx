@@ -101,7 +101,7 @@ let gptData = {
       "tools": [{"type": "function", "function": gptData}],
       "messages": [{
         "role": "system",
-                    "content": "You are an assistant that give career advise in 3 senteces"},
+                    "content": "You are an assistant that give career advise like a specialist"},
     
         {"role": "user", 
         "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
