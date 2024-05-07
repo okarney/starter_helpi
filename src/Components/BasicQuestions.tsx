@@ -415,8 +415,6 @@ const goToHome = () => {
         {/*<h2>GPT Response</h2>
         {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
         {/*<img src ={GIF} alt = "GIF"/>*/}
-
-
         {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
 
         <div>
@@ -452,7 +450,6 @@ const goToHome = () => {
       </div>
 
 </div>
-
 
   );
 }
