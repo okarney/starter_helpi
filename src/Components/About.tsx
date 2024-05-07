@@ -21,9 +21,9 @@ function About() {
         
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
-            <Button className="DetailedButton" onClick={goToHome}>Home</Button>
-            <li>About</li>
-            <li>Contact</li>
+        <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+        <li><Button className="BasicButton"> About </Button></li>
+        <li><Button className="BasicButton"> Contact</Button></li>
           
         </ul>
         </div> 
