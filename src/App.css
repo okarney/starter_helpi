@@ -16,6 +16,13 @@
   width : 80%;
   margin: auto;
 }
+.App-header3{
+  width : 80%;
+  margin: auto;
+  margin-right: -100px;
+  margin-left: 200px;
+}
+
 .navbar{
   margin: 15px auto;
   display: flex;
@@ -222,6 +229,20 @@ span{
     box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
     color:#600da0;
     }
+
+    .BasicButton:hover{
+    padding: 7x 30px;
+    margin-right: 15px;
+    outline: none;
+    border: 1.5px solid #7f7396;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #441880;
+    box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
+    color:#ffffff;
+    }
+
+
     .CareerButton{
   padding: 7 30px;
   font-size: 15px;
