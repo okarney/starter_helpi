@@ -146,8 +146,15 @@ function BasicQuestions() {
       setCareer3(obj.CareerChoice3);
   
   })
-.catch(error => {
+  .catch(error => {
     console.error('Error:', error);
+    alert("Failed to fetch career choices: ");
+    if (keyData !== "") {
+      alert(`Error arising from Key value. Is your key correct?`);
+    }
+    else{
+      alert("Please enter a Key");
+    }
   })
 };
 
