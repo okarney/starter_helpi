@@ -148,8 +148,22 @@ function BasicQuestions() {
   })
 .catch(error => {
     console.error('Error:', error);
+    if (key === "") {
+      alert("No API Key submitted. Please submit an API Key!");
+    }
+    else{
+      alert("Invalid API key submitted. Please submit a valid API Key!");
+    }
   })
 };
+
+
+// code to test whether the api key validation checks are working or not
+// comment in and out as needed
+
+// if (career1 !== "") {
+//   localStorage.clear();
+// }
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
