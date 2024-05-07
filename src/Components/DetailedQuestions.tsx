@@ -254,7 +254,7 @@ function OurHeader(){
 
 /*function OurHeader(){*/
 return(
-  <div className="App-header2">
+  <div className="App-header3">
       <div className = "navbar">
       <div className = "img">
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
@@ -272,8 +272,10 @@ return(
 }
 
   return (
+  <div>
+    <OurHeader/>
     <div className="detailed">
-      <OurHeader/>
+      
       
       <header className="detailed-header">
       <h1>Detailed Questions!</h1>
@@ -384,6 +386,7 @@ return(
    
     </div>
 
+    </div>
     </div>
   );
 }
