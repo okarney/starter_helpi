@@ -52,6 +52,9 @@ function App() {
                         element={<DetailedQuestions />}
                     />
 
+                    {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
                     <Route
                         path="/Survey"
                         element={<Survey />}
