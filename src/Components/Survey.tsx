@@ -4,7 +4,7 @@ import '../App';
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
 
-function About() {
+function Survey() {
     const navigate = useNavigate();
  
     const goToHome = () => {
@@ -12,12 +12,17 @@ function About() {
         // This will navigate to second component
         navigate('/Home');
     };
-    const goToSurvey = () => {
-
-      // This will navigate to second component
-      navigate('/Survey');
-    };
-
+    const goToAbout = () => {
+ 
+        // This will navigate to second component
+        navigate('/About');
+      };
+      const goToSurvey = () => {
+    
+        // This will navigate to second component
+        navigate('/Survey');
+      };
+    
     
    return (
     <div className="App">
@@ -27,8 +32,8 @@ function About() {
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
         <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-        <li><Button className="BasicButton"> About </Button></li>
-        <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
           
         </ul>
         </div> 
@@ -40,10 +45,8 @@ function About() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>            
+            <span> SURVERYYYY </span>
+                       
 
           </div>
           <div className='right-column'>
@@ -78,7 +81,7 @@ function About() {
   );
 }
 
-export default About;
+export default Survey;
 
 /*
 <li>Home</li>

@@ -12,6 +12,7 @@ import Home from "./Components/Home";
 import DetailedQuestions from "./Components/DetailedQuestions";
 import BasicQuestions from "./Components/BasicQuestions";
 import About from "./Components/About"
+import Survey from "./Components/Survey"
  
 function App() {
     return (
@@ -49,6 +50,14 @@ function App() {
                     <Route
                         path="/DetailedQuestions"
                         element={<DetailedQuestions />}
+                    />
+
+                    {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
+                    <Route
+                        path="/Survey"
+                        element={<Survey />}
                     />
  
                     {/* If any route mismatches the upper 

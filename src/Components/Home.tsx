@@ -48,24 +48,37 @@ function OurHeader(){
  
     // This will navigate to second component
     navigate('/About');
-};
+  };
+  const goToSurvey = () => {
 
-    return(
-      <div className="App-header2">
+    // This will navigate to second component
+    navigate('/Survey');
+  };
+  const goToHome = () => {
+
+    // This will navigate to second component
+    navigate('/Home');
+  };
+
+
+/*function OurHeader(){*/
+  return(
+    <div className="App-header2">
         <div className = "navbar">
-        
-        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+        <div className = "img">
+          <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+        </div>
+
         <ul>
-          <li><Button className="BasicButton"> Home </Button></li>
+          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton"> Contact</Button></li>
+          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
         </ul>
         </div> 
       </div>
-      
-      
-    )
-  }
+
+  )
+}
 
 function Home() {
     const navigate = useNavigate();
