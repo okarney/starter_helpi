@@ -131,16 +131,24 @@ let gptData = {
 })
 .catch(error => {
     console.error('Error:', error);
-    alert("Failed to fetch career choices: ");
-    if (keyData !== "") {
-      alert(`Error arising from Key value. Is your key correct?`);
+    //alert("Incorrect API key submitted. Please submit a valid API Key!");
+    if (key === "") {
+      alert("No API Key submitted. Please submit an API Key!");
     }
     else{
-      alert("Please enter a Key");
+      alert("Invalid API key submitted. Please submit a valid API Key!");
     }
   })
   
 };  
+
+
+// code to test whether the api key validation checks are working or not
+// comment in and out as needed
+
+// if (career1 !== "") {
+//   localStorage.clear();
+// }
 
   
   //sets the local storage item to the api key the user inputed
