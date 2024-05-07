@@ -254,8 +254,7 @@ function OurHeader(){
       
       <header className="detailed-header">
       <h1>Detailed Questions!</h1>
-        <h2><BasicExample progress={progress}></BasicExample>
-        </h2>
+        <h2><BasicExample progress={progress}></BasicExample></h2>
       
       <div className='bottom2'>
       <Form.Group controlId="question1">
@@ -320,13 +319,11 @@ function OurHeader(){
 
         {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
         {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
-
         <br></br>
-        {finished ? <h2>Your Careers</h2> : <span></span>}
+        {finished ? <h3>Your Careers</h3> : <span></span>}
         <br></br>
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> : 
-        
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <span>{career1}</span>
 
@@ -341,7 +338,8 @@ function OurHeader(){
 
 
           <span>{career3}</span>
-        </div>}
+        </div>
+        }
         
 
 
@@ -353,13 +351,14 @@ function OurHeader(){
         
         
       </header>
-      <div className='bottom'>
+      <div className='api'>
       <Form>
         <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey} ></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+   
     </div>
 
     </div>

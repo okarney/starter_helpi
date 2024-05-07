@@ -153,12 +153,6 @@ span{
   margin-left: -150px;
 }
 
-.api{
-  justify-content: left;
-  margin-right: 80%;
-  margin-left: 10px;
-}
-
 .btn p{
   font-size: 13px;
   color:#0e0d0f;
@@ -187,13 +181,13 @@ span{
 
   }
   .detailed-header h1{
-    min-height: 5vh;
+    min-height: 10vh;
   display: flex;
   flex-direction:column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(116, 78, 198);
+  color: rgb(94, 56, 178);
   }
  
   .detailed-header h2{
@@ -222,9 +216,43 @@ span{
     outline: none;
     border: 1.5px solid #7f7396;
     border-radius: 20px;
-    color: #441980;
-    background:transparent ;
+    color: #441880;
+    background:transparent;
+    box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
+    color:#600da0;
     }
-  
- /* box-shadow: 0 2px 15px rgba(66, 60, 99, 0.26);
-  background:linear-gradient(#a975ec,#9f82d9) ;*/
+    .CareerButton{
+  padding: 7 30px;
+  font-size: 15px;
+  margin-right: 15px;
+  outline: none;
+  border: 0px solid #441980;
+  border-radius: 20px;
+  cursor: pointer;
+  color: rgb(55, 30, 120);
+  background: transparent;
+  background:linear-gradient(#8067a3,#311e4d) ;
+  box-shadow: 0 2px 15px rgba(66, 60, 99, 0.26);
+  color:#e9eae9;
+  }
+  .detailed-header h3{
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+   
+  }
+  .Submit-Button{
+    padding: 7x 30px;
+    margin-right: 15px;
+    outline: none;
+    border: 1.5px solid #7f7396;
+    border-radius: 20px;
+    color: #441980;
+    background:transparent;
+
+  }
+  .api{
+    width:50%;
+    justify-content: center;
+    margin-left: 5%;
+  }
