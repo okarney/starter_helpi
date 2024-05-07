@@ -206,6 +206,11 @@ const goToHome = () => {
       // This will navigate to second component
       navigate('/About');
     };
+    const goToSurvey = () => {
+
+      // This will navigate to second component
+      navigate('/Survey');
+    };
 
 
 /*function OurHeader(){*/
@@ -219,7 +224,7 @@ const goToHome = () => {
         <ul>
           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton"> Contact</Button></li>
+          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
         </ul>
         </div> 
       </div>
