@@ -271,6 +271,7 @@ const goToHome = () => {
                       <option value="Creative and innovative">Creative and innovative</option>
                       <option value=" Hands-on and practical"> Hands-on and practical</option>
                       <option value="Leadership-driven and competitive">Leadership-driven and competitive</option>
+                      <option value="None of the above">None of the above</option>
 
                 </Form.Select>
                 </div>
@@ -309,6 +310,7 @@ const goToHome = () => {
                     <option value="Organized">Organized</option>
                     <option value="Somewhat organized">Somewhat organized</option>
                     <option value="Not organized">Not organized</option>
+                    <option value="None of the above">None of the above</option>
 
                 </Form.Select>
               </div>
@@ -328,6 +330,7 @@ const goToHome = () => {
                     <option value="Expressing creativity and originality">Expressing creativity and originality</option>
                     <option value="Engaging in practical tasks and hands-on work"> Engaging in practical tasks and hands-on work</option>
                     <option value="Leading teams and driving projects forward">Leading teams and driving projects forward</option>
+                    <option value="None of the above">None of the above</option>
 
                 </Form.Select>
               </div>
@@ -348,6 +351,7 @@ const goToHome = () => {
                     <option value="Pushing boundaries and exploring new ideas">Pushing boundaries and exploring new ideas</option>
                     <option value="Overcoming technical obstacles and mastering skills">Overcoming technical obstacles and mastering skills</option>
                     <option value="Taking risks and embracing leadership opportunities">Taking risks and embracing leadership opportunities</option>
+                    <option value="None of the above">None of the above</option>
 
                 </Form.Select>
               </div>
@@ -367,6 +371,7 @@ const goToHome = () => {
                     <option value="Do homework">Do homework</option>
                     <option value="Do nothing. I am antisocial">Do nothing. I am antisocial</option>
                     <option value="Doing outdoor sports(mountain climbing, sky-diving, hiking…)">Doing outdoor sports(mountain climbing, sky-diving, hiking…)</option>
+                    <option value="None of the above">None of the above</option>
 
                 </Form.Select>
               </div>
@@ -386,7 +391,7 @@ const goToHome = () => {
                     <option value="Natural Sciences">Natural Sciences</option>
                     <option value=" Health Sciences"> Health Sciences</option>
                     <option value="Music">Music</option>
-                    <option value="Other">Other</option>
+                    <option value="None of the above">None of the above</option>
 
                 </Form.Select>
               </div>
