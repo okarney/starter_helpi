@@ -139,11 +139,18 @@ function BasicQuestions() {
     })
   }).then(response => response.json())
   .then(data => {
+    if (choice1&&choice2&&choice3&&choice4&&choice5&&choice6&&choice7 === "None of the above"){
+      console.log("answer a question please")
+      alert("answer one question please");
+    }
+    else{
       console.log('Response:', data);
       const obj = JSON.parse(data.choices[0].message.tool_calls[0].function.arguments.toString());
       setCareer1(obj.CareerChoice1);
       setCareer2(obj.CareerChoice2);
       setCareer3(obj.CareerChoice3);
+    }
+      
   
   })
   .catch(error => {
