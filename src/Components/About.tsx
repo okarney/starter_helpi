@@ -2,7 +2,12 @@ import '../App.css';
 import { Button } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 import olivia from './logo.png'
+import Zahra from './Zahra.jpg'
+import purpleLI from './pLinkedIn.jpg'
+
+
 
 function About() {
     const navigate = useNavigate();
@@ -16,6 +21,12 @@ function About() {
 
       // This will navigate to second component
       navigate('/Survey');
+    };
+    const goToZahraLinkedIn = () => {
+
+      // This will navigate to second component
+      <Link to={{ pathname: "https://www.linkedin.com/in/zahra-temori/" }} target="_blank">Click to open HereWeCode (new tab)</Link>
+      //navigate('https://www.linkedin.com/in/zahra-temori/');
     };
 
     
@@ -40,14 +51,48 @@ function About() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>            
+            <h2>About Us</h2>
+
+            <hr></hr>
+
+            <br></br>
+            
+            <h3>Olivia Karney</h3> 
+            <span>Email: okarney@udel.edu</span>
+            <br></br>
+            <span>LinkedIn: </span>     
+            <br></br>
+       
+            <h3>Khadija Mohammadi</h3>
+            <span>Email: khadija@udel.edu</span>
+            <br></br>
+            <span>LinkedIn: </span> 
+            <br></br>
+
+            <h3>Zahra Temori</h3>
+            <span>Email: zahratm@udel.edu</span>
+            <br></br>
+            <span>LinkedIn: </span>
+            <Link to="https://www.linkedin.com/in/zahra-temori/">
+            <Button style={{ background: '#c3b1e1' }} type="button"><img src = {purpleLI} alt = "logo" id = "image" style={{height:100, width:100}}/>
+            </Button>
+            </Link>
+            <br></br>
+
+            <h3>Jacob Whitman</h3>
+            <span>Email: jacobwhi@udel.edu</span>
+            <br></br>
+            <span>LinkedIn: </span>           
 
           </div>
           <div className='right-column'>
-          <span> person </span>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <img src = {Zahra} alt = "logo" id = "image" style={{height:100, width:100}}/>
           <span> person </span>
           <div className='btn'>
           {/* <Container>
@@ -73,7 +118,7 @@ function About() {
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form> */}
-      <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
+      {/*<span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>*/}
     </div>
   );
 }
