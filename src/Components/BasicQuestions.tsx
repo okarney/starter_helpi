@@ -272,20 +272,18 @@ const goToHome = () => {
 
 
   return (
-    <div className="App">
+    <div className="Basic">
       <OurHeader/>
-      <header className="App-header">
-      <div className='bottom'>
+      <header className="Basic-header">
           <h1>Basic Questions</h1>
-        </div>
         
         {/*<h1>Basic Questions</h1>*/}
-        <h1><BasicExample progress={progress}></BasicExample></h1>
+        <h2><BasicExample progress={progress}></BasicExample></h2>
         <br></br>
         <br></br>
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which work environment aligns best with your interests?</Form.Label>
+                <Form.Label>1. Which work environment aligns best with your interests?</Form.Label>
               </div>
                 
                 <div className='dropdown'>
@@ -306,7 +304,7 @@ const goToHome = () => {
             
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which personality traits do you resonate with the most?</Form.Label>
+                <Form.Label>2. Which personality traits do you resonate with the most?</Form.Label>
               </div>
               <div className='dropdown'>
                 <Form.Select value={choice2} onChange={updateChoice2}>
@@ -327,7 +325,7 @@ const goToHome = () => {
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which of the following is true about you?</Form.Label>
+                <Form.Label>3. Which of the following is true about you?</Form.Label>
               </div>
               <div className='dropdown'>
                 <Form.Select value={choice3} onChange={updateChoice3}>
@@ -345,7 +343,7 @@ const goToHome = () => {
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which career-related activities do you find most fulfilling?</Form.Label>
+                <Form.Label>4. Which career-related activities do you find most fulfilling?</Form.Label>
               </div>
               <div className='dropdown'>
               <Form.Select value={choice4} onChange={updateChoice4}>
@@ -366,7 +364,7 @@ const goToHome = () => {
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which challenges are you eager to take on?</Form.Label>
+                <Form.Label>5. Which challenges are you eager to take on?</Form.Label>
               </div>
               <div className='dropdown'>
                 <Form.Select value={choice5} onChange={updateChoice5}>
@@ -386,7 +384,7 @@ const goToHome = () => {
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>What would you do on a weekend?</Form.Label>
+                <Form.Label>6. What would you do on a weekend?</Form.Label>
               </div>
               <div className='dropdown'>
                 <Form.Select value={choice6} onChange={updateChoice6}>
@@ -406,7 +404,7 @@ const goToHome = () => {
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
-                <Form.Label>Which academic area do you prefer?</Form.Label>
+                <Form.Label>7. Which academic area do you prefer?</Form.Label>
               </div>
               <div className='dropdown'>
                 <Form.Select value={choice7} onChange={updateChoice7}>
@@ -429,8 +427,7 @@ const goToHome = () => {
     
                 
                 <br></br>
-                <div className='bottom'>
-  <Button onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
+            <div><Button className='CareerBasicButton' onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
 </div>
 
