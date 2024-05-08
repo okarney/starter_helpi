@@ -1,10 +1,23 @@
 import '../App.css';
-import { Button } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
+import React, { useState } from 'react';
+import { Button, Form} from 'react-bootstrap';
+
+
+
 
 function Survey() {
+
+    //const [key, setKey] = useState<string>(keyData);
+    const [ques1, setQues1] = useState<string>("");
+    const [ques2, setQues2] = useState<string>("");
+    const [ques3, setQues3] = useState<string>("");
+
+    function handleSubmit() {
+      window.location.reload();
+    }
     const navigate = useNavigate();
  
     const goToHome = () => {
@@ -22,12 +35,29 @@ function Survey() {
         // This will navigate to second component
         navigate('/Survey');
       };
+  /*function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
+        setKey(event.target.value);
+      }*/
+      
+        function updateQues1(event: React.ChangeEvent<HTMLInputElement>) {
+          setQues1(event.target.value);
+          console.log(event);
+      }
     
+      function updateQues2(event: React.ChangeEvent<HTMLInputElement>) {
+        setQues2(event.target.value);
+        console.log(event);
+    }
+    function updateQues3(event: React.ChangeEvent<HTMLInputElement>) {
+      setQues3(event.target.value);
+      console.log(event);
     
+    }
    return (
     <div className="App">
         <div className="App-header2">
         <div className = "navbar">
+
         
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         <ul>
@@ -45,13 +75,163 @@ function Survey() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <span> SURVERYYYY </span>
+            <span> SURVERY </span>
+            <Form.Group>
+            <div className='questiontobeAsked'>
+                <Form.Label>1. Do you feel that your results were accurate?</Form.Label>
+              </div>
+        
+            <div>
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues1}
+                id = "if-the-user-strongly-agrees"
+                label="Strongly Agree"
+                value="strongly agree"
+                checked={ques1 === "strongly agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues1}
+                id = "if-the-user-agrees"
+                label="Agree"
+                value="agree"
+                checked={ques1 === "agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues1}
+                id = "if-the-user-isnot-sure"
+                label="Not Sure"
+                value="not sure"
+                checked={ques1 === "not sure"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues1}
+                id = "if-the-user-disagrees"
+                label="Disagree"
+                value="disagree"
+                checked={ques1 === "disagree"}
+            />
+        </div>
+        </Form.Group>
+
+        <Form.Group >
+            <div className='questiontobeAsked'>
+                <Form.Label>2. Was the site easily readable and user friendly?</Form.Label>
+              </div>
+        
+            <div>
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues2}
+                id = "if-the-user-strongly-agrees"
+                label="Strongly Agree"
+                value="strongly agree"
+                checked={ques2 === "strongly agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues2}
+                id = "if-the-user-agrees"
+                label="Agree"
+                value="agree"
+                checked={ques2 === "agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues2}
+                id = "if-the-user-isnot-sure"
+                label="Not Sure"
+                value="not sure"
+                checked={ques2 === "not sure"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues2}
+                id = "if-the-user-disagrees"
+                label="Disagree"
+                value="disagree"
+                checked={ques2 === "disagree"}
+            />
+        </div>
+        </Form.Group>
+
+        <Form.Group >
+            <div className='questiontobeAsked'>
+                <Form.Label>3. Would you recommend the quizzes to your friends?</Form.Label>
+              </div>
+        
+            <div>
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues3}
+                id = "if-the-user-strongly-agrees"
+                label="Strongly Agree"
+                value="strongly agree"
+                checked={ques3 === "strongly agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues3}
+                id = "if-the-user-agrees"
+                label="Agree"
+                value="agree"
+                checked={ques3 === "agree"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues3}
+                id = "if-the-user-isnot-sure"
+                label="Not Sure"
+                value="not sure"
+                checked={ques3 === "not sure"}
+            />
+            <Form.Check
+                type="radio"
+                inline
+                name="survey"
+                onChange={updateQues3}
+                id = "if-the-user-disagrees"
+                label="Disagree"
+                value="disagree"
+                checked={ques3 === "disagree"}
+            />
+        </div>
+        </Form.Group>
+        <Form>
+        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+      </Form>
+
                        
 
           </div>
           <div className='right-column'>
-          <span> person </span>
-          <span> person </span>
+          {/*<span> person </span>
+          <span> person </span>*/}
           <div className='btn'>
           {/* <Container>
                 <Row>
@@ -70,14 +250,10 @@ function Survey() {
         </div>
         
       </header>
-      {/* <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form> */}
+       
       <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
     </div>
+    
   );
 }
 

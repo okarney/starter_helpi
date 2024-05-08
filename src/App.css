@@ -56,7 +56,7 @@ ul li a:hover::after{
   margin: 40px;
 }
 .left-column{
-  flex-basis: 45%;
+  flex-basis: 60%;
 }
 .right-column{
   flex-basis:55% ;
