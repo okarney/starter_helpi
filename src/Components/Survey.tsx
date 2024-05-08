@@ -250,6 +250,8 @@ function Survey() {
         </div>
         
       </header>
+      
+      <br></br>
        
       <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
     </div>
