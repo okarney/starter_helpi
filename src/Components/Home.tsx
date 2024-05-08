@@ -5,6 +5,7 @@ import '../App';
 //import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
+import careerpic from './careerpic.png'
 //import {office} from './careervideo.mp4'
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 // let keyData = "";
