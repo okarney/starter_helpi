@@ -6,6 +6,7 @@ import '../App';
 import { useNavigate } from 'react-router-dom';
 import olivia from './logo.png'
 import careerpic from './careerpic.png'
+import office from './office.gif';
 //import {office} from './careervideo.mp4'
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 // let keyData = "";
@@ -119,7 +120,7 @@ function Home() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <img src = {careerpic} alt = "Creer pic" />
+            <img src ={office} alt = "office"/>
 
           </div>
           <div className='right-column'>

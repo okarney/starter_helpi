@@ -100,9 +100,8 @@ ul li a:hover::after{
   margin-right: 100px;
   margin-left: 0px;
 }
-.Progress-bar{
-  margin-left: 10px;
-  margin-right: 80px;
+.bg-custom{
+  background-color: rgb(129,54,189);
 }
 span{
   color: #0e0d0f;
@@ -196,12 +195,13 @@ span{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(94, 56, 178);
+  background-color: white;
   }
  
   .detailed-header h2{
     min-height: 5vh;
     width: 60%;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
     display:block;
     align-items: center;
     justify-content: center;
@@ -224,10 +224,10 @@ span{
     outline: none;
     border: 1.5px solid #7f7396;
     border-radius: 20px;
-    color: #441880;
+    color: #996fd4;
     background:transparent;
     box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
-    color:#600da0;
+    color:#8743ba;
     }
 
     .BasicButton:hover{
@@ -237,7 +237,7 @@ span{
     border: 1.5px solid #7f7396;
     border-radius: 20px;
     color: #ffffff;
-    background-color: #441880;
+    background-color: #8247ee;
     box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
     color:#ffffff;
     }
