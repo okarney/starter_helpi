@@ -131,24 +131,8 @@ let gptData = {
 })
 .catch(error => {
     console.error('Error:', error);
-    //alert("Incorrect API key submitted. Please submit a valid API Key!");
-    if (key === "") {
-      alert("No API Key submitted. Please submit an API Key!");
-    }
-    else{
-      alert("Invalid API key submitted. Please submit a valid API Key!");
-    }
   })
-  
 };  
-
-
-// code to test whether the api key validation checks are working or not
-// comment in and out as needed
-
-// if (career1 !== "") {
-//   localStorage.clear();
-// }
 
   
   //sets the local storage item to the api key the user inputed
@@ -245,37 +229,28 @@ function OurHeader(){
     // This will navigate to second component
     navigate('/About');
   };
-  const goToSurvey = () => {
 
-    // This will navigate to second component
-    navigate('/Survey');
-  };
-
-
-/*function OurHeader(){*/
-return(
-  <div className="App-header3">
-      <div className = "navbar">
-      <div className = "img">
-        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+  return(
+    <div className="App-header2">
+        <div className = "navbar">
+    
+        <div className = "img">
+            <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+          </div>
+        <ul>
+          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+          <li><Button className="BasicButton"> Contact</Button></li>
+        </ul>
+        </div> 
       </div>
-
-      <ul>
-        <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-        <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-        <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-      </ul>
-      </div> 
-    </div>
-
-)
+    
+  )
 }
 
   return (
-  <div>
-    <OurHeader/>
     <div className="detailed">
-      
+      <OurHeader/>
       
       <header className="detailed-header">
       <h1>Detailed Questions!</h1>
@@ -379,14 +354,13 @@ return(
       <div className='api'>
       <Form>
         <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey} ></Form.Control>
+        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
    
     </div>
 
-    </div>
     </div>
   );
 }

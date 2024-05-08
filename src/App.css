@@ -101,7 +101,8 @@ ul li a:hover::after{
   margin-left: 0px;
 }
 .bg-custom{
-  background-color: rgb(129,54,189);
+  background-color: rgb(129,54,189)!important;
+  color: rgb(129,54,189);
 }
 span{
   color: #0e0d0f;
