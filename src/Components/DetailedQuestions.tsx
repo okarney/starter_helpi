@@ -253,7 +253,7 @@ function OurHeader(){
       <OurHeader/>
       
       <header className="detailed-header">
-      <h1>Detailed Questions!</h1>
+      <h1>Detailed Questions</h1>
         <h2><BasicExample progress={progress}></BasicExample></h2>
       
       <div className='bottom2'>

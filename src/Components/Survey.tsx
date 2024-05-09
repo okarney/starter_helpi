@@ -75,7 +75,8 @@ function Survey() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <span> SURVERY </span>
+            <h2> Survey </h2>
+            <hr></hr>
             <Form.Group>
             <div className='questiontobeAsked'>
                 <Form.Label>1. Do you feel that your results were accurate?</Form.Label>
