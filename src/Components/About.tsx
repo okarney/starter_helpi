@@ -3,8 +3,8 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';
-import olivia from './logo.png'
-import Zahra from './Zahra.jpg';
+import olivia from './logo-removebg-preview.png'
+import Zahra from './Zahra1.jpg';
 import Olivia from './Olivia.png'
 import khadijaPlaceHolder from './khadijaPlaceHolder.jpg'
 import jacobPlaceHolder from './jacobPlaceHolder.jpg';

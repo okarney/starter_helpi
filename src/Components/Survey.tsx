@@ -1,7 +1,7 @@
 import '../App.css';
 import '../App';
 import { useNavigate } from 'react-router-dom';
-import olivia from './logo.png'
+import olivia from './logo-removebg-preview.png'
 import React, { useState } from 'react';
 import { Button, Form} from 'react-bootstrap';
 
@@ -97,7 +97,7 @@ function Survey() {
       
       <header className="App-header">
         <div className='banner'>
-          <div className='left-column'>
+          <div className='surveyHeader'>
          {/*<video controls autoPlay loop muted playsInline>
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
@@ -308,6 +308,7 @@ function Survey() {
         as="textarea"/>
   </Form.Group>
 
+main
         <Form>
         <Button className="Submit-Button" onClick={submitVisibility}>Submit</Button>
       </Form>
@@ -318,6 +319,7 @@ function Survey() {
                        
 
           </div>
+      
           <div className='right-column'>
           {/*<span> person </span>
           <span> person </span>*/}

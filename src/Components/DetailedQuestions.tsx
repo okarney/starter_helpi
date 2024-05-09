@@ -7,7 +7,7 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
 import GIF from './gif.gif';
-import olivia from './logo.png';
+import olivia from './logo-removebg-preview.png';
 
 
 

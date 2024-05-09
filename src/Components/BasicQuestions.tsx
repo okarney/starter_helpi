@@ -6,7 +6,7 @@ import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
 import GIF from './gif.gif';
-import olivia from './logo.png'
+import olivia from './logo-removebg-preview.png'
 // function App(){
 //   return <span>There is actually something here</span>
 // }
@@ -449,7 +449,7 @@ const goToHome = () => {
 
         {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
 
-        <div>
+        <div className='basicGPTrespond'>
         <span>{career1}</span>
 
         <br></br>
