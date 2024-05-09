@@ -4,7 +4,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import '../App';
 //import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
-import olivia from './logo.png'
+import olivia from './logo-removebg-preview.png'
 import office from './office.gif';
 //import {office} from './careervideo.mp4'
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -123,7 +123,7 @@ function Home() {
 
           </div>
           <div className='right-column'>
-          <h1>Career <span>Explorer</span></h1>
+          <h1>Career<span>Explorer</span></h1>
         <h3><span>Explore your future</span> career with us!</h3>
           <div className='btn'>
           <Container>
