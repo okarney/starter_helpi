@@ -17,6 +17,13 @@ function Survey() {
     const [ques4, setQues4] = useState<string>("");
     const [ques5, setQues5] = useState<string>("");
 
+    const [finished, setFinished] = useState<boolean> (false);
+    function submitVisibility(): void {
+      setFinished(!finished);
+    }
+  
+
+
      function updateQues1(event: React.ChangeEvent<HTMLInputElement>) {
           setQues1(event.target.value);
           console.log(event);
@@ -43,9 +50,10 @@ function Survey() {
     }
     
 
-    function handleSubmit() {
-      window.location.reload();
-    }
+    //function handleSubmit() {
+     // window.location.reload();
+    //}
+    //setFinished(false);
 
     const navigate = useNavigate();
  
@@ -299,10 +307,13 @@ function Survey() {
         onChange={updateQues5} 
         as="textarea"/>
   </Form.Group>
-  
+
         <Form>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+        <Button className="Submit-Button" onClick={submitVisibility}>Submit</Button>
       </Form>
+
+        {/*<Button onClick={submitVisibility}>Show/Hide</Button>*/}
+        {finished ? <p> Thank You for Taking the Survey!</p> : null}
 
                        
 
