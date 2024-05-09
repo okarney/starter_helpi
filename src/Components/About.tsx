@@ -1,8 +1,21 @@
 import '../App.css';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import '../App';
 import { useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import olivia from './logo.png'
+import Zahra from './Zahra.jpg';
+import Olivia from './Olivia.png'
+import khadijaPlaceHolder from './khadijaPlaceHolder.jpg'
+import jacobPlaceHolder from './jacobPlaceHolder.jpg';
+import purpleLI from './pLinkedIn.png';
+import  {OliviaLinkedIn}  from './linkedInButton';
+//import { OliviaLinkedIn, KhadijaLinkedIn } from './linkedInButton';
+//import { JacobLinkedIn } from './linkedInButton';
+// import { KhadijaLinkedIn } from './linkedInButton';
+
+
+
 
 function About() {
     const navigate = useNavigate();
@@ -17,6 +30,12 @@ function About() {
       // This will navigate to second component
       navigate('/Survey');
     };
+    // const goToZahraLinkedIn = () => {
+
+    //   // This will navigate to second component
+    //   <Link to={{ pathname: "https://www.linkedin.com/in/zahra-temori/" }} target="_blank">Click to open HereWeCode (new tab)</Link>
+    //   //navigate('https://www.linkedin.com/in/zahra-temori/');
+    // };
 
     
    return (
@@ -35,20 +54,114 @@ function About() {
       </div>
       <header className="App-header">
         <div className='banner'>
-          <div className='left-column'>
-         {/*<video controls autoPlay loop muted playsInline>
-        <source src= 'src/Components/office.mp4' type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>*/}
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>
-            <span> person </span>            
+        
 
-          </div>
-          <div className='right-column'>
-          <span> person </span>
-          <span> person </span>
+
+
+        <Container>
+        <h2>About Us</h2>
+          <hr></hr>      
+
+          <br></br>
+            <Row className="row-Olivia">
+                <Col>
+                  <img src = {Olivia} alt = "logo" id = "image" style={{height:300, width:300}}/>
+                  <br></br>
+                  <br></br>
+                </Col>
+                <Col>
+                <h3>Olivia Karney</h3> 
+                <span>okarney@udel.edu</span>
+                <br></br>
+                <span><OliviaLinkedIn></OliviaLinkedIn></span>     
+                <br></br>
+                <br></br>
+                </Col>
+                <Col>
+                  <img src = {khadijaPlaceHolder} alt = "logo" id = "image" style={{height:300, width:300}}/>
+                  <br></br>
+                  <br></br>
+                </Col>
+                <Col>
+                <h3>Khadija Mohammadi</h3>
+                <span>khadija@udel.edu</span>
+                <br></br>
+                <div>
+                  <Link to="https://www.linkedin.com/in/khadija-mohammadi-3ab7892ab/">
+                    <Button style={{ background: '#c3b1e1', height: 50, width: 50 }} type="button">
+                    <img src={purpleLI} alt="logo" style={{ height: 30, width: 30}} />
+                    </Button>
+                  </Link>
+                </div> 
+                <br></br>
+                <br></br>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                  <img src = {Zahra} alt = "logo" id = "image" style={{height:300, width:300}}/>
+                </Col>
+                <Col>
+                  <h3>Zahra Temori</h3>
+                  <span>zahratm@udel.edu</span>
+                  <br></br>
+                  <div>
+                    <Link to="https://www.linkedin.com/in/zahra-temori/">
+                      <Button style={{ background: '#c3b1e1', height: 50, width: 50 }} type="button">
+                      <img src={purpleLI} alt="logo" style={{ height: 30, width: 30}} />
+                      </Button>
+                    </Link>
+                  </div>
+                </Col>
+                <Col>
+                  <img src = {jacobPlaceHolder} alt = "logo" id = "image" style={{height:300, width:300}}/>
+                </Col>
+                <Col>
+                  <h3>Jacob Whitman</h3>
+                  <span>jacobwhi@udel.edu</span>
+                  <br></br>
+                  <div>
+                    <Link to="https://www.linkedin.com/in/jacob-whitman-b22952228/">   
+                      <Button style={{ background: '#c3b1e1', height: 50, width: 50 }} type="button">
+                      <img src={purpleLI} alt="logo" style={{ height: 30, width: 30}} />
+                      </Button>
+                    </Link>
+                  </div>
+                </Col>
+            </Row>
+           
+
+            
+            {/*<Row>*/}
+              {/*<h3>Zahra Temori</h3>
+              <span>Email: zahratm@udel.edu</span>
+              <br></br>
+              <Link to="https://www.linkedin.com/in/zahra-temori/">
+              
+              <Button style={{ background: '#c3b1e1', display: 'inline-block', height: 100, width: 100 }} type="button">
+              <img src={purpleLI} alt="logo" style={{ height: 50, width: 50, marginBottom: 20}} />
+              </Button>
+              </Link>
+
+              <Button style={{background: '#c3b1e1', backgroundImage:"./pLinkedIn.jpg",backgroundSize:"cover", width:"40px", height:"40px"}}></Button>
+              <button style={{background:'#c3b1e1', height: 100, width: 100}}><img src={purpleLI} alt="my image" /></button>
+   <br></br>*/}
+            {/*</Row>*/}
+            
+        </Container>
+          {/*<div className='left-column'>*/}
+            
+               
+
+          {/*</div>*/}
+          {/*<div className='right-column'>*/}
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+
+        
           <div className='btn'>
           {/* <Container>
                 <Row>
@@ -64,7 +177,7 @@ function About() {
             </Container> */}
             </div>
           </div>
-        </div>
+        {/*</div>*/}
         
       </header>
       {/* <Form>
@@ -73,7 +186,7 @@ function About() {
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form> */}
-      <span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>
+      {/*<span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>*/}
     </div>
   );
 }
