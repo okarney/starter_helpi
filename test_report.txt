@@ -281,7 +281,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (151 ms)
+  ✕ renders learn react link (141 ms)
 
   ● renders learn react link
 
@@ -320,22 +320,22 @@ FAIL src/App.test.tsx
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------------|---------|----------|---------|---------|-------------------
-All files               |    4.83 |     3.22 |    1.56 |    4.83 |                   
+All files               |    4.81 |     3.12 |    1.56 |    4.81 |                   
  src                    |    8.33 |        0 |      25 |    8.33 |                   
   App.tsx               |     100 |      100 |     100 |     100 |                   
   index.tsx             |       0 |      100 |     100 |       0 | 9-19              
   progressBar.tsx       |       0 |      100 |       0 |       0 | 7                 
   reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
- src/Components         |    4.59 |     3.44 |       0 |    4.59 |                   
+ src/Components         |    4.57 |     3.33 |       0 |    4.57 |                   
   About.tsx             |       0 |      100 |       0 |       0 | 21-41             
   BasicQuestions.tsx    |    5.88 |     3.03 |       0 |    5.88 | 19-274            
   DetailedQuestions.tsx |    6.55 |        4 |       0 |    6.55 | 20-251            
   Home.tsx              |       0 |      100 |       0 |       0 | 46-112            
-  Survey.tsx            |       0 |      100 |       0 |       0 | 14-73             
+  Survey.tsx            |       0 |        0 |       0 |       0 | 14-81             
   linkedInButton.tsx    |       0 |      100 |       0 |       0 | 7                 
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.235 s
+Time:        3.226 s
 Ran all test suites.
