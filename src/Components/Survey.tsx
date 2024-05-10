@@ -10,13 +10,13 @@ import { Button, Form} from 'react-bootstrap';
 
 function Survey() {
 
-    //const [key, setKey] = useState<string>(keyData);
     const [ques1, setQues1] = useState<string>("");
     const [ques2, setQues2] = useState<string>("");
     const [ques3, setQues3] = useState<string>("");
     const [ques4, setQues4] = useState<string>("");
     const [ques5, setQues5] = useState<string>("");
 
+    
     const [finished, setFinished] = useState<boolean> (false);
     function submitVisibility(): void {
       setFinished(!finished);
@@ -38,22 +38,19 @@ function Survey() {
       console.log(event);
     
     }
-    function updateQues4(event: React.ChangeEvent<HTMLInputElement>) {
+      function updateQues4(event: React.ChangeEvent<HTMLInputElement>) {
       setQues4(event.target.value);
       console.log(event);
     
     }
-    function updateQues5(event: React.ChangeEvent<HTMLInputElement>) {
+      function updateQues5(event: React.ChangeEvent<HTMLInputElement>) {
       setQues5(event.target.value);
       console.log(event);
     
     }
     
 
-    //function handleSubmit() {
-     // window.location.reload();
-    //}
-    //setFinished(false);
+    
 
     const navigate = useNavigate();
  
@@ -73,9 +70,7 @@ function Survey() {
         navigate('/Survey');
       };
     
-  /*function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
-        setKey(event.target.value);
-      }*/
+
       
      
    return (
@@ -83,7 +78,7 @@ function Survey() {
         <div className="App-header2">
         <div className = "navbar">
 
-        <div className = "img"> {/** why is it here? */}
+        <div className = "img"> 
         <img src = {olivia} alt = "logo" id = "image" className='fram'/>
         </div>
         <ul>
@@ -305,11 +300,12 @@ function Survey() {
         onChange={updateQues5} 
         as="textarea"/>
   </Form.Group>
+  <br></br>
 
         <Form>
         <Button className="Submit-Button" onClick={submitVisibility}>Submit</Button>
       </Form>
-
+        <br></br>
         {/*<Button onClick={submitVisibility}>Show/Hide</Button>*/}
         {finished ? <p> Thank You for Taking the Survey!</p> : null}
 

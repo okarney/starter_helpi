@@ -63,7 +63,7 @@ function BasicQuestions() {
     }
   }
 
-  //Gpt
+  //Gpt Integration:
   /*const [response, setResponse] = useState(""); // Response from GPT*/
 
   // send message to GPT function
