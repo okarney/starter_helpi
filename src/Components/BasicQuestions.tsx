@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Button, Form} from 'react-bootstrap';
+import { Button, Col, Container, Form, Row} from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
@@ -74,6 +74,10 @@ function BasicQuestions() {
      //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
  //);
  // JSON Data storing 3 Different Career Options
+    const [career1Title, setCareer1Title] = useState(""); // Response from GPT
+    const [career2Title, setCareer2Title] = useState(""); // Response from GPT
+    const [career3Title, setCareer3Title] = useState(""); // Response from GPT
+
     const [career1, setCareer1] = useState(""); // Response from GPT
     const [career2, setCareer2] = useState(""); // Response from GPT
     const [career3, setCareer3] = useState(""); // Response from GPT
@@ -86,20 +90,32 @@ function BasicQuestions() {
   'parameters': {
       'type': 'object',
       'properties': {
+        "CareerChoice1Title": {
+          "type": "string",
+          "description": "The title of your first career suggestion"
+        },
           "CareerChoice1": {
             "type": "string",
-            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions. Do not list the title here."
+        },
+        "CareerChoice2Title": {
+          "type": "string",
+          "description": "The title of your second career suggestion"
         },
           "CareerChoice2": {
             "type": "string",
-            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions. Do not list the title here."
+        },
+        "CareerChoice3Title": {
+          "type": "string",
+          "description": "The title of your third career suggestion"
         },
         "CareerChoice3": {
             "type": "string",
-            "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+            "description": "A description of a career that would be a good fit for the user based on their responses to the questions. Do not list the title here."
         }
      },
-     'required': ['CareerChoice1', 'CareerChoice2', 'CareerChoice3']
+     'required': ['CareerChoice1Title', 'CareerChoice1', 'CareerChoice2', 'CareerChoice3']
   }
 }
 
@@ -122,7 +138,7 @@ function BasicQuestions() {
         "role": "system",
                     "content": "You are an assistant that give career advise like a specialist"},
         {"role": "user", 
-        "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
+        "content": "Give a list of 3 potential career options based on the users responses to these questions. The title of the career in the CareerXTitle field must match the description of the career given. The questions and user's responses are listed below:" +
         
         `Which work environment aligns best with your interests?: ${choice1}` +
         `Which personality traits do you resonate with the most?: ${choice2}` +
@@ -146,6 +162,9 @@ function BasicQuestions() {
     else{
       console.log('Response:', data);
       const obj = JSON.parse(data.choices[0].message.tool_calls[0].function.arguments.toString());
+      setCareer1Title(obj.CareerChoice1Title);
+      setCareer2Title(obj.CareerChoice2Title);
+      setCareer3Title(obj.CareerChoice3Title);
       setCareer1(obj.CareerChoice1);
       setCareer2(obj.CareerChoice2);
       setCareer3(obj.CareerChoice3);
@@ -250,8 +269,11 @@ const goToHome = () => {
         </div> 
       </div>
 
+
   )
 }
+
+
   
 //validation checks
   /*return(
@@ -274,6 +296,7 @@ const goToHome = () => {
   return (
     <div className="Basic">
       <OurHeader/>
+
       <header className="Basic-header">
           <h1>Basic Questions</h1>
         
@@ -301,6 +324,9 @@ const goToHome = () => {
                 </div>
                 
             </Form.Group>
+
+            <br></br>
+
             
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
@@ -323,6 +349,9 @@ const goToHome = () => {
                 
             </Form.Group>
 
+            <br></br>
+
+
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
                 <Form.Label>3. Which of the following is true about you?</Form.Label>
@@ -340,6 +369,9 @@ const goToHome = () => {
               </div>
                 
             </Form.Group>
+
+            <br></br>
+
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
@@ -359,6 +391,8 @@ const goToHome = () => {
                 </Form.Select>
               </div>
                 
+              <br></br>
+
                 
             </Form.Group>
 
@@ -382,6 +416,8 @@ const goToHome = () => {
                 
             </Form.Group>
 
+            <br></br>
+
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
                 <Form.Label>6. What would you do on a weekend?</Form.Label>
@@ -401,6 +437,8 @@ const goToHome = () => {
               </div>
                 
             </Form.Group>
+
+            <br></br>
 
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
@@ -436,9 +474,30 @@ const goToHome = () => {
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 <br></br>
+<br></br>
+<br></br>
+
+
 
 <div className='bottom'>
-        {finished && key !== "" ? <h2>Your Careers</h2> : <span></span>}
+
+      
+
+      <br></br>
+
+
+        {finished && key !== "" ? 
+        <div>
+          <hr style={{backgroundColor: "#5D3FD3", height:3, borderTop:"white dashed"}}></hr>
+
+          <br></br>
+
+          <h2 style={{color: '#5D3FD3'}}>Your Careers</h2> 
+        </div>
+
+        
+        : <span></span>}
+
 
         <br></br>
 
@@ -450,10 +509,15 @@ const goToHome = () => {
         {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
 
         <div className='basicGPTrespond'>
+          
+        <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
+        
         <span>{career1}</span>
 
         <br></br>
         <br></br>      
+
+        <h5 style={{color: '#5D3FD3'}}>{career2Title}</h5>
 
 
         <span>{career2}</span>
@@ -461,23 +525,41 @@ const goToHome = () => {
         <br></br>
         <br></br>
 
+        <h5 style={{color: '#5D3FD3'}}>{career3Title}</h5>
+
+
         <span>{career3}</span>
         </div>}
         </div>{/*</Form.Group>*/}
         
 
+        <br></br>  
         <br></br>        
+      
         
         
       </header>
       <div className='bottom'>
       <div className='api'>
-        <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form>
+        <Container>
+          <Row>
+          <Col>
+            <Form>
+            <Form.Label></Form.Label>
+            <Form.Control style={{width:400}} type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+            </Form>
+
+          </Col>
+          <Col>
+          
+          <br></br>
+
+
+          <Button style={{margin:0}}className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+
+          </Col>
+          </Row>
+      </Container>
       </div>
       </div>
 

@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import olivia from './logo-removebg-preview.png'
 import Zahra from './Zahra1.jpg';
 import Olivia from './Olivia.png'
-import khadijaPlaceHolder from './khadijaPlaceHolder.jpg'
+import Khadija from './Khadija.png'
 import jacobPlaceHolder from './jacobPlaceHolder.jpg';
 import purpleLI from './pLinkedIn.png';
 import  {OliviaLinkedIn}  from './linkedInButton';
@@ -78,7 +78,7 @@ function About() {
                 <br></br>
                 </Col>
                 <Col>
-                  <img src = {khadijaPlaceHolder} alt = "logo" id = "image" style={{height:300, width:300}}/>
+                  <img src = {Khadija} alt = "logo" id = "image" style={{height:300, width:300}}/>
                   <br></br>
                   <br></br>
                 </Col>
