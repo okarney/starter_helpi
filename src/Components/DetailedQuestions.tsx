@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import {OpenAI} from "openai"
 import '../App.css';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 //import { Link } from 'react-router-dom';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
@@ -48,6 +48,9 @@ function DetailedQuestions() {
 
 
   // CHATGPT THINGS
+  const [career1Title, setCareer1Title] = useState(""); // Response from GPT
+  const [career2Title, setCareer2Title] = useState(""); // Response from GPT
+  const [career3Title, setCareer3Title] = useState(""); // Response from GPT
 
 
   const [career1, setCareer1] = useState(""); // Response from GPT
@@ -67,20 +70,32 @@ let gptData = {
   'parameters': {
       'type': 'object',
       'properties': {
+        "CareerChoice1Title": {
+          "type": "string",
+          "description": "The title of your first career suggestion"
+        },
           "CareerChoice1": {
             "type": "string",
             "description": "A description of a career that would be a good fit for the user based on their responses to the questions. If the user inputs a jumble of letters or responses that are not relevant to the question, your response is \"resubmit\"." 
         },
+        "CareerChoice2Title": {
+          "type": "string",
+          "description": "The title of your second career suggestion"
+        },
           "CareerChoice2": {
             "type": "string",
             "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
+        },
+        "CareerChoice3Title": {
+          "type": "string",
+          "description": "The title of your third career suggestion"
         },
         "CareerChoice3": {
             "type": "string",
             "description": "A description of a career that would be a good fit for the user based on their responses to the questions"
         }
      },
-     'required': ['CareerChoice1', 'CareerChoice2', 'CareerChoice3']
+     'required': ['CareerChoice1Title', 'CareerChoice1', 'CareerChoice2', 'CareerChoice3']
   }
 }
 
@@ -105,7 +120,7 @@ let gptData = {
                     "content": "You are an assistant that give career advise like a specialist"},
     
         {"role": "user", 
-        "content": "Give a list of 3 potential career options based on the users responses to these questions. Put each career choice and description on a new. The questions and user's responses are listed below:" +
+        "content": "Give a list of 3 potential career options based on the users responses to these questions. The title of the career in the CareerXTitle field must match the description of the career given. The questions and user's responses are listed below:" +
         
         `Describe your hobbies and interests: ${q1Response}` +
         `Describe your soft skills (teamwork, problem solving, leadership, communication, etc): ${q2Response}` +
@@ -124,6 +139,9 @@ let gptData = {
 .then(data => {
     console.log('Response:', data);
     const obj = JSON.parse(data.choices[0].message.tool_calls[0].function.arguments.toString());
+    setCareer1Title(obj.CareerChoice1Title);
+    setCareer2Title(obj.CareerChoice2Title);
+    setCareer3Title(obj.CareerChoice3Title);
     setCareer1(obj.CareerChoice1);
     setCareer2(obj.CareerChoice2);
     setCareer3(obj.CareerChoice3);
@@ -229,6 +247,11 @@ function OurHeader(){
     // This will navigate to second component
     navigate('/About');
   };
+  const goToSurvey = () => {
+
+    // This will navigate to second component
+    navigate('/Survey');
+  };
 
   return(
     <div className="App-header2">
@@ -240,7 +263,7 @@ function OurHeader(){
         <ul>
           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton"> Contact</Button></li>
+          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
         </ul>
         </div> 
       </div>
@@ -249,118 +272,157 @@ function OurHeader(){
 }
 
   return (
+    <div>
+            <OurHeader/>
+
     <div className="detailed">
-      <OurHeader/>
       
       <header className="detailed-header">
-      <h1>Detailed Questions</h1>
-        <h2><BasicExample progress={progress}></BasicExample></h2>
+          <h1>Detailed Questions</h1>
+          <h2><BasicExample progress={progress}></BasicExample></h2>
+      </header>
+
+      <div className='bottom-2'>
+          <Form.Group controlId="question1">
+              <Form.Label>1. Describe your hobbies and interests:</Form.Label>
+              <Form.Control
+                value={q1Response}
+                onChange={updateQ1Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question2">
+              <Form.Label>2. Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
+              <Form.Control
+                value={q2Response}
+                onChange={updateQ2Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question3">
+              <Form.Label>3. What subject areas intrigue you the most?</Form.Label>
+              <Form.Control
+                value={q3Response}
+                onChange={updateQ3Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question4">
+              <Form.Label>4. Where do you envision your career path evolving towards?</Form.Label>
+              <Form.Control
+                value={q4Response}
+                onChange={updateQ4Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question3">
+              <Form.Label>5. What technical skills do you possess or are interested in developing?</Form.Label>
+              <Form.Control
+                value={q5Response}
+                onChange={updateQ5Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question6">
+              <Form.Label>6. What is your dream place to live?</Form.Label>
+              <Form.Control
+                value={q6Response}
+                onChange={updateQ6Response} 
+                as="textarea"/>
+          </Form.Group>
+
+          <Form.Group controlId="question7">
+              <Form.Label>7. Describe your personal values:</Form.Label>
+              <Form.Control
+                value={q7Response}
+                onChange={updateQ7Response} 
+                as="textarea"/>
+          </Form.Group>
       
-      <div className='bottom2'>
-      <Form.Group controlId="question1">
-      <Form.Label>1. Describe your hobbies and interests:</Form.Label>
-      <Form.Control
-        value={q1Response}
-        onChange={updateQ1Response} 
-        as="textarea"/>
-  </Form.Group>
 
-  <Form.Group controlId="question2">
-      <Form.Label>2. Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
-      <Form.Control
-        value={q2Response}
-        onChange={updateQ2Response} 
-        as="textarea"/>
-  </Form.Group>
+      </div>
 
-  <Form.Group controlId="question3">
-      <Form.Label>3. What subject areas intrigue you the most?</Form.Label>
-      <Form.Control
-        value={q3Response}
-        onChange={updateQ3Response} 
-        as="textarea"/>
-  </Form.Group>
+      <Button className="CareerButton" onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
 
-  <Form.Group controlId="question4">
-      <Form.Label>4. Where do you envision your career path evolving towards?</Form.Label>
-      <Form.Control
-        value={q4Response}
-        onChange={updateQ4Response} 
-        as="textarea"/>
-  </Form.Group>
 
-  <Form.Group controlId="question3">
-      <Form.Label>5. What technical skills do you possess or are interested in developing?</Form.Label>
-      <Form.Control
-        value={q5Response}
-        onChange={updateQ5Response} 
-        as="textarea"/>
-  </Form.Group>
+      <br></br>
 
-  <Form.Group controlId="question6">
-      <Form.Label>6. What is your dream place to live?</Form.Label>
-      <Form.Control
-        value={q6Response}
-        onChange={updateQ6Response} 
-        as="textarea"/>
-  </Form.Group>
+      <br></br>
 
-  <Form.Group controlId="question7">
-      <Form.Label>7. Describe your personal values:</Form.Label>
-      <Form.Control
-        value={q7Response}
-        onChange={updateQ7Response} 
-        as="textarea"/>
 
-        <br></br>
-
-        <Button className="CareerButton" onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
-        <br></br>
-
-        {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
-        {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
-        <br></br>
-        {finished ? <h3>Your Careers</h3> : <span></span>}
-        <br></br>
-
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+         <br></br>
+        {finished && key !== "" ? 
         <div>
-          <span>{career1}</span>
+          <hr style={{backgroundColor: "#5D3FD3", height:3, borderTop:"white dashed"}}></hr>
 
           <br></br>
-          <br></br>
+
+          <h2 style={{marginLeft: 665, color: '#5D3FD3'}}>Your Careers</h2> 
+        </div>
+
+        
+        : <span></span>}
+
+        <br></br>
 
 
-          <span>{career2}</span>
+    <div className="detailed-results">
 
-          <br></br>      
-          <br></br>
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 540}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        <div>
+          <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
+        
+        <span>{career1}</span>
+
+        <br></br>
+        <br></br>      
+
+        <h5 style={{color: '#5D3FD3'}}>{career2Title}</h5>
 
 
-          <span>{career3}</span>
+        <span>{career2}</span>
+
+        <br></br>
+        <br></br>
+
+        <h5 style={{color: '#5D3FD3'}}>{career3Title}</h5>
+
+
+        <span>{career3}</span>
         </div>
         }
         
 
+      </div>
 
 
-
-  </Form.Group>
-  </div>
         <br></br>        
         
         
-      </header>
       <div className='api'>
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form>
+      <Container>
+          <Row>
+          <Col>
+            <Form>
+            <Form.Label></Form.Label>
+            <Form.Control style={{width:400}} type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+            </Form>
+
+          </Col>
+          <Col>
+          
+          <br></br>
+
+
+          <Button style={{margin:0}}className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+
+          </Col>
+          </Row>
+      </Container>
    
     </div>
 
+    </div>
     </div>
   );
 }
