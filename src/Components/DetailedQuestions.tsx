@@ -271,9 +271,10 @@ function OurHeader(){
       <OurHeader/>
       
       <header className="detailed-header">
-      <h1>Detailed Questions</h1>
-        <h2><BasicExample progress={progress}></BasicExample></h2>
-      
+          <h1>Detailed Questions</h1>
+          <h2><BasicExample progress={progress}></BasicExample></h2>
+      </header>
+
       <div className='bottom-2'>
           <Form.Group controlId="question1">
               <Form.Label>1. Describe your hobbies and interests:</Form.Label>
@@ -341,22 +342,24 @@ function OurHeader(){
 
       <br></br>
 
-        {/*<Button onClick={()=> setFinished(true)} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
-        {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
-        <br></br>
+
+         <br></br>
         {finished && key !== "" ? 
         <div>
           <hr style={{backgroundColor: "#5D3FD3", height:3, borderTop:"white dashed"}}></hr>
 
           <br></br>
 
-          <h2 style={{margin: 0, color: '#5D3FD3'}}>Your Careers</h2> 
+          <h2 style={{marginLeft: 665, color: '#5D3FD3'}}>Your Careers</h2> 
         </div>
 
         
         : <span></span>}
 
         <br></br>
+
+
+    <div className="detailed-results">
 
         {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
@@ -383,13 +386,12 @@ function OurHeader(){
         }
         
 
-
+      </div>
 
 
         <br></br>        
         
         
-      </header>
       <div className='api'>
       <Container>
           <Row>
