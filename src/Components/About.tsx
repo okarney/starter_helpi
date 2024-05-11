@@ -32,32 +32,27 @@ function About() {
     };
     // const goToZahraLinkedIn = () => {
 
-    //   // This will navigate to second component
-    //   <Link to={{ pathname: "https://www.linkedin.com/in/zahra-temori/" }} target="_blank">Click to open HereWeCode (new tab)</Link>
-    //   //navigate('https://www.linkedin.com/in/zahra-temori/');
-    // };
 
     
    return (
-    <div className="App">
+      <div>
         <div className="App-header2">
-        <div className = "navbar">
-        
-        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-        <ul>
-        <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-        <li><Button className="BasicButton"> About </Button></li>
-        <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-          
-        </ul>
-        </div> 
-      </div>
+            <div className = "navbar">
+            
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+                <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton"> About </Button></li>
+                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+                  
+                </ul>
+            </div>
+        </div>
+
+    <div className="App">
+
       <header className="App-header">
         <div className='banner'>
-        
-
-
-
         <Container>
         <h2>About Us</h2>
           <hr></hr>      
@@ -187,6 +182,8 @@ function About() {
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form> */}
       {/*<span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>*/}
+    </div>
+
     </div>
   );
 }

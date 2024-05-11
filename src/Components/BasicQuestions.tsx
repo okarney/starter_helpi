@@ -50,6 +50,25 @@ function BasicQuestions() {
       setProgress(progress - 15)
     }
   }
+
+  //HEADER FUNCTIONS
+  const navigate = useNavigate();
+
+    const goToHome = () => {
+      // This will navigate to first component
+      navigate('/Home');
+    };
+
+    const goToAbout = () => {
+
+      // This will navigate to second component
+      navigate('/About');
+    };
+    const goToSurvey = () => {
+
+      // This will navigate to second component
+      navigate('/Survey');
+    };
   
   // function to handle get career choices button
   //Validation Check #1: Make sure the user submits an API Key
@@ -63,7 +82,7 @@ function BasicQuestions() {
     }
   }
 
-  //Gpt
+  //Gpt Integration:
   /*const [response, setResponse] = useState(""); // Response from GPT*/
 
   // send message to GPT function
@@ -233,45 +252,45 @@ const goToHome = () => {
     navigate('/Home');
   };*/
 
-  function OurHeader(){
-    const navigate = useNavigate();
+//   function OurHeader(){
+//     const navigate = useNavigate();
 
-    const goToHome = () => {
-      // This will navigate to first component
-      navigate('/Home');
-    };
+//     const goToHome = () => {
+//       // This will navigate to first component
+//       navigate('/Home');
+//     };
 
-    const goToAbout = () => {
+//     const goToAbout = () => {
 
-      // This will navigate to second component
-      navigate('/About');
-    };
-    const goToSurvey = () => {
+//       // This will navigate to second component
+//       navigate('/About');
+//     };
+//     const goToSurvey = () => {
 
-      // This will navigate to second component
-      navigate('/Survey');
-    };
-
-
-/*function OurHeader(){*/
-  return(
-    <div className="App-header2">
-        <div className = "navbar">
-        <div className = "img">
-          <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-        </div>
-
-        <ul>
-          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-        </ul>
-        </div> 
-      </div>
+//       // This will navigate to second component
+//       navigate('/Survey');
+//     };
 
 
-  )
-}
+// /*function OurHeader(){*/
+//   return(
+//     <div className="App-header2">
+//         <div className = "navbar">
+//         <div className = "img">
+//           <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+//         </div>
+
+//         <ul>
+//           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+//           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+//           <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+//         </ul>
+//         </div> 
+//       </div>
+
+
+//   )
+// }
 
 
   
@@ -294,9 +313,19 @@ const goToHome = () => {
 
 
   return (
-    <div className="Basic">
-      <OurHeader/>
+    <div>
+        <div className="App-header2">
+            <div className = "navbar">
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+                <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>      
+                </ul>
+            </div> 
+        </div>
 
+    <div className="Basic">
       <header className="Basic-header">
           <h1>Basic Questions</h1>
         
@@ -562,7 +591,7 @@ const goToHome = () => {
       </Container>
       </div>
       </div>
-
+      </div>
 </div>
 
 

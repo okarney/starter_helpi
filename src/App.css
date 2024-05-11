@@ -13,8 +13,10 @@
 }
 /*this is the header */
 .App-header2{
-  width : 80%;
+  width : 100%;
+  margin-left: 5%;
   margin: auto;
+
 }
 .App-header3{
   width : 80%;
@@ -26,7 +28,7 @@
 .navbar{
   margin: 15px auto;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 ul{
   flex: 1;
@@ -174,21 +176,21 @@ span{
  
   .detailed-header h2{
     min-height: 5vh;
-    width: 60%;
+    width: 50%;
     background-color: #ffffff;
     display:block;
     align-items: center;
     justify-content: center;
     color: #7b60cc;
     text-align: right;
-    margin-left: 15%;
+    margin-left: 25%;
     margin-right: 15%;
   }
-  .bottom2{
+  .bottom-2{
     font-size: 18px;
     min-height: 5vh;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 25%;
+    margin-right: 25%;
     color:#441980;
 
   }
@@ -215,12 +217,16 @@ span{
     box-shadow: 0 2px 15px rgba(138, 123, 212, 0.26);
     color:#ffffff;
     }
-
+  .detailed-results{
+    margin-left: 8%;
+    margin-right: 8%;
+  }
 
     .CareerButton{
   padding: 7 30px;
   font-size: 15px;
-  margin-right: 15px;
+  margin-left: 45%;
+  margin-top: 50px;
   outline: none;
   border: 0px solid #441980;
   border-radius: 20px;
@@ -264,7 +270,7 @@ span{
   .api{
     width:50%;
     justify-content: center;
-    margin-left: 5%;
+    margin-left: 33%;
   }
   /* All design on Basic Question page---------------------------------------------------------------*/
   .detailed{
