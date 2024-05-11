@@ -256,41 +256,41 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
 
 
-function OurHeader(){
-  const navigate = useNavigate();
+// function OurHeader(){
+//   const navigate = useNavigate();
 
-  const goToHome = () => {
-    // This will navigate to first component
-    navigate('/Home');
-  };
+//   const goToHome = () => {
+//     // This will navigate to first component
+//     navigate('/Home');
+//   };
 
-  const goToAbout = () => {
+//   const goToAbout = () => {
  
-    // This will navigate to second component
-    navigate('/About');
-  };
-  const goToSurvey = () => {
+//     // This will navigate to second component
+//     navigate('/About');
+//   };
+//   const goToSurvey = () => {
 
-    // This will navigate to second component
-    navigate('/Survey');
-  };
+//     // This will navigate to second component
+//     navigate('/Survey');
+//   };
 
-  return(
-    <div className="App-header2">
-          <div className = "navbar">
-              <div className = "img">
-                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-              </div>
-              <ul>
-                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-              </ul>
-          </div> 
-      </div>
+//   return(
+//     <div className="App-header2">
+//           <div className = "navbar">
+//               <div className = "img">
+//                 <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+//               </div>
+//               <ul>
+//                 <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+//                 <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+//                 <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+//               </ul>
+//           </div> 
+//       </div>
     
-  )
-}
+//   )
+// }
 
   return (
     <div>

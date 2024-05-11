@@ -42,43 +42,43 @@ import office from './office.gif';
 //   );
 // }
 
-function OurHeader(){
-  const navigate = useNavigate();
-  const goToAbout = () => {
+// function OurHeader(){
+//   const navigate = useNavigate();
+//   const goToAbout = () => {
  
-    // This will navigate to second component
-    navigate('/About');
-  };
-  const goToSurvey = () => {
+//     // This will navigate to second component
+//     navigate('/About');
+//   };
+//   const goToSurvey = () => {
 
-    // This will navigate to second component
-    navigate('/Survey');
-  };
-  const goToHome = () => {
+//     // This will navigate to second component
+//     navigate('/Survey');
+//   };
+//   const goToHome = () => {
 
-    // This will navigate to second component
-    navigate('/Home');
-  };
+//     // This will navigate to second component
+//     navigate('/Home');
+//   };
 
 
-/*function OurHeader(){*/
-  return(
-    <div className="App-header2">
-        <div className = "navbar">
-        <div className = "img">
-          <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-        </div>
+// /*function OurHeader(){*/
+//   return(
+//     <div className="App-header2">
+//         <div className = "navbar">
+//         <div className = "img">
+//           <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+//         </div>
 
-        <ul>
-          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-        </ul>
-        </div> 
-      </div>
+//         <ul>
+//           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+//           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+//           <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+//         </ul>
+//         </div> 
+//       </div>
 
-  )
-}
+//   )
+// }
 
 function Home() {
     const navigate = useNavigate();
