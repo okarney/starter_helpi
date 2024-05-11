@@ -128,7 +128,7 @@ function Home() {
                 <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>      
                 </ul>
             </div> 
-      </div>
+        </div>
               {/*<OurHeader/>*/}
 
     <div className="App">

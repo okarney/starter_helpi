@@ -64,11 +64,7 @@ function Survey() {
         // This will navigate to second component
         navigate('/About');
       };
-      const goToSurvey = () => {
-    
-        // This will navigate to second component
-        navigate('/Survey');
-      };
+      
     
 
       

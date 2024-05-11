@@ -50,7 +50,7 @@ function About() {
                 <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
                   
                 </ul>
-            </div> 
+            </div>
         </div>
 
     <div className="App">
