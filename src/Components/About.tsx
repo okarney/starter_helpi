@@ -32,10 +32,6 @@ function About() {
     };
     // const goToZahraLinkedIn = () => {
 
-    //   // This will navigate to second component
-    //   <Link to={{ pathname: "https://www.linkedin.com/in/zahra-temori/" }} target="_blank">Click to open HereWeCode (new tab)</Link>
-    //   //navigate('https://www.linkedin.com/in/zahra-temori/');
-    // };
 
     
    return (
