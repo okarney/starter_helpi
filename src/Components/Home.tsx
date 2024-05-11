@@ -93,25 +93,43 @@ function Home() {
         // This will navigate to first component
         navigate('/DetailedQuestions');
     };
-    
+
+    // the following lines were moved from the "Our Header Function"
+
+  const goToAbout = () => {
  
- // const [key, setKey] = useState<string>(keyData); //for api key input
-  
-  //sets the local storage item to the api key the user inputed
-  // function handleSubmit() {
-  //   localStorage.setItem(saveKeyData, JSON.stringify(key));
-  //   window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
-  // }
+    // This will navigate to second component
+    navigate('/About');
+  };
+  const goToSurvey = () => {
 
+    // This will navigate to second component
+    navigate('/Survey');
+  };
+  const goToHome = () => {
 
-  //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
-  // function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
-  //   setKey(event.target.value);
+    // This will navigate to second component
+    navigate('/Home');
+  };
+    
+
+ 
     
   // }
   return (
-    <div>
-              <OurHeader/>
+      <div>
+        <div className="App-header2">
+            <div className = "navbar">
+            
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+                <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>      
+                </ul>
+            </div> 
+      </div>
+              {/*<OurHeader/>*/}
 
     <div className="App">
       <header className="App-header">
@@ -144,6 +162,10 @@ function Home() {
           </div>
         </div>
         
+        <br></br>
+        <br></br>
+
+
         
       </header>
       {/* <Form>
