@@ -110,8 +110,10 @@ function Home() {
     
   // }
   return (
+    <div>
+              <OurHeader/>
+
     <div className="App">
-        <OurHeader/>
       <header className="App-header">
         <div className='banner'>
           <div className='left-column'>
@@ -142,6 +144,7 @@ function Home() {
           </div>
         </div>
         
+        
       </header>
       {/* <Form>
         <Form.Label>API Key:</Form.Label>
@@ -150,6 +153,7 @@ function Home() {
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form> */}
       {/*<span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>*/}
+    </div>
     </div>
   );
 }

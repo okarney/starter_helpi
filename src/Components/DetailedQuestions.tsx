@@ -247,6 +247,11 @@ function OurHeader(){
     // This will navigate to second component
     navigate('/About');
   };
+  const goToSurvey = () => {
+
+    // This will navigate to second component
+    navigate('/Survey');
+  };
 
   return(
     <div className="App-header2">
@@ -258,7 +263,7 @@ function OurHeader(){
         <ul>
           <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
           <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton"> Contact</Button></li>
+          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
         </ul>
         </div> 
       </div>
@@ -267,8 +272,10 @@ function OurHeader(){
 }
 
   return (
+    <div>
+            <OurHeader/>
+
     <div className="detailed">
-      <OurHeader/>
       
       <header className="detailed-header">
           <h1>Detailed Questions</h1>
@@ -361,7 +368,7 @@ function OurHeader(){
 
     <div className="detailed-results">
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 540}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
         
@@ -415,6 +422,7 @@ function OurHeader(){
    
     </div>
 
+    </div>
     </div>
   );
 }
