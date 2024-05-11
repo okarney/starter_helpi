@@ -34,6 +34,28 @@ function DetailedQuestions() {
     }
   }
 
+
+  // HEADER FUNCTIONS
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    // This will navigate to first component
+    navigate('/Home');
+  };
+
+  const goToAbout = () => {
+ 
+    // This will navigate to second component
+    navigate('/About');
+  };
+  const goToSurvey = () => {
+
+    // This will navigate to second component
+    navigate('/Survey');
+  };
+
+
+
   // function to handle get career choices button
   //Validation Check #1: Make sure the user submits an API Key
 
@@ -255,17 +277,16 @@ function OurHeader(){
 
   return(
     <div className="App-header2">
-        <div className = "navbar">
-    
-        <div className = "img">
-            <img src = {olivia} alt = "logo" id = "image" className='fram'/>
-          </div>
-        <ul>
-          <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-        </ul>
-        </div> 
+          <div className = "navbar">
+              <div className = "img">
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+              </div>
+              <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
+              </ul>
+          </div> 
       </div>
     
   )
@@ -273,7 +294,16 @@ function OurHeader(){
 
   return (
     <div>
-            <OurHeader/>
+        <div className="App-header2">
+            <div className = "navbar">
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+                <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+                <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>      
+                </ul>
+            </div> 
+        </div>
 
     <div className="detailed">
       

@@ -13,9 +13,10 @@
 }
 /*this is the header */
 .App-header2{
-  width : 80%;
+  width : 100%;
   margin-left: 5%;
   margin: auto;
+
 }
 .App-header3{
   width : 80%;
@@ -27,7 +28,7 @@
 .navbar{
   margin: 15px auto;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 ul{
   flex: 1;
