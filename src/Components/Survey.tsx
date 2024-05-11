@@ -74,22 +74,21 @@ function Survey() {
       
      
    return (
-    <div className="App">
-        <div className="App-header2">
-        <div className = "navbar">
-
-        <div className = "img"> 
-        <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+    <div>
+      <div className="App-header2">
+            <div className = "navbar">
+            
+                <img src = {olivia} alt = "logo" id = "image" className='fram'/>
+                <ul>
+                <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
+                <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
+                <li><Button className="BasicButton"> Survey </Button></li>
+                  
+                </ul>
+            </div> 
         </div>
-        <ul>
-        <li><Button className="BasicButton" onClick={goToHome}> Home </Button></li>
-          <li><Button className="BasicButton" onClick={goToAbout}> About </Button></li>
-          <li><Button className="BasicButton" onClick={goToSurvey}> Survey </Button></li>
-          
-        </ul>
-        </div> 
-      </div>
-      
+    <div className="App">
+              
       <header className="App-header">
         <div className='banner'>
           <div className='surveyHeader'>
@@ -302,7 +301,6 @@ function Survey() {
   </Form.Group>
   <br></br>
 
-main
         <Form>
         <Button className="Submit-Button" onClick={submitVisibility}>Submit</Button>
       </Form>
@@ -339,7 +337,7 @@ main
       <br></br>
        
     </div>
-    
+  </div>
   );
 }
 export default Survey;
