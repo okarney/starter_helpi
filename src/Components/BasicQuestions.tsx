@@ -505,7 +505,6 @@ const goToHome = () => {
               
             
     
-                
                 <br></br>
             <div><Button className='CareerBasicButton' onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
         </div>
@@ -544,8 +543,9 @@ const goToHome = () => {
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img src ={GIF} alt = "GIF"/> : 
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <div><img style={{marginLeft:255}} src ={GIF} alt = "GIF"/> <br></br> <br></br> <br></br> </div> : 
 
+        
         <div className='basicGPTrespond'>
           
         <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
