@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import olivia from './logo-removebg-preview.png'
 import React, { useState } from 'react';
 import { Button, Form} from 'react-bootstrap';
+//import sunrise from './purpl.png'
 
 
 
@@ -84,6 +85,7 @@ function Survey() {
             </div> 
         </div>
     <div className="App">
+   
               
       <header className="App-header">
         <div className='banner'>
@@ -334,7 +336,7 @@ function Survey() {
        
     </div>
   </div>
-  );
+);
 }
 export default Survey;
 

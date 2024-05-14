@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
 import GIF from './gif.gif';
 import olivia from './logo-removebg-preview.png';
+import sunrise from './PurpleBG.png'
 
 
 
@@ -293,8 +294,14 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 // }
 
   return (
-    <div>
+    <div
+    style={{
+      backgroundImage:`url(${sunrise})`,
+      backgroundSize: "cover",
+      backgroundPosition:"center",
+    }}>
         <div className="App-header2">
+      
             <div className = "navbar">
                 <img src = {olivia} alt = "logo" id = "image" className='fram'/>
                 <ul>
@@ -304,9 +311,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
                 </ul>
             </div> 
         </div>
-
     <div className="detailed">
-      
       <header className="detailed-header">
           <h1>Detailed Questions</h1>
           <h2><BasicExample progress={progress}></BasicExample></h2>
