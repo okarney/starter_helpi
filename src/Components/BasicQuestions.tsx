@@ -331,14 +331,21 @@ const goToHome = () => {
             </div> 
         </div>
 
-    <div className="Basic">
       <header className="Basic-header">
           <h1>Basic Questions</h1>
+
         
         {/*<h1>Basic Questions</h1>*/}
         <h2><BasicExample progress={progress}></BasicExample></h2>
         <br></br>
-        <br></br>
+        </header>
+
+        <div className="Basic">
+
+          <br></br>
+          <br></br>
+
+
             <Form.Group controlId="basicQuestions">
               <div className='questionAsk'>
                 <Form.Label>1. Which work environment aligns best with your interests?</Form.Label>
@@ -501,16 +508,12 @@ const goToHome = () => {
                 
                 <br></br>
             <div><Button className='CareerBasicButton' onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
-
-</div>
+        </div>
 
 {/*<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
 
 {/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
-<br></br>
-<br></br>
-<br></br>
 
 
 
@@ -527,7 +530,7 @@ const goToHome = () => {
 
           <br></br>
 
-          <h2 style={{color: '#5D3FD3'}}>Your Careers</h2> 
+          <h2 style={{marginLeft: 55, color: '#5D3FD3'}}>Your Careers</h2> 
         </div>
 
         
@@ -564,16 +567,20 @@ const goToHome = () => {
 
 
         <span>{career3}</span>
+        <br></br>
+        <br></br>
+        <br></br>
+
+
+
         </div>}
         </div>{/*</Form.Group>*/}
         
 
-        <br></br>  
-        <br></br>        
       
+        </div>
+
         
-        
-      </header>
       <div className='bottom'>
       <div className='api'>
         <Container>
@@ -595,7 +602,6 @@ const goToHome = () => {
           </Col>
           </Row>
       </Container>
-      </div>
       </div>
       </div>
 </div>

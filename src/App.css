@@ -161,6 +161,7 @@ span{
 /*  All Design on the Detailed Question Page---------------------------------------------------*/
   .detailed{
   justify-content: center;
+    
 
   }
   .detailed-header h1{
@@ -274,8 +275,16 @@ span{
     margin-left: 33%;
   }
   /* All design on Basic Question page---------------------------------------------------------------*/
-  .detailed{
+  .Basic{
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.645);  /* Semi-transparent white */
+
+    backdrop-filter: blur(0px);  /* Blur effect for the frosted glass */
+
+    border-radius: 15px;
+
+    margin-left: 27%;
+    margin-right: 27%;
   }
   .detailed img{
     width:100%;
@@ -293,14 +302,14 @@ span{
   font-family:Georgia, 'Times New Roman', Times, serif;
   }
   .Basic-header h2{
-    width: 50%;
+    width: 46%;
     background-color: transparent;
     display:block;
     align-items: center;
     justify-content: center;
     color: #7b60cc;
     text-align: right;
-    margin-left: 25%;
+    margin-left: 27%;
   
   }
   .questionAsk{
@@ -308,12 +317,13 @@ span{
   min-height: 5vh;
   align-items: center;
   color:#441980;
-  margin-left: 31%;
+  margin-left: 10%;
+  margin-top: 1%;
   }
   .dropdown{
     font-size: 150px;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
   }
   .bottom h2{
     margin-left: 6.5%;
@@ -322,7 +332,7 @@ span{
     margin-left: 44%;
   }
   .CareerBasicButton{
-    margin-left: 45%;
+    margin-left: 39%;
     padding: 7 30px;
     font-size: 15px;
     margin-right: 15px;

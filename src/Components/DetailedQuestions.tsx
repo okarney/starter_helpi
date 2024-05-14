@@ -403,7 +403,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
     <div className="detailed-results">
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 540}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 535, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
         
