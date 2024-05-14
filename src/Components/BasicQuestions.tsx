@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
 import GIF from './gif.gif';
 import olivia from './logo-removebg-preview.png'
+import sunrise from './lavender.png'
 // function App(){
 //   return <span>There is actually something here</span>
 // }
@@ -313,7 +314,12 @@ const goToHome = () => {
 
 
   return (
-    <div>
+    <div
+    style={{
+      backgroundImage:`url(${sunrise})`,
+      backgroundSize: "cover",
+      backgroundPosition:"center",
+    }}>
         <div className="App-header2">
             <div className = "navbar">
                 <img src = {olivia} alt = "logo" id = "image" className='fram'/>
