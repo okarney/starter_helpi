@@ -79,11 +79,6 @@ ul li a:hover::after{
   margin-top: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 /*this is the page */
 .App-header {
   min-height: 75vh;
@@ -127,7 +122,7 @@ span{
   background: transparent;
   background:linear-gradient(#8067a3,#311e4d) ;
   box-shadow: 0 2px 15px rgba(66, 60, 99, 0.26);
-  color:#e9eae9;
+  color:#efefef;
   margin-top: 100px;
 }
 
@@ -260,9 +255,9 @@ span{
     border: 1.5px solid #7f7396;
     border-radius: 20px;
     color: #645cc1;
-    background:transparent;
+    background:#645cc1;
     box-shadow: 0 2px 15px rgba(115, 96, 201, 0.26);
-    color:#8743ba;
+    color:rgb(240, 240, 243);
 
   }
   .Submit-Button:hover{
@@ -283,23 +278,17 @@ span{
     margin-left: 33%;
   }
   /* All design on Basic Question page---------------------------------------------------------------*/
+
+  /* The format of frosted glass for basic question*/
   .Basic{
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.645);  /* Semi-transparent white */
-
     backdrop-filter: blur(0px);  /* Blur effect for the frosted glass */
-
     border-radius: 15px;
-
     margin-left: 27%;
     margin-right: 27%;
   }
-  .detailed img{
-    width:100%;
-    height: 100%;
-    margin-left: 50%;
-  }
-
+  /* The format of Basic title*/
   .Basic-header h1{
   min-height: 6vh;
   font-size: calc(20px + 2vmin);
@@ -309,6 +298,7 @@ span{
   margin-left: 42%;
   font-family:Georgia, 'Times New Roman', Times, serif;
   }
+  /* The format of Progress bar in basic qurstion*/
   .Basic-header h2{
     width: 46%;
     background-color: transparent;
@@ -320,6 +310,7 @@ span{
     margin-left: 27%;
   
   }
+  /* The format of Questions on basice page*/
   .questionAsk{
   font-size: 18px;
   min-height: 5vh;
@@ -327,18 +318,15 @@ span{
   color:#441980;
   margin-left: 10%;
   margin-top: 1%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   }
+  /* The format of dropdown for all questions on basic*/
   .dropdown{
     font-size: 150px;
     margin-right: 10%;
     margin-left: 10%;
   }
-  .bottom h2{
-    margin-left: 6.5%;
-  }
-  .bottom img{
-    margin-left: 44%;
-  }
+  /* The format of Career buttom that gives the result for user on basic page*/
   .CareerBasicButton{
     margin-left: 39%;
     padding: 7 30px;
@@ -355,21 +343,23 @@ span{
     color:#e9eae9;
   
     }
+    /* The format GPT respons to the user*/
     .basicGPTrespond{
       margin-left: 8%;
       margin-right: 8%;
 
     }
-    /*survey page---------------------------------------------*/
-    .questiontobeAsked{
-      font-size: 23px;
+/*survey page design ---------------------------------------------*/
+    /* The format of questions*/
+  .questiontobeAsked{
+  font-size: 23px;
   min-height: 5vh;
   align-items: center;
   color:#441980;
   margin-left: 10%;
   margin-top: 1%;
-
-    }
+  }
+  /* The format of options to each question*/
   .options{
       font-size: 20px;
       min-height: 5vh;
@@ -378,8 +368,9 @@ span{
       margin-left: 13%;
       margin-top: 1%;
     }
-    .surveyHeader h1{
-    min-height: 0;
+    /* The format of Survey title*/
+  .surveyHeader h1{
+  min-height: 0;
   flex-direction:column;
   align-items: center;
   justify-content: center;
