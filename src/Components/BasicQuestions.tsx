@@ -5,7 +5,7 @@ import { Button, Col, Container, Form, Row} from 'react-bootstrap';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 //import OpenAI from 'openai';
-import GIF from './gif.gif';
+import GIF from './gif-unscreen.gif';
 import olivia from './logo-removebg-preview.png'
 import sunrise from './lavender.png'
 // function App(){
@@ -543,7 +543,7 @@ const goToHome = () => {
         {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <div><img style={{marginLeft:255}} src ={GIF} alt = "GIF"/> <br></br> <br></br> <br></br> </div> : 
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <div><img style={{marginLeft:255}} src ={GIF} alt = "GIF"/><br></br><span style={{marginLeft:255, color:'#441980'}} >Generating your careers...</span> <br></br> <br></br> <br></br> </div> : 
 
         
         <div className='basicGPTrespond'>
