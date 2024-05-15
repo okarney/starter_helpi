@@ -325,38 +325,39 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
                 onChange={updateQ1Response} 
                 as="textarea"/>
           </Form.Group>
-
-          <Form.Group controlId="question3">
+          <br></br>
+          <Form.Group controlId="question2">
               <Form.Label>2. What subject areas intrigue you the most?</Form.Label>
               <Form.Control
                 value={q3Response}
                 onChange={updateQ3Response} 
                 as="textarea"/>
           </Form.Group>
-
-          <Form.Group controlId="question4">
+          <br></br>
+          <Form.Group controlId="question3">
               <Form.Label>3. Where do you envision your career path evolving towards?</Form.Label>
               <Form.Control
                 value={q4Response}
                 onChange={updateQ4Response} 
                 as="textarea"/>
           </Form.Group>
-
-          <Form.Group controlId="question3">
+          <br></br>
+          <Form.Group controlId="question4">
               <Form.Label>4. What technical skills do you possess or are interested in developing?</Form.Label>
               <Form.Control
                 value={q5Response}
                 onChange={updateQ5Response} 
                 as="textarea"/>
           </Form.Group>
-          <Form.Group controlId="question2">
+          <br></br>
+          <Form.Group controlId="question5">
               <Form.Label>5. Describe your soft skills (teamwork, problem solving, leadership, etc):</Form.Label>
               <Form.Control
                 value={q2Response}
                 onChange={updateQ2Response} 
                 as="textarea"/>
           </Form.Group>
-
+          <br></br>
           <Form.Group controlId="question6">
               <Form.Label>6. What is your dream place to live?</Form.Label>
               <Form.Control
@@ -364,7 +365,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
                 onChange={updateQ6Response} 
                 as="textarea"/>
           </Form.Group>
-
+          <br></br>
           <Form.Group controlId="question7">
               <Form.Label>7. Describe your personal values:</Form.Label>
               <Form.Control
@@ -391,7 +392,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
           <br></br>
 
-          <h2 style={{marginLeft: 53, color: '#5D3FD3'}}>Your Careers</h2> 
+          <h2 style={{marginLeft: 58, color: '#5D3FD3'}}>Your Careers</h2> 
         </div>
 
         
@@ -402,7 +403,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
       <div className="detailed-results">
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 200, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 220, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
         
