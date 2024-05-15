@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
 import GIF from './gif.gif';
 import olivia from './logo-removebg-preview.png';
-import sunrise from './PurpleBG.png'
+import sunrise from './lavender.png'
 
 
 
@@ -311,12 +311,12 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
                 </ul>
             </div> 
         </div>
-    <div className="detailed">
-      <header className="detailed-header">
+        <header className="detailed-header">
           <h1>Detailed Questions</h1>
           <h2><BasicExample progress={progress}></BasicExample></h2>
       </header>
-
+    <div className="detailed">
+      <br></br>
       <div className='bottom-2'>
           <Form.Group controlId="question1">
               <Form.Label>1. Describe your hobbies and interests:</Form.Label>
@@ -326,16 +326,8 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
                 as="textarea"/>
           </Form.Group>
 
-          <Form.Group controlId="question2">
-              <Form.Label>2. Describe your soft skills (teamwork, problem solving, leadership, communication, etc):</Form.Label>
-              <Form.Control
-                value={q2Response}
-                onChange={updateQ2Response} 
-                as="textarea"/>
-          </Form.Group>
-
           <Form.Group controlId="question3">
-              <Form.Label>3. What subject areas intrigue you the most?</Form.Label>
+              <Form.Label>2. What subject areas intrigue you the most?</Form.Label>
               <Form.Control
                 value={q3Response}
                 onChange={updateQ3Response} 
@@ -343,7 +335,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
           </Form.Group>
 
           <Form.Group controlId="question4">
-              <Form.Label>4. Where do you envision your career path evolving towards?</Form.Label>
+              <Form.Label>3. Where do you envision your career path evolving towards?</Form.Label>
               <Form.Control
                 value={q4Response}
                 onChange={updateQ4Response} 
@@ -351,10 +343,17 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
           </Form.Group>
 
           <Form.Group controlId="question3">
-              <Form.Label>5. What technical skills do you possess or are interested in developing?</Form.Label>
+              <Form.Label>4. What technical skills do you possess or are interested in developing?</Form.Label>
               <Form.Control
                 value={q5Response}
                 onChange={updateQ5Response} 
+                as="textarea"/>
+          </Form.Group>
+          <Form.Group controlId="question2">
+              <Form.Label>5. Describe your soft skills (teamwork, problem solving, leadership, etc):</Form.Label>
+              <Form.Control
+                value={q2Response}
+                onChange={updateQ2Response} 
                 as="textarea"/>
           </Form.Group>
 
@@ -392,7 +391,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
           <br></br>
 
-          <h2 style={{marginLeft: 665, color: '#5D3FD3'}}>Your Careers</h2> 
+          <h2 style={{marginLeft: 53, color: '#5D3FD3'}}>Your Careers</h2> 
         </div>
 
         
@@ -401,9 +400,9 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
         <br></br>
 
 
-    <div className="detailed-results">
+      <div className="detailed-results">
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 535, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 200, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
         
@@ -425,14 +424,12 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
         <span>{career3}</span>
         </div>
+        
         }
-        
-
-      </div>
-
-
-        <br></br>        
-        
+      </div> 
+      <br></br>
+      <br></br>       
+    </div>
         
       <div className='api'>
       <Container>
@@ -455,7 +452,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
           </Row>
       </Container>
    
-    </div>
+    
 
     </div>
     </div>

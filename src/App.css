@@ -161,7 +161,14 @@ span{
 /*  All Design on the Detailed Question Page---------------------------------------------------*/
   .detailed{
   justify-content: center;
-    
+  background-color: rgba(255, 255, 255, 0.645);  /* Semi-transparent white */
+
+  backdrop-filter: blur(0px);  /* Blur effect for the frosted glass */
+
+  border-radius: 15px;
+
+  margin-left: 25%;
+  margin-right: 25%;
 
   }
   .detailed-header h1{
@@ -189,18 +196,19 @@ span{
     margin-right: 15%;
   }
   .bottom-2{
-    font-size: 18px;
+    font-size: 20px;
     min-height: 5vh;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-top: 1%;
+    margin-left: 6%;
+    margin-right: 6%;
     color:#441980;
-
+    font-family:'Times New Roman', Times, serif;
   }
   .BasicButton{
     padding: 7x 30px;
     margin-right: 15px;
     outline: none;
-    border: 1.5px solid #7f7396;
+    border: 1.5px solid #9285aa;
     border-radius: 20px;
     color: #645cc1;
     background:transparent;
@@ -224,10 +232,10 @@ span{
     margin-right: 8%;
   }
 
-    .CareerButton{
+  .CareerButton{
   padding: 7 30px;
   font-size: 15px;
-  margin-left: 45%;
+  margin-left: 40%;
   margin-top: 50px;
   outline: none;
   border: 0px solid #441980;
@@ -354,7 +362,21 @@ span{
     }
     /*survey page---------------------------------------------*/
     .questiontobeAsked{
+      font-size: 23px;
+  min-height: 5vh;
+  align-items: center;
+  color:#441980;
+  margin-left: 10%;
+  margin-top: 1%;
 
+    }
+  .options{
+      font-size: 20px;
+      min-height: 5vh;
+      align-items: center;
+      color:#441980;
+      margin-left: 13%;
+      margin-top: 1%;
     }
     .surveyHeader h1{
     min-height: 0;
