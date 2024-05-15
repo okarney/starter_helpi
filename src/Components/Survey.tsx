@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import olivia from './logo-removebg-preview.png'
 import React, { useState } from 'react';
 import { Button, Form} from 'react-bootstrap';
-//import sunrise from './purpl.png'
+import sunrise from './PurpleBG.png'
 
 
 
@@ -71,7 +71,12 @@ function Survey() {
       
      
    return (
-    <div>
+    <div
+    style={{
+      backgroundImage:`url(${sunrise})`,
+      backgroundSize: "cover",
+      backgroundPosition:"center",
+    }}>
       <div className="App-header2">
             <div className = "navbar">
             
@@ -101,7 +106,7 @@ function Survey() {
                 <Form.Label>1. You feel that your results were accurate!</Form.Label>
               </div>
         
-            <div>
+            <div className='options'>
             <Form.Check
                 type="radio"
                 inline
@@ -150,7 +155,7 @@ function Survey() {
                 <Form.Label>2. The site was easily readable and user friendly!</Form.Label>
               </div>
         
-            <div>
+            <div className='options'>
             <Form.Check
                 type="radio"
                 inline
@@ -199,7 +204,7 @@ function Survey() {
                 <Form.Label>3. You would recommend the quizzes to your friends!</Form.Label>
               </div>
         
-            <div>
+            <div className='options'>
             <Form.Check
                 type="radio"
                 inline
@@ -247,7 +252,7 @@ function Survey() {
                 <Form.Label>4. The quiz kept you engaged throughout!</Form.Label>
               </div>
         
-            <div>
+            <div className='options'>
             <Form.Check
                 type="radio"
                 inline
@@ -288,23 +293,29 @@ function Survey() {
                 value="disagree"
                 checked={ques4 === "disagree"}
             />
-        </div>
-        </Form.Group>
+        </div ></Form.Group>
+
+        <div className='questiontobeAsked'>
         <Form.Group controlId="questionSuggestion">
-      <Form.Label>5. Do you have any suggestions for improving the quiz experience?</Form.Label>
+      <Form.Label >5. Do you have any suggestions for improving the quiz experience?</Form.Label>
       <Form.Control
         value={ques5}
         onChange={updateQues5} 
         as="textarea"/>
+        
   </Form.Group>
   <br></br>
-
-        <Form>
+  <Form>
         <Button className="Submit-Button" onClick={submitVisibility}>Submit</Button>
       </Form>
         <br></br>
         {/*<Button onClick={submitVisibility}>Show/Hide</Button>*/}
         {finished ? <p> Thank You for Taking the Survey!</p> : null}
+  </div>
+  
+  <br></br>
+
+        
 
                        
 
