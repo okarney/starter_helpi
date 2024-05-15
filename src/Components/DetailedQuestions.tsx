@@ -6,7 +6,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { BasicExample } from '../progressBar';
 import { useNavigate } from 'react-router-dom';
 import "./gptResponse.json"
-import GIF from './gif.gif';
+import GIF from './gif-unscreen.gif';
 import olivia from './logo-removebg-preview.png';
 import sunrise from './lavender.png'
 
@@ -403,7 +403,7 @@ function updateQ7Response(event: React.ChangeEvent<HTMLInputElement>) {
 
       <div className="detailed-results">
 
-        {finished && career1 === "" && career2 === "" && career3 === "" ? <img style={{marginLeft: 220, width: 200, height: 200}}src ={GIF} alt = "GIF"/> : career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
+        {finished && career1 === "" && career2 === "" && career3 === "" ?<div> <img style={{marginLeft: 220, width: 200, height: 200}}src ={GIF} alt = "GIF"/> <br></br><span style={{marginLeft:220, color:'#441980'}} >Generating your careers...</span> </div>: career1 === "resubmit" && career2 === "resubmit" && career3 === "resubmit" ? <span>Your responses have not adequately answered the questions. Please provide more information and resubmit!</span> :
         <div>
           <h5 style={{color: '#5D3FD3'}}>{career1Title}</h5>
         
