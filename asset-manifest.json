@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/starter_helpi/static/css/main.15c2878a.css",
-    "main.js": "/starter_helpi/static/js/main.5560b35a.js",
+    "main.js": "/starter_helpi/static/js/main.d186a416.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/office.gif": "/starter_helpi/static/media/office.a27497c4cf002dffef12.gif",
     "static/media/PurpleBG.png": "/starter_helpi/static/media/PurpleBG.31b34a8d1ce341a5473e.png",
     "static/media/lavender.png": "/starter_helpi/static/media/lavender.f2c88afd7c144a837430.png",
     "static/media/jacobPlaceHolder.jpg": "/starter_helpi/static/media/jacobPlaceHolder.460b8648088499ccf90f.jpg",
-    "static/media/gif.gif": "/starter_helpi/static/media/gif.b657157cd05202d6a053.gif",
     "static/media/Khadija.png": "/starter_helpi/static/media/Khadija.70ec3ecf1745f87e5f38.png",
     "static/media/Olivia.png": "/starter_helpi/static/media/Olivia.0688e5e1d2d31183926c.png",
     "static/media/gif-unscreen.gif": "/starter_helpi/static/media/gif-unscreen.d82d55255d42b2762bfc.gif",
@@ -16,11 +15,11 @@
     "static/media/pLinkedIn.png": "/starter_helpi/static/media/pLinkedIn.31fd50d6189cdbaf3391.png",
     "index.html": "/starter_helpi/index.html",
     "main.15c2878a.css.map": "/starter_helpi/static/css/main.15c2878a.css.map",
-    "main.5560b35a.js.map": "/starter_helpi/static/js/main.5560b35a.js.map",
+    "main.d186a416.js.map": "/starter_helpi/static/js/main.d186a416.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15c2878a.css",
-    "static/js/main.5560b35a.js"
+    "static/js/main.d186a416.js"
   ]
 }
