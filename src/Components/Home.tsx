@@ -117,7 +117,9 @@ function Home() {
     
   // }
   return (
-      <div>
+    <div style={{
+        backgroundColor: '#fafbfa',
+        }}>
         <div className="App-header2">
             <div className = "navbar">
             
@@ -131,24 +133,20 @@ function Home() {
         </div>
               {/*<OurHeader/>*/}
 
-    <div className="App">
-      <header className="App-header">
-        <div className='banner'>
-          <div className='left-column'>
-         {/*<video controls autoPlay loop muted playsInline>
-        <source src= 'src/Components/office.mp4' type="video/mp4"/>
-        Your browser does not support the video tag.
-    </video>*/}
-            <img src ={office} alt = "office"/>
+        <div className="App">
+          <header className="App-header">
+            <div className='banner'>
+              <div className='left-column'>
+                <img src ={office} alt = "office"/>
+              </div>
 
-          </div>
-          <div className='right-column'>
-          <h1>Career<span>Explorer</span></h1>
-        <h3 style={{marginLeft: 85}} ><span>Explore your future</span> career with us!</h3>
-          <div className='btn'>
-          <Container>
-                <Row>
-                <Col>
+              <div className='right-column'>
+                <h1>Career<span>Explorer</span></h1>
+                <h3 style={{marginLeft: 85}} ><span>Explore your future</span> career with us!</h3>
+                <div className='btn'>
+                <Container>
+                  <Row>
+                    <Col>
                     <Button className="BasicButton" onClick={goToBasic}> Basic Assessment </Button>
                     <p style={{ fontSize: '13px' }}> Discover your potential career path through our refined multiple-choice assessment.</p>
                     </Col>
@@ -156,33 +154,14 @@ function Home() {
                     <Button className="DetailedButton" onClick={goToDetailed}>Detailed Assessment</Button>
                     <p style={{ fontSize: '13px' }}>Discover your potential career path through our comprehensive detailed questions.</p>
                     </Col>
-                </Row>
-            </Container>
-            </div>
-          </div>
+                  </Row>
+                </Container>
+                </div>
+              </div>
+            </div> 
+          </header>
         </div>
-        
-        <br></br>
-        <br></br>
-
-
-        
-      </header>
-      {/* <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form> */}
-      {/*<span>Created By: Olivia Karney, Khadija Mohammadi, Zahra Temori, and Jacob Whitman</span>*/}
-    </div>
     </div>
   );
 }
-
 export default Home;
-
-/*
-<li>Home</li>
-          <li><a href = "#">About</a></li>
-          <li><a href = "#">Contact</a></li>*/

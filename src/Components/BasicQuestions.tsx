@@ -333,8 +333,6 @@ const goToHome = () => {
 
       <header className="Basic-header">
           <h1>Basic Questions</h1>
-
-        
         {/*<h1>Basic Questions</h1>*/}
         <h2><BasicExample progress={progress}></BasicExample></h2>
         <br></br>
