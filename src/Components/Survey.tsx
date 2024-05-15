@@ -99,8 +99,8 @@ function Survey() {
         <source src= 'src/Components/office.mp4' type="video/mp4"/>
         Your browser does not support the video tag.
     </video>*/}
-            <h1> Survey </h1>
-            <br></br>
+            <h1 style={{marginLeft:70, marginTop: 0, fontSize: 40}}> Survey </h1>
+            <hr style={{marginLeft: 70, borderWidth: 2, height: 5, width: 655}}></hr>
             <Form.Group>
             <div className='questiontobeAsked'>
                 <Form.Label>1. You feel that your results were accurate!</Form.Label>
@@ -149,6 +149,8 @@ function Survey() {
             />
         </div>
         </Form.Group>
+
+        <br></br>
 
         <Form.Group >
             <div className='questiontobeAsked'>
@@ -199,6 +201,8 @@ function Survey() {
         </div>
         </Form.Group>
 
+        <br></br>
+
         <Form.Group >
             <div className='questiontobeAsked'>
                 <Form.Label>3. You would recommend the quizzes to your friends!</Form.Label>
@@ -247,6 +251,9 @@ function Survey() {
             />
         </div>
         </Form.Group>
+
+        <br></br>
+
         <Form.Group >
             <div className='questiontobeAsked'>
                 <Form.Label>4. The quiz kept you engaged throughout!</Form.Label>
@@ -294,6 +301,8 @@ function Survey() {
                 checked={ques4 === "disagree"}
             />
         </div ></Form.Group>
+
+        <br></br>
 
         <div className='questiontobeAsked'>
         <Form.Group controlId="questionSuggestion">
