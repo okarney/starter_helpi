@@ -144,7 +144,7 @@ function Home() {
           </div>
           <div className='right-column'>
           <h1>Career<span>Explorer</span></h1>
-        <h3><span>Explore your future</span> career with us!</h3>
+        <h3 style={{marginLeft: 85}} ><span>Explore your future</span> career with us!</h3>
           <div className='btn'>
           <Container>
                 <Row>
