@@ -8,9 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import GIF from './gif-unscreen.gif';
 import olivia from './logo-removebg-preview.png'
 import sunrise from './lavender.png'
-// function App(){
-//   return <span>There is actually something here</span>
-// }
+
+
+
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 
@@ -25,7 +25,9 @@ function BasicQuestions() {
   const [progress, setProgress] = useState<number>(0)
 
   const [finished, setFinished] = useState<boolean> (false);
-  
+
+
+  //The usates for 7-questions. 
   const [choice1, setChoice1] = useState<string>("Select an option");
   const [choice2, setChoice2] = useState<string>("Select an option");
   const [choice3, setChoice3] = useState<string>("Select an option");
@@ -40,9 +42,7 @@ function BasicQuestions() {
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
 
-  //function handleIncrease() {
-   // setProgress(progress + 20);
-  //}
+  //this is going to be the progress bar
   function updateProgress(originalValue: string, event: string){
     if (originalValue === "Select an option" && event !== "Select an option") {
       setProgress(progress + 15)
@@ -84,16 +84,12 @@ function BasicQuestions() {
   }
 
   //Gpt Integration:
-  /*const [response, setResponse] = useState(""); // Response from GPT*/
-
   // send message to GPT function
   
   const API_KEY = key; 
 
-   //const openai = new OpenAI(
-     //{apiKey: API_KEY, dangerouslyAllowBrowser: true}
- //);
- // JSON Data storing 3 Different Career Options
+   
+    //More on Gpt Inyegration
     const [career1Title, setCareer1Title] = useState(""); // Response from GPT
     const [career2Title, setCareer2Title] = useState(""); // Response from GPT
     const [career3Title, setCareer3Title] = useState(""); // Response from GPT
@@ -104,6 +100,8 @@ function BasicQuestions() {
     
 
  
+
+     // JSON Data storing 3 Different Career Options
  let gptData = {
   'name': "gptData",
   'description': "data to be passed to gpt",
@@ -142,7 +140,6 @@ function BasicQuestions() {
   async function callOpenAIAPI() {
 
     setFinished(true);
-    //const response = await getResponse(input);
     await fetch('https://api.openai.com/v1/chat/completions', {
     method: "POST",
     headers: {
@@ -207,40 +204,49 @@ function BasicQuestions() {
 // code to test whether the api key validation checks are working or not
 // comment in and out as needed
 
-// if (career1 !== "") {
-//   localStorage.clear();
-// }
+
 
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
-  
+  //update function for question 1
     function updateChoice1(event: React.ChangeEvent<HTMLSelectElement>) {
       updateProgress(choice1, event.target.value);
       setChoice1(event.target.value);
   }
 
+  //update function for question 2
   function updateChoice2(event: React.ChangeEvent<HTMLSelectElement>) {
     updateProgress(choice2, event.target.value);
     setChoice2(event.target.value);
 }
+
+//update function for question 3
 function updateChoice3(event: React.ChangeEvent<HTMLSelectElement>) {
   updateProgress(choice3, event.target.value);
   setChoice3(event.target.value);
 }
+
+//update function for question 4
 function updateChoice4(event: React.ChangeEvent<HTMLSelectElement>) {
   updateProgress(choice4, event.target.value);
   setChoice4(event.target.value);
 }
+
+//update function for question 5
 function updateChoice5(event: React.ChangeEvent<HTMLSelectElement>) {
   updateProgress(choice5, event.target.value);
   setChoice5(event.target.value);
 }
+
+//update function for question 6
 function updateChoice6(event: React.ChangeEvent<HTMLSelectElement>) {
   updateProgress(choice6, event.target.value);
   setChoice6(event.target.value);
 }
+
+//update function for question 7
 function updateChoice7(event: React.ChangeEvent<HTMLSelectElement>) {
   updateProgress(choice7, event.target.value);
   setChoice7(event.target.value);
@@ -507,9 +513,6 @@ const goToHome = () => {
             <div><Button className='CareerBasicButton' onClick={handleGetCareerChoices} disabled={!(progress >= 100)}>Get Career Choices</Button>
         </div>
 
-{/*<Button onClick={callOpenAIAPI} disabled={!(progress >= 100)}>Get Career Choices</Button>*/}
-
-{/*finished ? <span> Your responses have been seccussfully submitted!</span>: <span></span>*/}
 
 
 
@@ -536,9 +539,6 @@ const goToHome = () => {
 
         <br></br>
 
-        {/*<h2>GPT Response</h2>
-        {finished ? <img src ={GIF} alt = "GIF"/> : <span></span>}
-        {/*<img src ={GIF} alt = "GIF"/>*/}
 
 
         {finished && career1 === "" && career2 === "" && career3 === "" ? <div><img style={{marginLeft:255}} src ={GIF} alt = "GIF"/><br></br><span style={{marginLeft:255, color:'#441980'}} >Generating your careers...</span> <br></br> <br></br> <br></br> </div> : 
